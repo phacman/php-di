@@ -7,6 +7,8 @@ namespace DI\Definition\Source;
 use DI\Definition\AutowireDefinition;
 use DI\Definition\Definition;
 use DI\Definition\ObjectDefinition;
+use LogicException;
+use const PHP_SAPI;
 
 /**
  * Decorator that caches another definition source.
@@ -51,7 +53,7 @@ class SourceCache implements DefinitionSource, MutableDefinitionSource
     {
         return function_exists('apcu_fetch')
             && ini_get('apc.enabled')
-            && ! ('cli' === \PHP_SAPI && ! ini_get('apc.enable_cli'));
+            && ! ('cli' === PHP_SAPI && ! ini_get('apc.enable_cli'));
     }
 
     public function getCacheKey(string $name) : string
@@ -61,7 +63,7 @@ class SourceCache implements DefinitionSource, MutableDefinitionSource
 
     public function addDefinition(Definition $definition) : void
     {
-        throw new \LogicException('You cannot set a definition at runtime on a container that has caching enabled. Doing so would risk caching the definition for the next execution, where it might be different. You can either put your definitions in a file, remove the cache or ->set() a raw value directly (PHP object, string, int, ...) instead of a PHP-DI definition.');
+        throw new LogicException('You cannot set a definition at runtime on a container that has caching enabled. Doing so would risk caching the definition for the next execution, where it might be different. You can either put your definitions in a file, remove the cache or ->set() a raw value directly (PHP object, string, int, ...) instead of a PHP-DI definition.');
     }
 
     private function shouldBeCached(Definition $definition = null) : bool

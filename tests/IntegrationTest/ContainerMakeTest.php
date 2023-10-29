@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace DI\Test\IntegrationTest;
 
+use DateTime;
 use DI\ContainerBuilder;
 use DI\Test\UnitTest\Fixtures\Class1CircularDependencies;
 use DI\Test\UnitTest\Fixtures\PassByReferenceDependency;
@@ -11,6 +12,10 @@ use DI\Test\UnitTest\Fixtures\Singleton;
 use stdClass;
 use DI\DependencyException;
 use DI\NotFoundException;
+use Throwable;
+use function DI\decorate;
+use function DI\factory;
+use function DI\get;
 
 /**
  * Test class for Container.
@@ -86,7 +91,7 @@ class ContainerMakeTest extends BaseContainerTest
         $this->expectExceptionMessage('Circular dependency detected while trying to resolve entry \'foo\'');
         $builder->addDefinitions([
             // Alias to itself -> infinite recursive loop
-            'foo' => \DI\get('foo'),
+            'foo' => get('foo'),
         ]);
         $container = $builder->build();
         $container->make('foo');
@@ -121,9 +126,9 @@ class ContainerMakeTest extends BaseContainerTest
     public function testThrowableDuringResolve(ContainerBuilder $builder)
     {
       $builder->addDefinitions([
-        'tomorrow' => \DI\factory(function() {
+        'tomorrow' => factory(function() {
           // Cause a TypeError to be thrown in PHP 7 when this gets resolved
-          return (new \DateTime())->add('tomorrow');
+          return (new DateTime())->add('tomorrow');
         })
       ]);
       $container = $builder->build();
@@ -131,7 +136,7 @@ class ContainerMakeTest extends BaseContainerTest
       try {
         // First resolve should throw the TypeError
         $container->make('tomorrow');
-      } catch (\Throwable $e) {
+      } catch (Throwable $e) {
         $exception = $e;
       }
       $this->assertInstanceOf('TypeError', $exception);
@@ -139,7 +144,7 @@ class ContainerMakeTest extends BaseContainerTest
       try {
         // Second error must ALSO throw the TypeError, not a circular exception
         $container->make('tomorrow');
-      } catch (\Throwable $e) {
+      } catch (Throwable $e) {
         $exception = $e;
       }
       $this->assertInstanceOf('TypeError', $exception);
@@ -152,7 +157,7 @@ class ContainerMakeTest extends BaseContainerTest
     public function testMakeWithDecorator(ContainerBuilder $builder)
     {
         $builder->addDefinitions([
-            Fixture\Foo::class => \DI\decorate(function ($previous) {
+            Fixture\Foo::class => decorate(function ($previous) {
                 return $previous;
             }),
         ]);

@@ -8,14 +8,15 @@ use DI\Compiler\RequestedEntryHolder;
 use DI\Definition\Definition;
 use DI\Definition\Exception\InvalidDefinition;
 use DI\Invoker\FactoryParameterResolver;
-use Invoker\Exception\NotCallableException;
-use Invoker\Exception\NotEnoughParametersException;
-use Invoker\Invoker;
-use Invoker\InvokerInterface;
-use Invoker\ParameterResolver\AssociativeArrayResolver;
-use Invoker\ParameterResolver\DefaultValueResolver;
-use Invoker\ParameterResolver\NumericArrayResolver;
-use Invoker\ParameterResolver\ResolverChain;
+use DI\Zeal\Invoker\AssociativeArrayResolver;
+use DI\Zeal\Invoker\DefaultValueResolver;
+use DI\Zeal\Invoker\Invoker;
+use DI\Zeal\Invoker\InvokerInterface;
+use DI\Zeal\Invoker\NotCallableException;
+use DI\Zeal\Invoker\NotEnoughParametersException;
+use DI\Zeal\Invoker\NumericArrayResolver;
+use DI\Zeal\Invoker\ResolverChain;
+use LogicException;
 
 /**
  * Compiled version of the dependency injection container.
@@ -28,7 +29,7 @@ abstract class CompiledContainer extends Container
      * This const is overridden in child classes (compiled containers).
      * @var array
      */
-    protected const METHOD_MAPPING = [];
+    public const METHOD_MAPPING = [];
 
     private ?InvokerInterface $factoryInvoker = null;
 
@@ -80,7 +81,7 @@ abstract class CompiledContainer extends Container
     {
         // It needs to be forbidden because that would mean get() must go through the definitions
         // every time, which kinds of defeats the performance gains of the compiled container
-        throw new \LogicException('You cannot set a definition at runtime on a compiled container. You can either put your definitions in a file, disable compilation or ->set() a raw value directly (PHP object, string, int, ...) instead of a PHP-DI definition.');
+        throw new LogicException('You cannot set a definition at runtime on a compiled container. You can either put your definitions in a file, disable compilation or ->set() a raw value directly (PHP object, string, int, ...) instead of a PHP-DI definition.');
     }
 
     /**

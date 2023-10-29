@@ -9,6 +9,7 @@ use DI\Definition\ObjectDefinition\MethodInjection;
 use DI\Definition\ObjectDefinition\PropertyInjection;
 use DI\Test\UnitTest\Definition\Fixture\NonInstantiableClass;
 use PHPUnit\Framework\TestCase;
+use stdClass;
 
 /**
  * @covers \DI\Definition\ObjectDefinition
@@ -54,7 +55,7 @@ class ObjectDefinitionTest extends TestCase
         self::assertFalse($definition->isInstantiable());
         $definition = new ObjectDefinition(NonInstantiableClass::class);
         self::assertFalse($definition->isInstantiable());
-        $definition = new ObjectDefinition(\stdClass::class);
+        $definition = new ObjectDefinition(stdClass::class);
         self::assertTrue($definition->classExists());
     }
 

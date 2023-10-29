@@ -11,7 +11,7 @@ use DI\Definition\ValueDefinition;
 use EasyMock\EasyMock;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
-use Psr\Container\ContainerInterface;
+use DI\Zeal\Psr\Container\ContainerInterface;
 use DI\Definition\Exception\InvalidDefinition;
 
 /**

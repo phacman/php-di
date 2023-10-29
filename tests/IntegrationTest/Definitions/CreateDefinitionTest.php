@@ -15,7 +15,8 @@ use DI\Test\IntegrationTest\Definitions\CreateDefinitionTest\PropertyInjection;
 use DI\Test\IntegrationTest\Definitions\ObjectDefinition\Class1;
 use DI\Test\IntegrationTest\Definitions\ObjectDefinition\Class2;
 use DI\Test\IntegrationTest\Definitions\ObjectDefinition\Class3;
-use ProxyManager\Proxy\LazyLoadingInterface;
+use DI\Zeal\ProxyManager\Proxy\LazyLoadingInterface;
+use stdClass;
 use function DI\create;
 use function DI\get;
 use DI\Definition\Exception\InvalidDefinition;
@@ -58,12 +59,12 @@ class CreateDefinitionTest extends BaseContainerTest
                 ->constructor(
                     123,
                     get('foo'),
-                    get(\stdClass::class),
-                    get(\stdClass::class),
+                    get(stdClass::class),
+                    get(stdClass::class),
                     get('lazyService')
                 ),
             'foo' => 'bar',
-            'lazyService' => create(\stdClass::class)->lazy(),
+            'lazyService' => create(stdClass::class)->lazy(),
         ]);
         $container = $builder->build();
 
@@ -71,9 +72,9 @@ class CreateDefinitionTest extends BaseContainerTest
 
         self::assertEquals(123, $object->value);
         self::assertEquals('bar', $object->scalarValue);
-        self::assertEquals(new \stdClass, $object->typedValue);
-        self::assertEquals(new \stdClass, $object->typedOptionalValue);
-        self::assertInstanceOf(\stdClass::class, $object->lazyService);
+        self::assertEquals(new stdClass, $object->typedValue);
+        self::assertEquals(new stdClass, $object->typedOptionalValue);
+        self::assertInstanceOf(stdClass::class, $object->lazyService);
         self::assertInstanceOf(LazyLoadingInterface::class, $object->lazyService);
         self::assertFalse($object->lazyService->isProxyInitialized());
         self::assertEquals('hello', $object->optionalValue);
@@ -93,7 +94,7 @@ class CreateDefinitionTest extends BaseContainerTest
                 // Inject lazy object
                 ->property('lazyService', get('lazyService')),
             'foo' => 'bar',
-            'lazyService' => create(\stdClass::class)->lazy(),
+            'lazyService' => create(stdClass::class)->lazy(),
         ]);
         $container = $builder->build();
 
@@ -101,7 +102,7 @@ class CreateDefinitionTest extends BaseContainerTest
 
         self::assertEquals('foo', $object->value);
         self::assertEquals('bar', $object->entry);
-        self::assertInstanceOf(\stdClass::class, $object->lazyService);
+        self::assertInstanceOf(stdClass::class, $object->lazyService);
         self::assertInstanceOf(LazyLoadingInterface::class, $object->lazyService);
         self::assertFalse($object->lazyService->isProxyInitialized());
     }
@@ -117,12 +118,12 @@ class CreateDefinitionTest extends BaseContainerTest
                     'method',
                     123,
                     get('foo'),
-                    get(\stdClass::class),
-                    get(\stdClass::class),
+                    get(stdClass::class),
+                    get(stdClass::class),
                     get('lazyService')
                 ),
             'foo' => 'bar',
-            'lazyService' => create(\stdClass::class)->lazy(),
+            'lazyService' => create(stdClass::class)->lazy(),
         ]);
         $container = $builder->build();
 
@@ -130,9 +131,9 @@ class CreateDefinitionTest extends BaseContainerTest
 
         self::assertEquals(123, $object->value);
         self::assertEquals('bar', $object->scalarValue);
-        self::assertEquals(new \stdClass, $object->typedValue);
-        self::assertEquals(new \stdClass, $object->typedOptionalValue);
-        self::assertInstanceOf(\stdClass::class, $object->lazyService);
+        self::assertEquals(new stdClass, $object->typedValue);
+        self::assertEquals(new stdClass, $object->typedOptionalValue);
+        self::assertInstanceOf(stdClass::class, $object->lazyService);
         self::assertInstanceOf(LazyLoadingInterface::class, $object->lazyService);
         self::assertFalse($object->lazyService->isProxyInitialized());
         self::assertEquals('hello', $object->optionalValue);
@@ -287,11 +288,11 @@ class CreateDefinitionTest extends BaseContainerTest
         $this->expectException('Exception');
         $this->expectExceptionMessage('Property stdClass::$foo does not exist');
         $builder->addDefinitions([
-            \stdClass::class => create()
+            stdClass::class => create()
                 ->property('foo', 'bar'),
         ]);
         $container = $builder->build();
-        $container->get(\stdClass::class);
+        $container->get(stdClass::class);
     }
 
     /**
@@ -312,6 +313,9 @@ class CreateDefinitionTest extends BaseContainerTest
 
 namespace DI\Test\IntegrationTest\Definitions\CreateDefinitionTest;
 
+use DI\Zeal\ProxyManager\Proxy\LazyLoadingInterface;
+use stdClass;
+
 class Property
 {
     public $foo;
@@ -323,16 +327,16 @@ class ConstructorInjection
     public $scalarValue;
     public $typedValue;
     public $typedOptionalValue;
-    /** @var \ProxyManager\Proxy\LazyLoadingInterface */
+    /** @var LazyLoadingInterface */
     public $lazyService;
     public $optionalValue;
 
     public function __construct(
         $value,
         string $scalarValue,
-        \stdClass $typedValue,
-        \stdClass $typedOptionalValue = null,
-        \stdClass $lazyService,
+        stdClass $typedValue,
+        stdClass $typedOptionalValue = null,
+        stdClass $lazyService,
         $optionalValue = 'hello'
     ) {
         $this->value = $value;
@@ -348,7 +352,7 @@ class PropertyInjection
 {
     public $value;
     public $entry;
-    /** @var \ProxyManager\Proxy\LazyLoadingInterface */
+    /** @var LazyLoadingInterface */
     public $lazyService;
 }
 
@@ -358,16 +362,16 @@ class MethodInjection
     public $scalarValue;
     public $typedValue;
     public $typedOptionalValue;
-    /** @var \ProxyManager\Proxy\LazyLoadingInterface */
+    /** @var LazyLoadingInterface */
     public $lazyService;
     public $optionalValue;
 
     public function method(
         $value,
         string $scalarValue,
-        \stdClass $typedValue,
-        \stdClass $typedOptionalValue = null,
-        \stdClass $lazyService,
+        stdClass $typedValue,
+        stdClass $typedOptionalValue = null,
+        stdClass $lazyService,
         $optionalValue = 'hello'
     ) {
         $this->value = $value;

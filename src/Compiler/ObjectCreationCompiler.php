@@ -7,7 +7,9 @@ namespace DI\Compiler;
 use DI\Definition\Exception\InvalidDefinition;
 use DI\Definition\ObjectDefinition;
 use DI\Definition\ObjectDefinition\MethodInjection;
+use const PHP_VERSION_ID;
 use ReflectionClass;
+use ReflectionException;
 use ReflectionMethod;
 use ReflectionParameter;
 use ReflectionProperty;
@@ -57,7 +59,7 @@ class ObjectCreationCompiler
 
                 $propertyClassName = $propertyInjection->getClassName() ?: $className;
                 $property = new ReflectionProperty($propertyClassName, $propertyInjection->getPropertyName());
-                if ($property->isPublic() && !(\PHP_VERSION_ID >= 80100 && $property->isReadOnly())) {
+                if ($property->isPublic() && !(PHP_VERSION_ID >= 80100 && $property->isReadOnly())) {
                     $code[] = sprintf('$object->%s = %s;', $propertyInjection->getPropertyName(), $value);
                 } else {
                     // Private/protected/readonly property
@@ -160,7 +162,7 @@ class ObjectCreationCompiler
     {
         try {
             return $parameter->getDefaultValue();
-        } catch (\ReflectionException) {
+        } catch (ReflectionException) {
             throw new InvalidDefinition(sprintf(
                 'The parameter "%s" of %s has no type defined or guessable. It has a default value, '
                 . 'but the default value can\'t be read through Reflection because it is a PHP internal class.',

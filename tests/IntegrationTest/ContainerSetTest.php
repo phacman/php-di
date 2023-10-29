@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace DI\Test\IntegrationTest;
 
 use DI\ContainerBuilder;
+use stdClass;
 use function DI\create;
 use function DI\get;
 use function DI\value;
@@ -92,7 +93,7 @@ class ContainerSetTest extends BaseContainerTest
         }
 
         $builder->addDefinitions([
-            'foo' => create(\stdClass::class),
+            'foo' => create(stdClass::class),
         ]);
         $container = $builder->build();
 

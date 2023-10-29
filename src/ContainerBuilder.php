@@ -14,8 +14,10 @@ use DI\Definition\Source\ReflectionBasedAutowiring;
 use DI\Definition\Source\SourceCache;
 use DI\Definition\Source\SourceChain;
 use DI\Proxy\ProxyFactory;
+use DI\Zeal\Psr\Container\ContainerInterface;
+use Exception;
 use InvalidArgumentException;
-use Psr\Container\ContainerInterface;
+use LogicException;
 
 /**
  * Helper to create and configure a Container.
@@ -127,7 +129,7 @@ class ContainerBuilder
 
         if ($this->sourceCache) {
             if (!SourceCache::isSupported()) {
-                throw new \Exception('APCu is not enabled, PHP-DI cannot use it as a cache');
+                throw new Exception('APCu is not enabled, PHP-DI cannot use it as a cache');
             }
             // Wrap the source with the cache decorator
             $source = new SourceCache($source, $this->sourceCacheNamespace);
@@ -327,7 +329,7 @@ class ContainerBuilder
     private function ensureNotLocked() : void
     {
         if ($this->locked) {
-            throw new \LogicException('The ContainerBuilder cannot be modified after the container has been built');
+            throw new LogicException('The ContainerBuilder cannot be modified after the container has been built');
         }
     }
 }

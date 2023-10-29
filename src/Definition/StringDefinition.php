@@ -5,8 +5,9 @@ declare(strict_types=1);
 namespace DI\Definition;
 
 use DI\DependencyException;
-use Psr\Container\ContainerInterface;
-use Psr\Container\NotFoundExceptionInterface;
+use DI\Zeal\Psr\Container\ContainerInterface;
+use DI\Zeal\Psr\Container\NotFoundExceptionInterface;
+use RuntimeException;
 
 /**
  * Definition of a string composed of other strings.
@@ -82,7 +83,7 @@ class StringDefinition implements Definition, SelfResolvingDefinition
 
         $result = preg_replace_callback('#\{([^{}]+)}#', $callback, $expression);
         if ($result === null) {
-            throw new \RuntimeException(sprintf('An unknown error occurred while parsing the string definition: \'%s\'', $expression));
+            throw new RuntimeException(sprintf('An unknown error occurred while parsing the string definition: \'%s\'', $expression));
         }
 
         return $result;

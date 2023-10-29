@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace DI\Definition;
 
+use const PHP_EOL;
+
 /**
  * Defines a reference to an environment variable, with fallback to a default
  * value if the environment variable is not defined.
@@ -68,20 +70,20 @@ class EnvironmentVariableDefinition implements Definition
 
     public function __toString() : string
     {
-        $str = '    variable = ' . $this->variableName . \PHP_EOL
+        $str = '    variable = ' . $this->variableName . PHP_EOL
             . '    optional = ' . ($this->isOptional ? 'yes' : 'no');
 
         if ($this->isOptional) {
             if ($this->defaultValue instanceof Definition) {
                 $nestedDefinition = (string) $this->defaultValue;
-                $defaultValueStr = str_replace(\PHP_EOL, \PHP_EOL . '    ', $nestedDefinition);
+                $defaultValueStr = str_replace(PHP_EOL, PHP_EOL . '    ', $nestedDefinition);
             } else {
                 $defaultValueStr = var_export($this->defaultValue, true);
             }
 
-            $str .= \PHP_EOL . '    default = ' . $defaultValueStr;
+            $str .= PHP_EOL . '    default = ' . $defaultValueStr;
         }
 
-        return sprintf('Environment variable (' . \PHP_EOL . '%s' . \PHP_EOL . ')', $str);
+        return sprintf('Environment variable (' . PHP_EOL . '%s' . PHP_EOL . ')', $str);
     }
 }

@@ -7,8 +7,18 @@ namespace DI\Test\IntegrationTest;
 use DI\Container;
 use DI\ContainerBuilder;
 use DI\FactoryInterface;
-use Psr\Container\ContainerInterface;
-use Invoker\InvokerInterface;
+use DI\Zeal\Psr\Container\ContainerInterface;
+use DI\Zeal\Invoker\InvokerInterface;
+use stdClass;
+use function DI\add;
+use function DI\autowire;
+use function DI\create;
+use function DI\decorate;
+use function DI\env;
+use function DI\factory;
+use function DI\get;
+use function DI\string;
+use function DI\value;
 
 /**
  * Tests container debugging.
@@ -41,31 +51,31 @@ class ContainerDebugTest extends BaseContainerTest
         $builder = new ContainerBuilder();
 
         $builder->addDefinitions([
-            'create' => \DI\create(Container::class),
-            'autowire' => \DI\autowire(Container::class),
-            'factory' => \DI\factory(function () {
+            'create' => create(Container::class),
+            'autowire' => autowire(Container::class),
+            'factory' => factory(function () {
                 return true;
             }),
             'callback' => function () {
                 return true;
             },
-            'decorator' => \DI\decorate(function () {
+            'decorator' => decorate(function () {
                 return true;
             }),
-            'alias' => \DI\get('value'),
-            'environment' => \DI\env('foo'),
-            'array' => \DI\add(['foo', 'bar']),
-            'string' => \DI\string('foo'),
-            'float' => \DI\value(1.5),
-            'bool' => \DI\value(true),
-            'str' => \DI\value('string'),
-            'null' => \DI\value(null),
+            'alias' => get('value'),
+            'environment' => env('foo'),
+            'array' => add(['foo', 'bar']),
+            'string' => string('foo'),
+            'float' => value(1.5),
+            'bool' => value(true),
+            'str' => value('string'),
+            'null' => value(null),
         ]);
 
         /** @var Container $container */
         $container = $builder->build();
 
-        $container->set('entry_object', new \stdClass());
+        $container->set('entry_object', new stdClass());
         $container->set('entry_array', ['foo', 'bar']);
         $container->set('entry_int', 100);
         $container->set('entry_bool', false);
@@ -83,11 +93,11 @@ class ContainerDebugTest extends BaseContainerTest
             $container->debugEntry(FactoryInterface::class)
         );
         $this->assertMatchesRegularExpression(
-            '/^Object \(\n {4}class = #NOT INSTANTIABLE# Invoker\\\InvokerInterface\n/',
+            '/^Object \(\n {4}class = #NOT INSTANTIABLE# DI\\\Zeal\\\Invoker\\\InvokerInterface\n/',
             $container->debugEntry(InvokerInterface::class)
         );
         $this->assertMatchesRegularExpression(
-            '/^Object \(\n {4}class = #NOT INSTANTIABLE# Psr\\\Container\\\ContainerInterface\n/',
+            '/^Object \(\n {4}class = #NOT INSTANTIABLE# DI\\\Zeal\\\Psr\\\Container\\\ContainerInterface\n/',
             $container->debugEntry(ContainerInterface::class)
         );
 

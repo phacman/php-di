@@ -7,6 +7,7 @@ namespace DI\Test\IntegrationTest\Attributes;
 use DI\ContainerBuilder;
 use DI\Test\IntegrationTest\BaseContainerTest;
 use DI\DependencyException;
+use stdClass;
 
 /**
  * Test using PHP 8 attributes.
@@ -82,7 +83,7 @@ class AttributesTest extends BaseContainerTest
     {
         $builder->useAttributes(true);
 
-        $dependency = new \stdClass();
+        $dependency = new stdClass();
 
         $builder->addDefinitions([
             'namedDependency'  => $dependency,

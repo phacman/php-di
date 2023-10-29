@@ -16,7 +16,8 @@ use DI\Test\IntegrationTest\Definitions\AutowireDefinitionTest\TypedSetter;
 use DI\Test\IntegrationTest\Definitions\ObjectDefinition\Class1;
 use DI\Test\IntegrationTest\Definitions\ObjectDefinition\Class2;
 use DI\Test\IntegrationTest\Definitions\ObjectDefinition\Class3;
-use ProxyManager\Proxy\LazyLoadingInterface;
+use DI\Zeal\ProxyManager\Proxy\LazyLoadingInterface;
+use stdClass;
 use function DI\autowire;
 use function DI\create;
 use function DI\get;
@@ -58,8 +59,8 @@ class AutowireDefinitionTest extends BaseContainerTest
 
         $object = $container->get(ConstructorInjection::class);
 
-        self::assertEquals(new \stdClass, $object->typedValue);
-        self::assertEquals(new \stdClass, $object->typedOptionalValue);
+        self::assertEquals(new stdClass, $object->typedValue);
+        self::assertEquals(new stdClass, $object->typedOptionalValue);
         self::assertEquals('bar', $object->value);
         self::assertInstanceOf(LazyService::class, $object->lazyService);
         self::assertInstanceOf(LazyLoadingInterface::class, $object->lazyService);
@@ -101,7 +102,7 @@ class AutowireDefinitionTest extends BaseContainerTest
 
         $object = $container->get(AutowireDefinition\ConstructorInjection::class);
 
-        self::assertSame($container->get(\stdClass::class), $object->autowiredParameter);
+        self::assertSame($container->get(stdClass::class), $object->autowiredParameter);
 
         self::assertSame($container->get('foo'), $object->overloadedParameter);
         self::assertNotSame($container->get(AutowireDefinition\Class1::class), $object->overloadedParameter);
@@ -117,8 +118,8 @@ class AutowireDefinitionTest extends BaseContainerTest
             AutowireDefinition\ConstructorInjection::class => autowire()
                 ->constructorParameter('overloadedParameter', get('foo')),
 
-            \stdClass::class => create(),
-            'anotherStdClass' => create(\stdClass::class),
+            stdClass::class => create(),
+            'anotherStdClass' => create(stdClass::class),
 
             AutowireDefinition\Class1::class => create(),
             'foo' => create(AutowireDefinition\Class1::class),
@@ -128,7 +129,7 @@ class AutowireDefinitionTest extends BaseContainerTest
         $object = $container->get(AutowireDefinition\ConstructorInjection::class);
 
         self::assertSame($container->get('anotherStdClass'), $object->autowiredParameter);
-        self::assertNotSame($container->get(\stdClass::class), $object->autowiredParameter);
+        self::assertNotSame($container->get(stdClass::class), $object->autowiredParameter);
 
         self::assertSame($container->get('foo'), $object->overloadedParameter);
         self::assertNotSame($container->get(AutowireDefinition\Class1::class), $object->overloadedParameter);
@@ -144,8 +145,8 @@ class AutowireDefinitionTest extends BaseContainerTest
             AutowireDefinition\MethodInjection::class => autowire()
                 ->methodParameter('setFoo', 'overloadedParameter', get('foo')),
 
-            \stdClass::class => create(),
-            'anotherStdClass' => create(\stdClass::class),
+            stdClass::class => create(),
+            'anotherStdClass' => create(stdClass::class),
 
             AutowireDefinition\Class1::class => create(),
             'foo' => create(AutowireDefinition\Class1::class),
@@ -155,7 +156,7 @@ class AutowireDefinitionTest extends BaseContainerTest
         $object = $container->get(AutowireDefinition\MethodInjection::class);
 
         self::assertSame($container->get('anotherStdClass'), $object->autowiredParameter);
-        self::assertNotSame($container->get(\stdClass::class), $object->autowiredParameter);
+        self::assertNotSame($container->get(stdClass::class), $object->autowiredParameter);
 
         self::assertSame($container->get('foo'), $object->overloadedParameter);
         self::assertNotSame($container->get(AutowireDefinition\Class1::class), $object->overloadedParameter);
@@ -243,8 +244,8 @@ class AutowireDefinitionTest extends BaseContainerTest
         $container = $builder->addDefinitions([
             NullableTypedConstructorParameter::class => autowire()
                 ->constructorParameter('bar', get('foo')),
-            'stdClass' => new \stdClass,
-            'foo' => new \stdClass,
+            'stdClass' => new stdClass,
+            'foo' => new stdClass,
         ])->build();
 
         self::assertSame($container->get('foo'), $container->get(NullableTypedConstructorParameter::class)->bar);
@@ -284,8 +285,8 @@ class AutowireDefinitionTest extends BaseContainerTest
         $container = $builder->addDefinitions([
             TypedSetter::class => autowire()
                 ->methodParameter('setFoo', 'bar', get('foo')),
-            'stdClass' => new \stdClass,
-            'foo' => new \stdClass,
+            'stdClass' => new stdClass,
+            'foo' => new stdClass,
         ])->build();
 
         self::assertSame($container->get('foo'), $container->get(TypedSetter::class)->bar);
@@ -354,11 +355,14 @@ class AutowireDefinitionTest extends BaseContainerTest
 
         $object = $container->get(Php71::class);
 
-        self::assertEquals(new \stdClass, $object->param);
+        self::assertEquals(new stdClass, $object->param);
     }
 }
 
 namespace DI\Test\IntegrationTest\Definitions\AutowireDefinitionTest;
+
+use DI\Zeal\ProxyManager\Proxy\LazyLoadingInterface;
+use stdClass;
 
 class NullableConstructorParameter
 {
@@ -374,7 +378,7 @@ class NullableTypedConstructorParameter
 {
     public $bar;
 
-    public function __construct(\stdClass $bar = null)
+    public function __construct(stdClass $bar = null)
     {
         $this->bar = $bar;
     }
@@ -394,7 +398,7 @@ class TypedSetter
 {
     public $bar;
 
-    public function setFoo(\stdClass $bar)
+    public function setFoo(stdClass $bar)
     {
         $this->bar = $bar;
     }
@@ -405,15 +409,15 @@ class ConstructorInjection
     public $value;
     public $typedValue;
     public $typedOptionalValue;
-    /** @var \ProxyManager\Proxy\LazyLoadingInterface */
+    /** @var LazyLoadingInterface */
     public $lazyService;
     public $unknownTypedAndOptional;
     public $optionalValue;
 
     public function __construct(
-        \stdClass $typedValue,
+        stdClass $typedValue,
         string $value,
-        \stdClass $typedOptionalValue = null,
+        stdClass $typedOptionalValue = null,
         LazyService $lazyService,
         UnknownClass $unknownTypedAndOptional = null,
         $optionalValue = 'hello'

@@ -8,7 +8,7 @@ use DI\Definition\StringDefinition;
 use DI\NotFoundException;
 use EasyMock\EasyMock;
 use PHPUnit\Framework\TestCase;
-use Psr\Container\ContainerInterface;
+use DI\Zeal\Psr\Container\ContainerInterface;
 use DI\DependencyException;
 
 /**

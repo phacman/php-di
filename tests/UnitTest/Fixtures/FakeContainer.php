@@ -6,7 +6,7 @@ namespace DI\Test\UnitTest\Fixtures;
 
 use DI\Definition\Source\DefinitionSource;
 use DI\Proxy\ProxyFactory;
-use Psr\Container\ContainerInterface;
+use DI\Zeal\Psr\Container\ContainerInterface;
 
 /**
  * Fake container class that exposes all constructor parameters.

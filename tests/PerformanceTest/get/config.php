@@ -3,25 +3,30 @@
 declare(strict_types=1);
 use DI\Test\PerformanceTest\Get\A;
 use DI\Test\PerformanceTest\Get\B;
-use Psr\Container\ContainerInterface;
+use DI\Zeal\Psr\Container\ContainerInterface;
+use function DI\autowire;
+use function DI\create;
+use function DI\factory;
+use function DI\get;
+use function DI\string;
 
 return [
-    'object'  => \DI\create('DI\Test\PerformanceTest\Get\GetFixture')
-        ->constructor(\DI\get('array')),
+    'object'  => create('DI\Test\PerformanceTest\Get\GetFixture')
+        ->constructor(get('array')),
     'value'   => 'foo',
-    'string'  => \DI\string('Hello this is {value}'),
-    'alias'   => \DI\get('factory'),
-    'factory' => \DI\factory(function (ContainerInterface $c) {
+    'string'  => string('Hello this is {value}'),
+    'alias'   => get('factory'),
+    'factory' => factory(function (ContainerInterface $c) {
         return $c->get('object');
     }),
     'array' => [
         'foo',
         'bar',
-        \DI\get('string'),
+        get('string'),
     ],
 
-    A::class  => \DI\autowire()
-        ->constructorParameter('value', \DI\get('string')),
-    B::class  => \DI\autowire()
-        ->method('setValue', \DI\string('Wow: {string}'), \DI\get('value')),
+    A::class  => autowire()
+        ->constructorParameter('value', get('string')),
+    B::class  => autowire()
+        ->method('setValue', string('Wow: {string}'), get('value')),
 ];

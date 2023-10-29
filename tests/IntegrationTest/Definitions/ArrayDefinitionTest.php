@@ -6,6 +6,11 @@ namespace DI\Test\IntegrationTest\Definitions;
 
 use DI\ContainerBuilder;
 use DI\Test\IntegrationTest\BaseContainerTest;
+use stdClass;
+use function DI\add;
+use function DI\create;
+use function DI\env;
+use function DI\get;
 
 /**
  * Test array definitions.
@@ -67,19 +72,19 @@ class ArrayDefinitionTest extends BaseContainerTest
     {
         $builder->addDefinitions([
             'links'     => [
-                \DI\get('dependency1'),
-                \DI\get('dependency2'),
+                get('dependency1'),
+                get('dependency2'),
             ],
-            'dependency1' => \DI\create('stdClass'),
-            'dependency2' => \DI\create('stdClass'),
+            'dependency1' => create('stdClass'),
+            'dependency2' => create('stdClass'),
         ]);
         $container = $builder->build();
 
         $array = $container->get('links');
 
         $this->assertEntryIsCompiled($container, 'links');
-        $this->assertInstanceOf(\stdClass::class, $array[0]);
-        $this->assertInstanceOf(\stdClass::class, $array[1]);
+        $this->assertInstanceOf(stdClass::class, $array[0]);
+        $this->assertInstanceOf(stdClass::class, $array[1]);
         $this->assertSame($container->get('dependency1'), $array[0]);
         $this->assertSame($container->get('dependency2'), $array[1]);
     }
@@ -91,8 +96,8 @@ class ArrayDefinitionTest extends BaseContainerTest
     {
         $builder->addDefinitions([
             'array' => [
-                \DI\env('PHP_DI_DO_NOT_DEFINE_THIS', 'env'),
-                \DI\create('stdClass'),
+                env('PHP_DI_DO_NOT_DEFINE_THIS', 'env'),
+                create('stdClass'),
             ],
         ]);
         $container = $builder->build();
@@ -101,7 +106,7 @@ class ArrayDefinitionTest extends BaseContainerTest
 
         $this->assertEntryIsCompiled($container, 'array');
         $this->assertEquals('env', $array[0]);
-        $this->assertEquals(new \stdClass, $array[1]);
+        $this->assertEquals(new stdClass, $array[1]);
     }
 
     /**
@@ -112,8 +117,8 @@ class ArrayDefinitionTest extends BaseContainerTest
         $builder->addDefinitions([
             'array' => [
                 'array' => [
-                    \DI\env('PHP_DI_DO_NOT_DEFINE_THIS', 'env'),
-                    \DI\create('stdClass'),
+                    env('PHP_DI_DO_NOT_DEFINE_THIS', 'env'),
+                    create('stdClass'),
                 ],
             ],
         ]);
@@ -123,7 +128,7 @@ class ArrayDefinitionTest extends BaseContainerTest
 
         $this->assertEntryIsCompiled($container, 'array');
         $this->assertEquals('env', $array['array'][0]);
-        $this->assertEquals(new \stdClass, $array['array'][1]);
+        $this->assertEquals(new stdClass, $array['array'][1]);
     }
 
     /**
@@ -160,11 +165,11 @@ class ArrayDefinitionTest extends BaseContainerTest
             ],
         ]);
         $builder->addDefinitions([
-            'values' => \DI\add([
+            'values' => add([
                 'another value',
-                \DI\get('foo'),
+                get('foo'),
             ]),
-            'foo'    => \DI\create('stdClass'),
+            'foo'    => create('stdClass'),
         ]);
         $container = $builder->build();
 
@@ -175,7 +180,7 @@ class ArrayDefinitionTest extends BaseContainerTest
         $this->assertEquals('value 1', $array[0]);
         $this->assertEquals('value 2', $array[1]);
         $this->assertEquals('another value', $array[2]);
-        $this->assertInstanceOf(\stdClass::class, $array[3]);
+        $this->assertInstanceOf(stdClass::class, $array[3]);
     }
 
     /**
@@ -185,14 +190,14 @@ class ArrayDefinitionTest extends BaseContainerTest
     {
         $builder->addDefinitions([
             'array' => [
-                \DI\env('PHP_DI_DO_NOT_DEFINE_THIS', 'env'),
-                \DI\create('stdClass'),
+                env('PHP_DI_DO_NOT_DEFINE_THIS', 'env'),
+                create('stdClass'),
             ],
         ]);
         $builder->addDefinitions([
-            'array' => \DI\add([
-                \DI\env('PHP_DI_DO_NOT_DEFINE_THIS', 'foo'),
-                \DI\create('stdClass'),
+            'array' => add([
+                env('PHP_DI_DO_NOT_DEFINE_THIS', 'foo'),
+                create('stdClass'),
             ]),
         ]);
         $container = $builder->build();
@@ -201,9 +206,9 @@ class ArrayDefinitionTest extends BaseContainerTest
 
         $this->assertEntryIsCompiled($container, 'array');
         $this->assertEquals('env', $array[0]);
-        $this->assertEquals(new \stdClass, $array[1]);
+        $this->assertEquals(new stdClass, $array[1]);
         $this->assertEquals('foo', $array[2]);
-        $this->assertEquals(new \stdClass, $array[3]);
+        $this->assertEquals(new stdClass, $array[3]);
     }
 
     /**
@@ -212,7 +217,7 @@ class ArrayDefinitionTest extends BaseContainerTest
     public function test_add_to_non_existing_array_works(ContainerBuilder $builder)
     {
         $builder->addDefinitions([
-            'values' => \DI\add([
+            'values' => add([
                 'value 1',
             ]),
         ]);

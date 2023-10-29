@@ -14,7 +14,8 @@ use DI\Definition\InstanceDefinition;
 use DI\Definition\ObjectDefinition;
 use DI\Definition\SelfResolvingDefinition;
 use DI\Proxy\ProxyFactory;
-use Psr\Container\ContainerInterface;
+use DI\Zeal\Psr\Container\ContainerInterface;
+use RuntimeException;
 
 /**
  * Dispatches to more specific resolvers.
@@ -75,7 +76,7 @@ class ResolverDispatcher implements DefinitionResolver
     /**
      * Returns a resolver capable of handling the given definition.
      *
-     * @throws \RuntimeException No definition resolver was found for this type of definition.
+     * @throws RuntimeException No definition resolver was found for this type of definition.
      */
     private function getDefinitionResolver(Definition $definition) : DefinitionResolver
     {
@@ -117,7 +118,7 @@ class ResolverDispatcher implements DefinitionResolver
 
                 return $this->instanceResolver;
             default:
-                throw new \RuntimeException('No definition resolver was configured for definition of type ' . $definition::class);
+                throw new RuntimeException('No definition resolver was configured for definition of type ' . $definition::class);
         }
     }
 }

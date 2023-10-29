@@ -6,6 +6,8 @@ namespace DI\Test\UnitTest\Definition\Dumper;
 
 use DI\Definition\Dumper\ObjectDefinitionDumper;
 use PHPUnit\Framework\TestCase;
+use function DI\create;
+use function DI\get;
 
 /**
  * @covers \DI\Definition\Dumper\ObjectDefinitionDumper
@@ -14,10 +16,10 @@ class ObjectDefinitionDumperTest extends TestCase
 {
     public function testAll()
     {
-        $definition = \DI\create(FixtureClass::class)
+        $definition = create(FixtureClass::class)
             ->lazy()
-            ->constructor(\DI\get('Mailer'), 'email@example.com')
-            ->method('setFoo', \DI\get('SomeDependency'))
+            ->constructor(get('Mailer'), 'email@example.com')
+            ->method('setFoo', get('SomeDependency'))
             ->property('prop', 'Some value')
             ->getDefinition('foo');
         $dumper = new ObjectDefinitionDumper();
@@ -41,7 +43,7 @@ class ObjectDefinitionDumperTest extends TestCase
 
     public function testClass()
     {
-        $definition = \DI\create(FixtureClass::class)
+        $definition = create(FixtureClass::class)
             ->getDefinition('foo');
         $dumper = new ObjectDefinitionDumper();
 
@@ -56,7 +58,7 @@ class ObjectDefinitionDumperTest extends TestCase
 
     public function testNonExistentClass()
     {
-        $definition = \DI\create('foobar')
+        $definition = create('foobar')
             ->constructor('foo', 'bar')
             ->getDefinition('foo');
         $resolver = new ObjectDefinitionDumper();
@@ -72,7 +74,7 @@ class ObjectDefinitionDumperTest extends TestCase
 
     public function testNonInstantiableClass()
     {
-        $definition = \DI\create('ArrayAccess')
+        $definition = create('ArrayAccess')
             ->getDefinition('foo');
         $resolver = new ObjectDefinitionDumper();
 
@@ -87,7 +89,7 @@ class ObjectDefinitionDumperTest extends TestCase
 
     public function testLazy()
     {
-        $definition = \DI\create('stdClass')
+        $definition = create('stdClass')
             ->lazy()
             ->getDefinition('foo');
         $resolver = new ObjectDefinitionDumper();
@@ -103,8 +105,8 @@ class ObjectDefinitionDumperTest extends TestCase
 
     public function testConstructorParameters()
     {
-        $definition = \DI\create(FixtureClass::class)
-            ->constructor(\DI\get('Mailer'), 'email@example.com')
+        $definition = create(FixtureClass::class)
+            ->constructor(get('Mailer'), 'email@example.com')
             ->getDefinition('foo');
         $resolver = new ObjectDefinitionDumper();
 
@@ -123,8 +125,8 @@ class ObjectDefinitionDumperTest extends TestCase
 
     public function testUndefinedConstructorParameter()
     {
-        $definition = \DI\create(FixtureClass::class)
-            ->constructor(\DI\get('Mailer'))
+        $definition = create(FixtureClass::class)
+            ->constructor(get('Mailer'))
             ->getDefinition('foo');
         $resolver = new ObjectDefinitionDumper();
 
@@ -143,7 +145,7 @@ class ObjectDefinitionDumperTest extends TestCase
 
     public function testPropertyValue()
     {
-        $definition = \DI\create(FixtureClass::class)
+        $definition = create(FixtureClass::class)
             ->property('prop', 'Some value')
             ->getDefinition('foo');
         $resolver = new ObjectDefinitionDumper();
@@ -160,8 +162,8 @@ class ObjectDefinitionDumperTest extends TestCase
 
     public function testPropertyGet()
     {
-        $definition = \DI\create(FixtureClass::class)
-            ->property('prop', \DI\get('foo'))
+        $definition = create(FixtureClass::class)
+            ->property('prop', get('foo'))
             ->getDefinition('foo');
         $resolver = new ObjectDefinitionDumper();
 
@@ -177,8 +179,8 @@ class ObjectDefinitionDumperTest extends TestCase
 
     public function testMethodLinkParameter()
     {
-        $definition = \DI\create(FixtureClass::class)
-            ->method('setFoo', \DI\get('Mailer'))
+        $definition = create(FixtureClass::class)
+            ->method('setFoo', get('Mailer'))
             ->getDefinition('foo');
         $resolver = new ObjectDefinitionDumper();
 
@@ -196,7 +198,7 @@ class ObjectDefinitionDumperTest extends TestCase
 
     public function testMethodValueParameter()
     {
-        $definition = \DI\create(FixtureClass::class)
+        $definition = create(FixtureClass::class)
             ->method('setFoo', 'foo')
             ->getDefinition('foo');
         $resolver = new ObjectDefinitionDumper();
@@ -215,7 +217,7 @@ class ObjectDefinitionDumperTest extends TestCase
 
     public function testMethodDefaultParameterValue()
     {
-        $definition = \DI\create(FixtureClass::class)
+        $definition = create(FixtureClass::class)
             ->method('defaultValue')
             ->getDefinition('foo');
         $resolver = new ObjectDefinitionDumper();

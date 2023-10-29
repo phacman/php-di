@@ -13,7 +13,7 @@ use DI\Test\IntegrationTest\BaseContainerTest;
 use DI\Test\UnitTest\Fixtures\FakeContainer;
 use EasyMock\EasyMock;
 use PHPUnit\Framework\TestCase;
-use Psr\Container\ContainerInterface;
+use DI\Zeal\Psr\Container\ContainerInterface;
 
 /**
  * @covers \DI\ContainerBuilder

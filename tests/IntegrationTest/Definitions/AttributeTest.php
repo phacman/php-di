@@ -10,7 +10,8 @@ use DI\Test\IntegrationTest\Definitions\AttributesTest\AutowiredClass;
 use DI\Test\IntegrationTest\Definitions\AttributesTest\ConstructorInjection;
 use DI\Test\IntegrationTest\Definitions\AttributesTest\NonAnnotatedClass;
 use DI\Test\IntegrationTest\Definitions\AttributesTest\PropertyInjection;
-use ProxyManager\Proxy\LazyLoadingInterface;
+use DI\Zeal\ProxyManager\Proxy\LazyLoadingInterface;
+use stdClass;
 use function DI\autowire;
 use function DI\create;
 
@@ -38,17 +39,17 @@ class AttributeTest extends BaseContainerTest
         $builder->useAttributes(true);
         $builder->addDefinitions([
             'foo' => 'bar',
-            'lazyService' => autowire(\stdClass::class)->lazy(),
-            'attribute' => create(\stdClass::class),
+            'lazyService' => autowire(stdClass::class)->lazy(),
+            'attribute' => create(stdClass::class),
         ]);
         $container = $builder->build();
 
         $object = $container->get(ConstructorInjection::class);
 
-        self::assertEquals(new \stdClass, $object->typedValue);
-        self::assertEquals(new \stdClass, $object->typedOptionalValue);
+        self::assertEquals(new stdClass, $object->typedValue);
+        self::assertEquals(new stdClass, $object->typedOptionalValue);
         self::assertEquals('bar', $object->value);
-        self::assertInstanceOf(\stdClass::class, $object->lazyService);
+        self::assertInstanceOf(stdClass::class, $object->lazyService);
         self::assertInstanceOf(LazyLoadingInterface::class, $object->lazyService);
         self::assertFalse($object->lazyService->isProxyInitialized());
         self::assertSame($container->get('attribute'), $object->attribute);
@@ -65,7 +66,7 @@ class AttributeTest extends BaseContainerTest
 
         $object = $container->get(AutowiredClass::class);
 
-        self::assertEquals(new \stdClass, $object->entry);
+        self::assertEquals(new stdClass, $object->entry);
     }
 
     /**
@@ -76,7 +77,7 @@ class AttributeTest extends BaseContainerTest
         $builder->useAttributes(true);
         $builder->addDefinitions([
             'foo' => 'bar',
-            'lazyService' => autowire(\stdClass::class)->lazy(),
+            'lazyService' => autowire(stdClass::class)->lazy(),
         ]);
         $container = $builder->build();
 
@@ -84,8 +85,8 @@ class AttributeTest extends BaseContainerTest
 
         self::assertEquals('bar', $object->value);
         self::assertEquals('bar', $object->value2);
-        self::assertInstanceOf(\stdClass::class, $object->entry);
-        self::assertInstanceOf(\stdClass::class, $object->lazyService);
+        self::assertInstanceOf(stdClass::class, $object->entry);
+        self::assertInstanceOf(stdClass::class, $object->lazyService);
         self::assertInstanceOf(LazyLoadingInterface::class, $object->lazyService);
         self::assertFalse($object->lazyService->isProxyInitialized());
     }
@@ -98,17 +99,17 @@ class AttributeTest extends BaseContainerTest
         $builder->useAttributes(true);
         $builder->addDefinitions([
             'foo' => 'bar',
-            'lazyService' => autowire(\stdClass::class)->lazy(),
-            'attribute' => create(\stdClass::class),
+            'lazyService' => autowire(stdClass::class)->lazy(),
+            'attribute' => create(stdClass::class),
         ]);
         $container = $builder->build();
 
         $object = $container->get(ConstructorInjection::class);
 
-        self::assertEquals(new \stdClass, $object->typedValue);
-        self::assertEquals(new \stdClass, $object->typedOptionalValue);
+        self::assertEquals(new stdClass, $object->typedValue);
+        self::assertEquals(new stdClass, $object->typedOptionalValue);
         self::assertEquals('bar', $object->value);
-        self::assertInstanceOf(\stdClass::class, $object->lazyService);
+        self::assertInstanceOf(stdClass::class, $object->lazyService);
         self::assertInstanceOf(LazyLoadingInterface::class, $object->lazyService);
         self::assertFalse($object->lazyService->isProxyInitialized());
         self::assertSame($container->get('attribute'), $object->attribute);
@@ -119,6 +120,7 @@ class AttributeTest extends BaseContainerTest
 namespace DI\Test\IntegrationTest\Definitions\AttributesTest;
 
 use DI\Attribute\Inject;
+use DI\Zeal\ProxyManager\Proxy\LazyLoadingInterface;
 use stdClass;
 
 class NonAnnotatedClass
@@ -140,7 +142,7 @@ class ConstructorInjection
     public string $scalarValue;
     public stdClass $typedValue;
     public ?stdClass $typedOptionalValue;
-    /** @var stdClass&\ProxyManager\Proxy\LazyLoadingInterface */
+    /** @var stdClass&LazyLoadingInterface */
     public $lazyService;
     public stdClass $attribute;
     public string $optionalValue;
@@ -149,11 +151,11 @@ class ConstructorInjection
     public function __construct(
         $value,
         string $scalarValue,
-        \stdClass $typedValue,
-        \stdClass $typedOptionalValue = null,
-        \stdClass $lazyService,
+        stdClass $typedValue,
+        stdClass $typedOptionalValue = null,
+        stdClass $lazyService,
         #[Inject('attribute')]
-        \stdClass $attribute,
+        stdClass $attribute,
         string $optionalValue = 'hello'
     ) {
         $this->value = $value;
@@ -184,7 +186,7 @@ class MethodInjection
     public $scalarValue;
     public $typedValue;
     public $typedOptionalValue;
-    /** @var \ProxyManager\Proxy\LazyLoadingInterface */
+    /** @var LazyLoadingInterface */
     public $lazyService;
     public stdClass $attribute;
     public $optionalValue;
@@ -194,8 +196,8 @@ class MethodInjection
         $value,
         string $scalarValue,
         $untypedValue,
-        \stdClass $typedOptionalValue = null,
-        \stdClass $lazyService,
+        stdClass $typedOptionalValue = null,
+        stdClass $lazyService,
         #[Inject('attribute')]
         stdClass $attribute,
         $optionalValue = 'hello'

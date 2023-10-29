@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace DI\Definition;
 
-use Psr\Container\ContainerInterface;
+use DI\Zeal\Psr\Container\ContainerInterface;
 
 /**
  * Definition of a value for dependency injection.

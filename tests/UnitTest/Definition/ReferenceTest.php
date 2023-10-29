@@ -7,7 +7,7 @@ namespace DI\Test\UnitTest\Definition;
 use DI\Definition\Reference;
 use EasyMock\EasyMock;
 use PHPUnit\Framework\TestCase;
-use Psr\Container\ContainerInterface;
+use DI\Zeal\Psr\Container\ContainerInterface;
 
 /**
  * @covers \DI\Definition\Reference

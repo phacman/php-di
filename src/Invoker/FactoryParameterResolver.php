@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace DI\Invoker;
 
-use Invoker\ParameterResolver\ParameterResolver;
-use Psr\Container\ContainerInterface;
+use DI\Zeal\Invoker\ParameterResolver;
+use DI\Zeal\Psr\Container\ContainerInterface;
 use ReflectionFunctionAbstract;
 use ReflectionNamedType;
 
@@ -54,7 +54,7 @@ class FactoryParameterResolver implements ParameterResolver
 
             $parameterClass = $parameterType->getName();
 
-            if ($parameterClass === 'Psr\Container\ContainerInterface') {
+            if ($parameterClass === 'DI\Zeal\Psr\Container\ContainerInterface') {
                 $resolvedParameters[$index] = $this->container;
             } elseif ($parameterClass === 'DI\Factory\RequestedEntry') {
                 // By convention the second parameter is the definition

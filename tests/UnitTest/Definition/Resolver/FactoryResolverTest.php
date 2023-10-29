@@ -13,7 +13,7 @@ use DI\Test\UnitTest\Definition\Resolver\Fixture\FixtureClass;
 use DI\Test\UnitTest\Definition\Resolver\Fixture\NoConstructor;
 use EasyMock\EasyMock;
 use PHPUnit\Framework\TestCase;
-use Psr\Container\ContainerInterface;
+use DI\Zeal\Psr\Container\ContainerInterface;
 use DI\Definition\Exception\InvalidDefinition;
 
 /**

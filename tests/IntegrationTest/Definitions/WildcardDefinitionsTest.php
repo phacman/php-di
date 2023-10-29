@@ -11,6 +11,8 @@ use DI\Test\IntegrationTest\Fixtures\Implementation1;
 use DI\Test\IntegrationTest\Fixtures\Implementation2;
 use DI\Test\IntegrationTest\Fixtures\Interface1;
 use DI\Test\IntegrationTest\Fixtures\Interface2;
+use function DI\autowire;
+use function DI\create;
 
 /**
  * Test definitions using wildcards.
@@ -24,7 +26,7 @@ class WildcardDefinitionsTest extends BaseContainerTest
     {
         $builder->addDefinitions([
             'foo*' => 'bar',
-            'DI\Test\IntegrationTest\*\Interface*' => \DI\create('DI\Test\IntegrationTest\*\Implementation*'),
+            'DI\Test\IntegrationTest\*\Interface*' => create('DI\Test\IntegrationTest\*\Implementation*'),
         ]);
         $container = $builder->build();
 
@@ -44,7 +46,7 @@ class WildcardDefinitionsTest extends BaseContainerTest
     public function test_wildcard_with_static_name(ContainerBuilder $builder)
     {
         $builder->addDefinitions([
-            'DI\Test\IntegrationTest\*\Interface*' => \DI\create(Implementation1::class),
+            'DI\Test\IntegrationTest\*\Interface*' => create(Implementation1::class),
         ]);
         $container = $builder->build();
 
@@ -60,7 +62,7 @@ class WildcardDefinitionsTest extends BaseContainerTest
     public function test_wildcards_autowire(ContainerBuilder $builder)
     {
         $builder->addDefinitions([
-            'DI\Test\IntegrationTest\*\Interface*' => \DI\autowire('DI\Test\IntegrationTest\*\Implementation*'),
+            'DI\Test\IntegrationTest\*\Interface*' => autowire('DI\Test\IntegrationTest\*\Implementation*'),
         ]);
         $container = $builder->build();
 
@@ -78,7 +80,7 @@ class WildcardDefinitionsTest extends BaseContainerTest
     public function test_wildcards_autowire_with_dependency(ContainerBuilder $builder)
     {
         $builder->addDefinitions([
-            'DI\Test\IntegrationTest\*\Interface*' => \DI\autowire('DI\Test\IntegrationTest\*\Implementation*'),
+            'DI\Test\IntegrationTest\*\Interface*' => autowire('DI\Test\IntegrationTest\*\Implementation*'),
         ]);
         $container = $builder->build();
 
@@ -101,7 +103,7 @@ class WildcardDefinitionsTest extends BaseContainerTest
     {
         $builder->useAttributes(true);
         $builder->addDefinitions([
-            'DI\Test\IntegrationTest\*\Interface*' => \DI\create('DI\Test\IntegrationTest\*\Implementation*'),
+            'DI\Test\IntegrationTest\*\Interface*' => create('DI\Test\IntegrationTest\*\Implementation*'),
         ]);
         $container = $builder->build();
 

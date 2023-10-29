@@ -6,6 +6,7 @@ namespace DI\Attribute;
 
 use Attribute;
 use DI\Definition\Exception\InvalidAttribute;
+use const JSON_THROW_ON_ERROR;
 
 /**
  * #[Inject] attribute.
@@ -47,7 +48,7 @@ final class Inject
                 if (! is_string($value)) {
                     throw new InvalidAttribute(sprintf(
                         "#[Inject(['param' => 'value'])] expects \"value\" to be a string, %s given.",
-                        json_encode($value, \JSON_THROW_ON_ERROR)
+                        json_encode($value, JSON_THROW_ON_ERROR)
                     ));
                 }
 

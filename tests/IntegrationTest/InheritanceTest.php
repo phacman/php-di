@@ -8,6 +8,8 @@ use DI\ContainerBuilder;
 use DI\Test\IntegrationTest\Fixtures\InheritanceTest\BaseClass;
 use DI\Test\IntegrationTest\Fixtures\InheritanceTest\Dependency;
 use DI\Test\IntegrationTest\Fixtures\InheritanceTest\SubClass;
+use function DI\create;
+use function DI\get;
 
 /**
  * Test class for bean injection.
@@ -24,17 +26,17 @@ class InheritanceTest extends BaseContainerTest
         $builder->useAutowiring(false);
         $builder->useAttributes(false);
         $builder->addDefinitions([
-            Dependency::class => \DI\create(),
-            BaseClass::class => \DI\create(SubClass::class)
-                ->property('property1', \DI\get(Dependency::class))
-                ->property('property4', \DI\get(Dependency::class))
-                ->constructor(\DI\get(Dependency::class))
-                ->method('setProperty2', \DI\get(Dependency::class)),
-            SubClass::class => \DI\create()
-                ->property('property1', \DI\get(Dependency::class))
-                ->property('property4', \DI\get(Dependency::class))
-                ->constructor(\DI\get(Dependency::class))
-                ->method('setProperty2', \DI\get(Dependency::class)),
+            Dependency::class => create(),
+            BaseClass::class => create(SubClass::class)
+                ->property('property1', get(Dependency::class))
+                ->property('property4', get(Dependency::class))
+                ->constructor(get(Dependency::class))
+                ->method('setProperty2', get(Dependency::class)),
+            SubClass::class => create()
+                ->property('property1', get(Dependency::class))
+                ->property('property4', get(Dependency::class))
+                ->constructor(get(Dependency::class))
+                ->method('setProperty2', get(Dependency::class)),
         ]);
 
         /** @var $instance SubClass */
@@ -56,7 +58,7 @@ class InheritanceTest extends BaseContainerTest
         $builder->useAutowiring(true);
         $builder->useAttributes(true);
         $builder->addDefinitions([
-            BaseClass::class => \DI\get(SubClass::class),
+            BaseClass::class => get(SubClass::class),
         ]);
 
         /** @var $instance SubClass */
@@ -78,17 +80,17 @@ class InheritanceTest extends BaseContainerTest
         $builder->useAutowiring(false);
         $builder->useAttributes(false);
         $builder->addDefinitions([
-            Dependency::class => \DI\create(),
-            BaseClass::class => \DI\create(SubClass::class)
-                ->property('property1', \DI\get(Dependency::class))
-                ->property('property4', \DI\get(Dependency::class))
-                ->constructor(\DI\get(Dependency::class))
-                ->method('setProperty2', \DI\get(Dependency::class)),
-            SubClass::class => \DI\create()
-                ->property('property1', \DI\get(Dependency::class))
-                ->property('property4', \DI\get(Dependency::class))
-                ->constructor(\DI\get(Dependency::class))
-                ->method('setProperty2', \DI\get(Dependency::class)),
+            Dependency::class => create(),
+            BaseClass::class => create(SubClass::class)
+                ->property('property1', get(Dependency::class))
+                ->property('property4', get(Dependency::class))
+                ->constructor(get(Dependency::class))
+                ->method('setProperty2', get(Dependency::class)),
+            SubClass::class => create()
+                ->property('property1', get(Dependency::class))
+                ->property('property4', get(Dependency::class))
+                ->constructor(get(Dependency::class))
+                ->method('setProperty2', get(Dependency::class)),
         ]);
 
         /** @var $instance SubClass */
@@ -110,7 +112,7 @@ class InheritanceTest extends BaseContainerTest
         $builder->useAutowiring(true);
         $builder->useAttributes(true);
         $builder->addDefinitions([
-            BaseClass::class => \DI\get(SubClass::class),
+            BaseClass::class => get(SubClass::class),
         ]);
 
         /** @var $instance SubClass */

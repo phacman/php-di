@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace DI;
 
+use Closure;
 use DI\Definition\Definition;
 use DI\Definition\Exception\InvalidDefinition;
 use DI\Definition\FactoryDefinition;
@@ -19,15 +20,18 @@ use DI\Definition\Source\SourceChain;
 use DI\Definition\ValueDefinition;
 use DI\Invoker\DefinitionParameterResolver;
 use DI\Proxy\ProxyFactory;
+use DI\Zeal\Invoker\AssociativeArrayResolver;
+use DI\Zeal\Invoker\DefaultValueResolver;
+use DI\Zeal\Invoker\InvocationException;
+use DI\Zeal\Invoker\Invoker;
+use DI\Zeal\Invoker\InvokerInterface;
+use DI\Zeal\Invoker\NotCallableException;
+use DI\Zeal\Invoker\NotEnoughParametersException;
+use DI\Zeal\Invoker\NumericArrayResolver;
+use DI\Zeal\Invoker\ResolverChain;
+use DI\Zeal\Invoker\TypeHintContainerResolver;
+use DI\Zeal\Psr\Container\ContainerInterface;
 use InvalidArgumentException;
-use Invoker\Invoker;
-use Invoker\InvokerInterface;
-use Invoker\ParameterResolver\AssociativeArrayResolver;
-use Invoker\ParameterResolver\Container\TypeHintContainerResolver;
-use Invoker\ParameterResolver\DefaultValueResolver;
-use Invoker\ParameterResolver\NumericArrayResolver;
-use Invoker\ParameterResolver\ResolverChain;
-use Psr\Container\ContainerInterface;
 
 /**
  * Dependency Injection Container.
@@ -231,16 +235,14 @@ class Container implements ContainerInterface, FactoryInterface, InvokerInterfac
     /**
      * Call the given function using the given parameters.
      *
-     * Missing parameters will be resolved from the container.
-     *
      * @param callable|array|string $callable Function to call.
-     * @param array    $parameters Parameters to use. Can be indexed by the parameter names
-     *                             or not indexed (same order as the parameters).
-     *                             The array can also contain DI definitions, e.g. DI\get().
-     *
+     * @param array $parameters Parameters to use.
      * @return mixed Result of the function.
+     * @throws InvocationException Base exception class for all the sub-exceptions below.
+     * @throws NotCallableException
+     * @throws NotEnoughParametersException
      */
-    public function call($callable, array $parameters = []) : mixed
+    public function call(callable|array|string $callable, array $parameters = []) : mixed
     {
         return $this->getInvoker()->call($callable, $parameters);
     }
@@ -255,7 +257,7 @@ class Container implements ContainerInterface, FactoryInterface, InvokerInterfac
     {
         if ($value instanceof DefinitionHelper) {
             $value = $value->getDefinition($name);
-        } elseif ($value instanceof \Closure) {
+        } elseif ($value instanceof Closure) {
             $value = new FactoryDefinition($name, $value);
         }
 

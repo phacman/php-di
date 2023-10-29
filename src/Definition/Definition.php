@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace DI\Definition;
 
 use DI\Factory\RequestedEntry;
+use Stringable;
 
 /**
  * Definition.
@@ -13,7 +14,7 @@ use DI\Factory\RequestedEntry;
  *
  * @author Matthieu Napoli <matthieu@mnapoli.fr>
  */
-interface Definition extends RequestedEntry, \Stringable
+interface Definition extends RequestedEntry, Stringable
 {
     /**
      * Returns the name of the entry in the container.

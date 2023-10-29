@@ -10,9 +10,11 @@ use DI\Definition\ObjectDefinition;
 use DI\Definition\Resolver\ArrayResolver;
 use DI\Definition\Resolver\DefinitionResolver;
 use EasyMock\EasyMock;
+use Exception;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use DI\DependencyException;
+use stdClass;
 
 /**
  * @covers \DI\Definition\Resolver\ArrayResolver
@@ -57,7 +59,7 @@ class ArrayResolverTest extends TestCase
                 [$this->isInstanceOf(Reference::class)],
                 [$this->isInstanceOf(ObjectDefinition::class)]
             )
-            ->willReturnOnConsecutiveCalls(42, new \stdClass());
+            ->willReturnOnConsecutiveCalls(42, new stdClass());
 
         $definition = new ArrayDefinition([
             'bar',
@@ -67,7 +69,7 @@ class ArrayResolverTest extends TestCase
 
         $value = $this->resolver->resolve($definition);
 
-        $this->assertEquals(['bar', 42, new \stdClass()], $value);
+        $this->assertEquals(['bar', 42, new stdClass()], $value);
     }
 
     /**
@@ -93,7 +95,7 @@ class ArrayResolverTest extends TestCase
         $this->expectExceptionMessage('Error while resolving foo[0]. This is a message');
         $this->parentResolver->expects($this->once())
             ->method('resolve')
-            ->willThrowException(new \Exception('This is a message'));
+            ->willThrowException(new Exception('This is a message'));
 
         $definition = new ArrayDefinition([
             new Reference('bar'),

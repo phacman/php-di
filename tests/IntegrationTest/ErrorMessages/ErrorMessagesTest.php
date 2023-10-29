@@ -9,6 +9,8 @@ use DI\Definition\Exception\InvalidDefinition;
 use DI\Test\IntegrationTest\BaseContainerTest;
 use function DI\autowire;
 use DI\DependencyException;
+use function DI\create;
+use function DI\factory;
 
 /**
  * Test error messages.
@@ -56,7 +58,7 @@ MESSAGE;
         $this->expectExceptionMessage($message);
 
         $builder->addDefinitions([
-            'Acme\Foo\Bar\Bar' => \DI\create(),
+            'Acme\Foo\Bar\Bar' => create(),
         ]);
 
         $builder->build()->get('Acme\Foo\Bar\Bar');
@@ -161,7 +163,7 @@ MESSAGE;
         $this->expectException(InvalidDefinition::class);
         $this->expectExceptionMessage('Entry "foo" cannot be resolved: factory \'bar\' is neither a callable nor a valid container entry');
         $builder->addDefinitions([
-            'foo' => \DI\factory('bar'),
+            'foo' => factory('bar'),
         ]);
         $builder->build()->get('foo');
     }

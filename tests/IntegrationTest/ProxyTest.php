@@ -8,7 +8,9 @@ use DI\ContainerBuilder;
 use DI\Test\IntegrationTest\Fixtures\LazyDependency;
 use DI\Test\IntegrationTest\Fixtures\ProxyTest\A;
 use DI\Test\IntegrationTest\Fixtures\ProxyTest\B;
-use ProxyManager\Proxy\LazyLoadingInterface;
+use DI\Zeal\ProxyManager\Proxy\LazyLoadingInterface;
+use function DI\create;
+use function DI\get;
 
 /**
  * Test lazy injections with proxies.
@@ -23,7 +25,7 @@ class ProxyTest extends BaseContainerTest
     {
         $builder->useAutowiring(false);
         $builder->addDefinitions([
-            'foo' => \DI\create(LazyDependency::class)
+            'foo' => create(LazyDependency::class)
                 ->lazy(),
         ]);
 
@@ -40,7 +42,7 @@ class ProxyTest extends BaseContainerTest
     {
         $builder->useAutowiring(false);
         $builder->addDefinitions([
-            'foo' => \DI\create(LazyDependency::class)
+            'foo' => create(LazyDependency::class)
                 ->lazy(),
         ]);
         $container = $builder->build();
@@ -62,10 +64,10 @@ class ProxyTest extends BaseContainerTest
     {
         $builder->useAutowiring(false);
         $builder->addDefinitions([
-            'A' => \DI\create(A::class)
-                ->constructor(\DI\get('B'))
+            'A' => create(A::class)
+                ->constructor(get('B'))
                 ->lazy(),
-            'B' => \DI\create(B::class),
+            'B' => create(B::class),
         ]);
         $container = $builder->build();
 

@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace DI\Test\IntegrationTest;
 
+use stdClass;
 use function DI\autowire;
 use DI\ContainerBuilder;
 use function DI\create;
@@ -84,8 +85,8 @@ class CompiledContainerTest extends BaseContainerTest
         $this->expectExceptionMessage('Entry "stdClass" cannot be compiled: An object was found but objects cannot be compiled');
         $builder = new ContainerBuilder;
         $builder->addDefinitions([
-            \stdClass::class => create()
-                ->property('foo', new \stdClass),
+            stdClass::class => create()
+                ->property('foo', new stdClass),
         ]);
         $builder->enableCompilation(self::COMPILATION_DIR, self::generateCompiledClassName());
         $builder->build();
@@ -103,7 +104,7 @@ class CompiledContainerTest extends BaseContainerTest
             'foo' => [
                 'bar' => [
                     'baz' => [
-                        new \stdClass,
+                        new stdClass,
                     ],
                 ],
             ],
@@ -122,7 +123,7 @@ class CompiledContainerTest extends BaseContainerTest
         $builder = new ContainerBuilder;
         $builder->enableCompilation(self::COMPILATION_DIR, self::generateCompiledClassName());
         $builder->addDefinitions([
-            'foo' => create(\stdClass::class),
+            'foo' => create(stdClass::class),
         ]);
         $container = $builder->build();
 
@@ -167,7 +168,7 @@ class CompiledContainerTest extends BaseContainerTest
         $builder->enableCompilation(self::COMPILATION_DIR, self::generateCompiledClassName());
         $builder->writeProxiesToFile(true, self::COMPILATION_DIR);
         $builder->addDefinitions([
-          'foo' => create(\stdClass::class)->lazy(),
+          'foo' => create(stdClass::class)->lazy(),
           'bar' => autowire(CompiledContainerTest\ConstructorWithAbstractClassTypehint::class)->lazy(),
         ]);
         $builder->build();
@@ -237,12 +238,15 @@ MESSAGE;
 
 namespace DI\Test\IntegrationTest\CompiledContainerTest;
 
+use DI\Container;
+use stdClass;
+
 class Property
 {
     public $foo;
 }
 
-class CustomParentContainer extends \DI\Container
+class CustomParentContainer extends Container
 {
 }
 
@@ -256,7 +260,7 @@ class ConstructorWithTypehint
 
 class ConstructorWithAnotherTypehint
 {
-    public function __construct(\stdClass $param)
+    public function __construct(stdClass $param)
     {
 
     }

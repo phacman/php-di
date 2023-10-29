@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace DI\Test\IntegrationTest;
 
 use DI\ContainerBuilder;
-use Psr\Container\NotFoundExceptionInterface;
-use Psr\Container\ContainerExceptionInterface;
+use DI\Zeal\Psr\Container\NotFoundExceptionInterface;
+use DI\Zeal\Psr\Container\ContainerExceptionInterface;
 use DI\Test\IntegrationTest\Fixtures\Class1;
 
 class ContainerPsrCompatabilityTest extends BaseContainerTest

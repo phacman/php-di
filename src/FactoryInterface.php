@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace DI;
 
+use InvalidArgumentException;
+
 /**
  * Describes the basic interface of a factory.
  *
@@ -22,7 +24,7 @@ interface FactoryInterface
      *                           parameters to specific values. Parameters not defined in this array will
      *                           be automatically resolved.
      *
-     * @throws \InvalidArgumentException The name parameter must be of type string.
+     * @throws InvalidArgumentException The name parameter must be of type string.
      * @throws DependencyException       Error while resolving the entry.
      * @throws NotFoundException         No entry or class found for the given name.
      */
