@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace DI\Definition;
 
-use DI\Zeal\Psr\Container\ContainerInterface;
+use Psr\Container\ContainerInterface;
 
 /**
  * Represents a reference to another entry.

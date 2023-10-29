@@ -3,7 +3,7 @@
 declare(strict_types=1);
 use DI\Test\PerformanceTest\Get\A;
 use DI\Test\PerformanceTest\Get\B;
-use DI\Zeal\Psr\Container\ContainerInterface;
+use Psr\Container\ContainerInterface;
 use function DI\autowire;
 use function DI\create;
 use function DI\factory;

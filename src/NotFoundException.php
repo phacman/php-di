@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace DI;
 
-use DI\Zeal\Psr\Container\NotFoundExceptionInterface;
 use Exception;
+use Psr\Container\NotFoundExceptionInterface;
 
 /**
  * Exception thrown when a class or a value is not found in the container.

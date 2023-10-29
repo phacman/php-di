@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-use DI\Zeal\Psr\Container\ContainerInterface;
+use Psr\Container\ContainerInterface;
 
 return [
 

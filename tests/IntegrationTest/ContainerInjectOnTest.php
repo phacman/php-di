@@ -11,7 +11,7 @@ use DI\Test\IntegrationTest\Fixtures\Class2;
 use DI\Test\IntegrationTest\Fixtures\Implementation1;
 use DI\Test\IntegrationTest\Fixtures\Interface1;
 use DI\Test\IntegrationTest\Fixtures\LazyDependency;
-use DI\Zeal\ProxyManager\Proxy\LazyLoadingInterface;
+use ProxyManager\Proxy\LazyLoadingInterface;
 use stdClass;
 use function DI\create;
 use function DI\get;

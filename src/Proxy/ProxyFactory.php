@@ -5,12 +5,12 @@ declare(strict_types=1);
 namespace DI\Proxy;
 
 use Closure;
-use DI\Zeal\ProxyManager\Configuration;
-use DI\Zeal\ProxyManager\Factory\LazyLoadingValueHolderFactory;
-use DI\Zeal\ProxyManager\FileLocator\FileLocator;
-use DI\Zeal\ProxyManager\GeneratorStrategy\EvaluatingGeneratorStrategy;
-use DI\Zeal\ProxyManager\GeneratorStrategy\FileWriterGeneratorStrategy;
-use DI\Zeal\ProxyManager\Proxy\LazyLoadingInterface;
+use ProxyManager\Configuration;
+use ProxyManager\Factory\LazyLoadingValueHolderFactory;
+use ProxyManager\FileLocator\FileLocator;
+use ProxyManager\GeneratorStrategy\EvaluatingGeneratorStrategy;
+use ProxyManager\GeneratorStrategy\FileWriterGeneratorStrategy;
+use ProxyManager\Proxy\LazyLoadingInterface;
 use RuntimeException;
 
 /**

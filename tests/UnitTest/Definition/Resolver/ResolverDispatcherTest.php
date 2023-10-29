@@ -11,7 +11,7 @@ use DI\Definition\ValueDefinition;
 use DI\Proxy\ProxyFactory;
 use EasyMock\EasyMock;
 use PHPUnit\Framework\TestCase;
-use DI\Zeal\Psr\Container\ContainerInterface;
+use Psr\Container\ContainerInterface;
 
 /**
  * @covers \DI\Definition\Resolver\ResolverDispatcher

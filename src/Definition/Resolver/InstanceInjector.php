@@ -7,7 +7,7 @@ namespace DI\Definition\Resolver;
 use DI\Definition\Definition;
 use DI\Definition\InstanceDefinition;
 use DI\DependencyException;
-use DI\Zeal\Psr\Container\NotFoundExceptionInterface;
+use Psr\Container\NotFoundExceptionInterface;
 
 /**
  * Injects dependencies on an existing instance.

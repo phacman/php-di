@@ -14,10 +14,10 @@ use DI\Definition\Source\ReflectionBasedAutowiring;
 use DI\Definition\Source\SourceCache;
 use DI\Definition\Source\SourceChain;
 use DI\Proxy\ProxyFactory;
-use DI\Zeal\Psr\Container\ContainerInterface;
 use Exception;
 use InvalidArgumentException;
 use LogicException;
+use Psr\Container\ContainerInterface;
 
 /**
  * Helper to create and configure a Container.

@@ -5,9 +5,9 @@ declare(strict_types=1);
 namespace DI\Definition\Exception;
 
 use DI\Definition\Definition;
-use DI\Zeal\Psr\Container\ContainerExceptionInterface;
 use Exception;
 use const PHP_EOL;
+use Psr\Container\ContainerExceptionInterface;
 
 /**
  * Invalid DI definitions.

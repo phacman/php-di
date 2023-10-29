@@ -14,7 +14,7 @@ use DI\Definition\InstanceDefinition;
 use DI\Definition\ObjectDefinition;
 use DI\Definition\SelfResolvingDefinition;
 use DI\Proxy\ProxyFactory;
-use DI\Zeal\Psr\Container\ContainerInterface;
+use Psr\Container\ContainerInterface;
 use RuntimeException;
 
 /**

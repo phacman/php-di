@@ -8,7 +8,7 @@ use DI\ContainerBuilder;
 use DI\Test\IntegrationTest\Fixtures\LazyDependency;
 use DI\Test\IntegrationTest\Fixtures\ProxyTest\A;
 use DI\Test\IntegrationTest\Fixtures\ProxyTest\B;
-use DI\Zeal\ProxyManager\Proxy\LazyLoadingInterface;
+use ProxyManager\Proxy\LazyLoadingInterface;
 use function DI\create;
 use function DI\get;
 

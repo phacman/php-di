@@ -8,14 +8,14 @@ use DI\Compiler\RequestedEntryHolder;
 use DI\Definition\Definition;
 use DI\Definition\Exception\InvalidDefinition;
 use DI\Invoker\FactoryParameterResolver;
-use DI\Zeal\Invoker\AssociativeArrayResolver;
-use DI\Zeal\Invoker\DefaultValueResolver;
-use DI\Zeal\Invoker\Invoker;
-use DI\Zeal\Invoker\InvokerInterface;
-use DI\Zeal\Invoker\NotCallableException;
-use DI\Zeal\Invoker\NotEnoughParametersException;
-use DI\Zeal\Invoker\NumericArrayResolver;
-use DI\Zeal\Invoker\ResolverChain;
+use Invoker\Exception\NotCallableException;
+use Invoker\Exception\NotEnoughParametersException;
+use Invoker\Invoker;
+use Invoker\InvokerInterface;
+use Invoker\ParameterResolver\AssociativeArrayResolver;
+use Invoker\ParameterResolver\DefaultValueResolver;
+use Invoker\ParameterResolver\NumericArrayResolver;
+use Invoker\ParameterResolver\ResolverChain;
 use LogicException;
 
 /**
