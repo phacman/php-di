@@ -1,0 +1,2121 @@
+Matthieu Napoli (1608):
+      2012-03-18 03:58:21 | fa405d4a | First commit
+      2012-03-18 03:59:06 | 5bdd0473 | Ignored files
+      2012-03-18 04:01:23 | ae9db208 | Deleted unnecessary library
+      2012-03-18 04:06:07 | 68ada10b | Readme
+      2012-03-18 04:18:25 | 73e1e658 | Readme
+      2012-03-18 04:19:40 | 70ebade0 | Readme
+      2012-03-20 03:36:23 | f9a3da90 | Added Factory and Singleton strategy
+      2012-03-22 17:39:58 | ca57564a | Injection with explicit type specification
+      2012-03-22 17:43:51 | a8281374 | Readme
+      2012-03-24 18:52:18 | 9ced862a | Implementation mapping
+      2012-09-04 01:18:20 | 440b4874 | Added tests and better naming
+      2012-09-04 22:53:21 | 4f455317 | Added travis-ci support
+      2012-09-04 22:55:06 | 6b15ad14 | Added travis-ci support
+      2012-09-04 22:57:32 | 3e25c7c9 | Added travis-ci support
+      2012-09-04 23:03:47 | 397cd10a | Added travis-ci support
+      2012-09-04 23:10:20 | 58327346 | Added test
+      2012-09-04 23:20:03 | 90b662ec | Changed directory layout and used Composer autoloader
+      2012-09-04 23:24:56 | 6a9b7c52 | Changed directory layout and used Composer autoloader
+      2012-09-04 23:25:45 | 2085e3a2 | Ignored file
+      2012-09-04 23:26:21 | bdb73bce | Ignored file
+      2012-09-04 23:36:07 | 0d0b3ee5 | Fixed travis-ci configuration
+      2012-09-05 01:11:33 | 67adef61 | Possibility to define instance to be injected for a specific type at runtime
+      2012-09-05 01:19:08 | d350657c | Changing case on directory
+      2012-09-05 01:19:47 | de4575f1 | Changing case on directory
+      2012-09-05 01:33:10 | ecbd0a12 | Changed tests layout, used autoloading
+      2012-09-06 01:48:05 | 21c4ea94 | Readme
+      2012-09-06 01:48:25 | a412d504 | Parameter name and description fixed
+      2012-09-07 00:13:08 | d9edee0a | Readme
+      2012-09-07 20:57:01 | 9a3a4e69 | Fixed build
+      2012-09-08 03:07:16 | 3ba5c4c8 | Proxy class #2
+      2012-09-09 02:55:51 | c368ef0c | Tests for proxy class, #2
+      2012-09-10 01:58:38 | d81fc067 | Better organisation of the project and added Tests
+      2012-09-10 02:02:30 | 90c43dd3 | Readme
+      2012-09-10 13:46:17 | 23e77434 | @Value annotation, issue #4
+      2012-09-19 20:14:29 | 9351d512 | Lazy @Inject (proxy class), issue #2
+      2012-09-29 21:04:09 | d51a5e28 | Excluded file from distribution package
+      2012-09-29 21:21:27 | 36c33751 | Refactored tests namespaces, issue #3
+      2012-09-29 22:16:51 | 7199cf9d | Wiki link (tag: 0.9.0)
+      2012-09-30 00:29:01 | 68860767 | Renamed DependencyManager into Container, #8
+      2012-09-30 13:34:34 | 5c8f5d5d | Named injection: @Inject(name=""), #5
+      2012-09-30 13:44:31 | 8a28a3d6 | ValueInjector for consistency
+      2012-09-30 13:52:27 | a67ec7e3 | Rename Container::addInstancesMapping and create Container::addBean, #10
+      2012-09-30 14:21:35 | 02845abb | Readme link
+      2012-10-06 05:04:24 | cf2d4f28 | Heavy refactoring, removed factories, simplified the API, ref #13
+      2012-10-06 15:32:26 | 80d43502 | Readme
+      2012-10-06 15:32:57 | 72cdc5d3 | Readme
+      2012-10-06 15:35:10 | 73ae6029 | Readme (tag: 1.0.0)
+      2012-10-06 15:38:44 | 54aafdb5 | Ignore file
+      2012-10-07 02:27:00 | ecf4a248 | Fixes #15 - benches
+      2012-10-09 01:05:48 | a784e60a | composer.json
+      2012-10-10 00:08:55 | 815a672a | Readme
+      2012-10-16 01:31:35 | 0204e5a2 | Documentation
+      2012-10-16 12:15:59 | 2dcec4b3 | Readme
+      2012-10-16 12:19:42 | cb44e474 | Readme
+      2012-10-20 00:52:07 | 5a9e195f | Fixed issue 14 + test
+      2012-10-22 18:40:44 | 2d7c86b6 | Documentation
+      2012-10-22 19:03:31 | 76085ef2 | Gh-pages template
+      2012-10-22 19:07:28 | 01036e2c | Website template
+      2012-10-22 19:38:58 | 65572ca7 | Website template
+      2012-10-22 19:47:13 | c20fad83 | Website template
+      2012-10-23 01:25:28 | 5d890ed2 | Website template
+      2012-10-23 18:20:14 | 288c45dd | Tests reorganisation
+      2012-10-23 18:21:18 | 01712a51 | Homepage link
+      2012-10-23 18:27:56 | e3f5d3a3 | Homepage example
+      2012-10-25 15:22:16 | ffdb0929 | Fixed link
+      2012-10-26 23:39:38 | 2769024a | Issue #20, added Zend Framework support with base controller class (tag: 1.0.1)
+      2012-10-26 23:52:05 | 630a165b | Removed dependency to unstable package: Composer doesn't like that (tag: 1.0.2)
+      2012-10-26 23:58:44 | 5aeecd1a | Fixed #20 - Zend Framework integration (tag: 1.0.3)
+      2012-10-27 00:28:45 | b3c6bc80 | Merge branch '1.0'
+      2012-10-27 01:03:33 | 97f43e63 | Documentation and ZF integration
+      2012-10-27 01:06:00 | ee570a6e | Documentation
+      2012-10-27 01:09:56 | 8206c2d8 | Documentation
+      2012-10-27 01:13:49 | b1d9f7c6 | Documentation
+      2012-10-28 00:23:41 | e6795754 | Renamed Container::addClassAlias to setClassAlias
+      2012-10-28 12:13:42 | ce8ec2c2 | #6 allow use of a cache for Doctrine annotations
+      2012-10-28 12:16:07 | 063374af | Documentation
+      2012-10-28 12:17:42 | b2dffae7 | Documentation
+      2012-10-28 14:35:58 | 31eb72cd | Fixes #6
+      2012-11-01 16:57:26 | 4637bc25 | Added tests for inheritance situation
+      2012-11-01 22:00:20 | 35989aea | Refactoring, first step to #16
+      2012-11-01 22:58:32 | 600096eb | Cache #16
+      2012-11-02 01:26:46 | 45124e86 | Cache documentation #16
+      2012-11-02 01:30:35 | 278801b8 | Cache documentation #16
+      2012-11-02 01:35:39 | e5e22cff | Change log
+      2012-11-02 01:37:00 | 3550f3e2 | Documentation
+      2012-11-02 01:37:39 | 4511b79f | Change log (tag: 1.1.0)
+      2012-11-04 15:20:57 | 7800ab97 | Documentation
+      2012-11-04 15:23:36 | bbdb47aa | Comment
+      2012-11-10 14:36:06 | e8b4f1da | Documentation
+      2012-11-26 23:47:49 | 10bf1d22 | #23 Changed license to MIT License
+      2012-11-27 00:10:13 | 59989527 | Added test case
+      2012-11-27 01:17:22 | 136418b2 | Documentation for specifying #12, #19 and #25
+      2012-11-27 21:06:32 | e191c309 | Documentation for specifying #12, #19 and #25
+      2012-11-28 01:30:26 | 6c8257cf | Refactoring of bean declaration, bean injection, type mapping, value injection... #12, #25 and #26
+      2012-11-28 01:31:03 | 67181d71 | Refactoring of bean declaration, bean injection, type mapping, value injection... #12, #25 and #26
+      2012-11-28 01:55:34 | 518c083c | Documentation for #12 and #25
+      2012-11-28 01:59:44 | 6532b48b | 2.0 changelog
+      2012-11-28 02:04:36 | 97d93983 | README improvement
+      2012-11-28 14:18:44 | 285b6a94 | Removed backslashes for FQ class names inside strings
+      2012-11-29 18:47:58 | f6ce48f5 | Documentation update
+      2012-11-29 18:51:58 | db669b2b | Documentation update
+      2012-11-29 18:56:28 | c0c509ed | Documentation update
+      2012-11-29 19:01:06 | c900d113 | Documentation update
+      2012-11-29 19:03:12 | f9cfc426 | Typo
+      2012-11-30 21:13:30 | 08ca6fe1 | Documentation for #12
+      2012-11-30 21:15:53 | 742478bb | Improved documentation of caches
+      2012-11-30 21:29:25 | c8ca0a98 | Documentation for specifying #19
+      2012-12-01 01:32:31 | 3eff4eec | Simple property renaming
+      2012-12-04 00:16:02 | ac53cd77 | #27 Rename resolveDependencies() to injectAll()
+      2012-12-04 01:03:45 | 9740084f | README
+      2012-12-04 02:33:13 | b45ae318 | #24 Dependencies are injected before the constructor is called
+      2012-12-04 02:36:28 | 64ef0f13 | #24 Documentation
+      2012-12-04 02:40:20 | 44a979b2 | #24 Documentation
+      2012-12-04 02:42:10 | 1c538388 | #24 Documentation
+      2012-12-04 02:45:16 | c278ee6f | #24 Documentation
+      2012-12-05 19:55:46 | ef4bf087 | Unresolved "use"
+      2012-12-05 20:05:23 | 042d8598 | Removed #19 from the documentation in 2.0
+      2012-12-05 20:23:35 | 30d7ddc7 | Documentation
+      2012-12-05 20:43:11 | fff1da5e | Useless "use"
+      2012-12-05 20:53:02 | cf6501cf | Website template
+      2012-12-05 20:58:13 | a7757c14 | Website template
+      2012-12-05 21:03:22 | eecac315 | Website template (tag: 2.0.0)
+      2012-12-06 17:12:36 | 7531f4a5 | Added the example in the doc
+      2012-12-09 18:59:04 | 7aebd176 | #32 CONTRIBUTING file
+      2012-12-09 18:59:32 | 0f49ffad | Merge remote-tracking branch 'origin/master'
+      2012-12-09 19:01:10 | aeea2609 | #32 CONTRIBUTING file (tag: 2.0.1)
+      2012-12-26 17:50:21 | c84c3264 | PHP 5.5 support on Travis CI
+      2013-01-23 00:15:45 | 6bef16a2 | Updated dependencies: doctrine/common replaced with doctrine/annotations and doctrine/cache
+      2013-01-23 00:17:44 | f4a0af1e | Changelog: updated dependencies: doctrine/common replaced with doctrine/annotations and doctrine/cache
+      2013-01-23 00:20:16 | 5f7a1bc5 | Changelog: updated dependencies: doctrine/common replaced with doctrine/annotations and doctrine/cache
+      2013-01-27 17:23:14 | 5fde3ace | #1 Use statements are taken into account for class resolution
+      2013-01-29 18:44:20 | 8bdbc9b4 | #30 phpunit configuration file
+      2013-01-29 18:50:40 | 957ec748 | Documentation (tag: 2.1.0)
+      2013-01-30 00:21:55 | 6054ed95 | Documentation
+      2013-01-30 01:02:56 | 88042886 | #34 Setter injection
+      2013-01-30 01:08:25 | 1b92410d | #34 Setter injection
+      2013-01-30 13:14:13 | 5cfcb301 | Merge pull request #37 from potherca/master
+      2013-01-30 14:04:34 | 2f3809b5 | Merge pull request #38 from potherca/develop
+      2013-01-31 23:57:00 | e092b136 | #34 Setter injection - Additional tests
+      2013-01-31 23:57:33 | 6b07fdc3 | Merge remote-tracking branch 'origin/master' into SetterInjection
+      2013-02-01 00:01:10 | 228ba06f | #34 Setter injection - Additional tests
+      2013-02-02 22:59:03 | 94de6ba2 | #34 Setter injection - Documentation
+      2013-03-16 00:56:48 | c558c7c7 | #35 Constructor injection
+      2013-03-16 03:03:44 | 59225399 | #35 Constructor injection - Documentation
+      2013-03-16 03:07:46 | 0fc65e81 | #35 Constructor injection - Fix bugs
+      2013-03-16 03:13:29 | 1e5c302e | Renamed ClassMetadata::getPropertyAnnotations and ClassMetadata::getMethodAnnotations
+      2013-03-16 03:16:13 | 17273b7e | Removed failing tests for non implemented Constructor and Setter lazy injection
+      2013-03-16 03:24:55 | 4348814a | Added unit tests
+      2013-03-16 03:26:20 | ce2312be | Applied scrutinizer-ci advice
+      2013-03-16 03:33:25 | 666d196d | Change log for 3.0
+      2013-03-17 00:30:41 | 54099c7d | Documentation
+      2013-03-17 00:31:56 | afbcc734 | Getting started
+      2013-03-17 00:36:09 | 987749cb | Documentation, #41
+      2013-03-19 17:21:39 | 910e6c86 | Merge pull request #42 from domu1de/scopes
+      2013-03-19 18:10:24 | c923c932 | PhpStorm code reformating
+      2013-03-19 18:14:18 | 7bd72769 | Added Scope enum
+      2013-03-19 18:19:15 | 854a2872 | Problems with merge
+      2013-03-19 18:31:59 | b1d0d2da | Refactored Scope with enum
+      2013-03-19 18:36:14 | bdcea5c1 | Fixed indentation
+      2013-03-21 02:25:39 | 8f3c6635 | Changed dependency from myc-sense/enum to myclabs/enum
+      2013-03-23 01:38:05 | 7e26e6d6 | Merge pull request #44 from domu1de/dev
+      2013-03-23 01:41:11 | 0dba1842 | Fixed exception thrown by Container::get
+      2013-03-23 01:54:42 | 17862ac9 | #46 PSR2 guide style
+      2013-03-23 01:56:53 | 319973bf | #46 PSR2 guide style in the documentation
+      2013-03-23 02:02:52 | 6f31f319 | Preventive fix regarding https://bugs.php.net/bug.php?id=61384 (thanks Scrutinizer-CI)
+      2013-03-23 02:04:35 | af3b1800 | Change log
+      2013-03-23 02:08:19 | af799867 | #39 Fixed documentation links
+      2013-03-23 02:09:02 | 9a3b640f | Preventive fix regarding https://bugs.php.net/bug.php?id=61384 (thanks Scrutinizer-CI)
+      2013-03-23 02:10:56 | 71d64982 | Preventive fix (thanks Scrutinizer-CI)
+      2013-03-23 02:48:01 | b1074c7e | #43 Refactoring of configuration options
+      2013-03-23 02:58:07 | 259ee7f5 | Change log
+      2013-03-23 17:37:28 | e3fa7201 | Merge pull request #47 from domu1de/dev
+      2013-03-23 22:45:54 | 047f4d88 | #43 Refactoring of configuration options
+      2013-03-24 03:07:39 | 91fca008 | Fixed test
+      2013-03-24 04:15:55 | a9266b8a | ref #43 - Refactoring of the configuration - Method injection through annotations
+      2013-03-24 17:27:18 | 6c35c869 | ref #43 - Refactoring of the configuration - Metadata renamed to Definition 2 types of definitions: Value and Class Several definition readers (Annotations, PHP array, YAML...)
+      2013-03-24 19:07:05 | 4b6e20ef | ref #43 - Refactoring of the configuration - ArrayDefinitionReader
+      2013-03-24 19:12:29 | 10f393f5 | Bugfixes
+      2013-03-24 19:50:14 | 9578822b | ref #43 - Refactoring of the configuration - ArrayDefinitionReader
+      2013-03-24 21:04:46 | 3a686024 | ref #43 - Refactoring of the configuration - CombinedDefinitionReader + Definition::merge
+      2013-03-25 01:30:00 | adec5131 | ref #43 - Refactoring of the configuration - Configuration + Container
+      2013-03-25 18:00:34 | 289ca0ee | ref #43 - Refactoring of the configuration - ReflectionReader
+      2013-03-26 00:29:24 | 7fcc1d92 | ref #43 - Refactoring of the configuration - ReflectionDefinitionReader
+      2013-03-26 00:39:37 | edeed262 | ref #43 - Refactoring of the configuration - Removed Container::addConfiguration
+      2013-03-26 02:19:39 | 1019666a | ref #43 - Refactoring of the configuration - Cleared usage of Container::injectAll + Remove performance tests
+      2013-03-26 20:10:10 | 750bd764 | Removed performance tests
+      2013-03-26 21:26:54 | 529f377d | ref #43 - Refactoring of the configuration - Refactored @Inject annotation
+      2013-03-27 01:14:10 | 60a2a8fd | ref #43 - Refactoring of the configuration - Refactored @Inject annotation
+      2013-03-27 22:37:10 | 20e8f926 | Refactored PhpDoc parsing outside of AnnotationDefinitionReader
+      2013-03-28 00:53:16 | e9d93720 | ref #43 - Added closure support in PHP array config
+      2013-03-28 01:02:24 | b6ee88a0 | ref #43 - Rewrote documentation
+      2013-03-28 01:08:38 | 72df79a1 | Merge pull request #49 from mnapoli/ConfigurationRefactoring
+      2013-03-28 01:23:31 | dcfedaf0 | Added @author tags where missing
+      2013-03-28 02:17:51 | 6181eef4 | #50 Renamed DI\Annotations to DI\Annotation
+      2013-03-28 02:19:32 | 77c6ebf6 | #50 Renamed DI\Annotations to DI\Annotation
+      2013-03-28 02:33:53 | 01ade84a | Merge pull request #52 from domu1de/3.0
+      2013-03-28 02:39:02 | 9ebee6f8 | #36 documentation
+      2013-03-28 02:39:22 | df3547da | Merge remote-tracking branch 'origin/3.0' into 3.0
+      2013-03-28 14:21:34 | c3834451 | Fixed exception message
+      2013-03-28 14:32:56 | f19c9065 | Added support for short configuration for method injection
+      2013-03-28 20:39:35 | e3bd33db | Added schema
+      2013-03-30 03:59:07 | 8e0bff51 | #45 Setting the container constructor to public (no more singleton)
+      2013-03-30 04:25:52 | c3c017df | Fixed bug + added tests for constructor injection with array
+      2013-03-30 04:48:43 | 5cdaa783 | ref #53 Added integration tests
+      2013-03-30 15:12:47 | eebd54a7 | ref #53 Added integration tests
+      2013-03-30 18:18:47 | 0246532a | #36 Documentation and website
+      2013-03-31 00:59:19 | f7927f8f | Replaced @Scope by @Injectable
+      2013-04-01 20:32:05 | 0b579781 | Moved the instance creation logic outside of the container: Factory class Also fixes #40
+      2013-04-01 20:42:43 | d714df1d | Fixed changelog
+      2013-04-01 21:31:51 | e2bc4c51 | Fixed scope documentation (@Injectable now) and added tests
+      2013-04-05 00:33:47 | d27e5299 | Renamed DefinitionReaders into DefinitionSources + added a sub-namespace to clear up DI\Definition
+      2013-04-05 01:00:35 | 6f257803 | Renamed DefinitionReaders into DefinitionSources - fixed small renames left behind
+      2013-04-06 21:17:49 | 85d68e66 | #36 Improved main readme
+      2013-04-07 22:51:01 | 23f19fea | #53 Added tests for inheritance + fixed bug
+      2013-04-07 23:00:47 | dd4de2af | #53 Removed useless/duplicate tests
+      2013-04-08 00:08:37 | cd79e2d8 | test for #58 Getting a proxy of an alias
+      2013-04-08 00:22:22 | 41706455 | Updated change log
+      2013-04-08 00:30:15 | a2d6e994 | Removed remaining calls to Container::getInstance (singleton usage)
+      2013-04-08 00:41:20 | c7fca1e8 | #36 Improved main readme
+      2013-04-12 21:06:47 | c2c7bba0 | Removed private Container::__clone()
+      2013-04-12 21:09:59 | 77d328db | Fixed file docblocks
+      2013-04-12 21:15:11 | 502cd2da | Reorganized integration tests for buggy situations
+      2013-04-12 21:20:00 | 12f6134b | Comments
+      2013-04-12 21:20:23 | b6f97056 | Reorganized method
+      2013-04-12 21:33:11 | ae6ee227 | Removed access to Container->getConfiguration() : methods are now proxied by the container
+      2013-04-12 21:38:48 | c2831693 | Unused imports
+      2013-04-13 11:34:09 | 9c0cd6c6 | #56 Moved Definition exceptions to a sub-namespace
+      2013-04-13 12:51:37 | ef64306d | phpDoc
+      2013-04-13 12:53:22 | a08a12e8 | Fixed a test
+      2013-04-13 13:54:28 | 7eca87be | Added Definition::isCacheable() -> ClosureDefinitions are not cached and don't cause errors if there was a cache set up
+      2013-04-13 16:58:06 | 300b7c1e | #55 New definition source: PHP code + Removed ArrayAccess on Container
+      2013-04-13 17:16:59 | 7739a3da | #55 New definition source: PHP code : Updated documentation
+      2013-04-13 18:02:01 | 3137dad0 | Small change website template
+      2013-04-13 21:01:45 | 3b0c0a49 | Changed website template
+      2013-04-13 22:42:04 | 5f667228 | #36 Updated the Performances doc + Removed the "debug" parameter for the cache because it was obsolete and non functional
+      2013-04-13 23:13:19 | 53d8a144 | #36 Updated the docs, improved the Getting started guide
+      2013-04-13 23:14:44 | c7a9e614 | Updated the website template to not use relative URLs anymore
+      2013-04-13 23:20:42 | 59b66482 | Updated the website template
+      2013-04-13 23:35:23 | e2677b6d | Removed ZF 1 integration: obsolete and not working anymore
+      2013-04-13 23:36:29 | 98c72b8f | Updated change log: Removed ZF 1 integration: obsolete and not working anymore
+      2013-04-13 23:38:57 | edbf87eb | #59 Container is no longer a singleton
+      2013-04-14 16:00:48 | c9c4e1a7 | Merge branch 'dev' of domu1de/PHP-DI
+      2013-04-14 16:02:01 | f0e8bec0 | Updated docblocks
+      2013-04-14 16:05:41 | d3a6dce7 | Added $container->addDefinitionsFromFile
+      2013-04-14 16:08:37 | 562fab68 | Renamed NoSuchFileException into FileNotFoundException
+      2013-04-14 16:19:45 | 067b1e84 | Removed parseScope from DefinitionFileLoaders
+      2013-04-14 16:23:32 | 61bccea5 | Added integration tests using PhpDefinitionFileLoader
+      2013-04-14 16:34:12 | c69d0ca8 | Added integration tests using YamlDefinitionFileLoader
+      2013-04-14 16:43:59 | 241b371d | Moved Loader to Definition\FileLoader
+      2013-04-14 16:47:15 | 03be30eb | Renamed PhpDefinitionFileLoader to ArrayDefinitionFileLoader
+      2013-04-14 16:48:23 | e28c3656 | Renamed PhpDefinitionFileLoader to ArrayDefinitionFileLoader
+      2013-04-18 15:46:24 | 1c585c19 | #60 File Loaders - Moved $validate option to Configuration and Container
+      2013-04-22 15:44:24 | 8cb1fee4 | #60 File Loaders - Change log
+      2013-04-22 16:02:08 | 0b2c06aa | #60 File Loaders - Documentation for YAML
+      2013-04-23 20:34:08 | ce1997d4 | Improved tests
+      2013-04-23 20:36:37 | 822ef83f | Improved tests
+      2013-04-23 20:43:54 | 1218adc6 | Improved tests
+      2013-04-23 20:45:07 | a4c97651 | Fixed YAML tests and integration tests
+      2013-04-23 21:02:32 | f90a53b4 | Deactivation of XML tests
+      2013-04-23 21:09:35 | 1d4055a0 | Merge remote changes
+      2013-04-23 21:10:33 | 56da26a2 | Deactivation of XML tests
+      2013-04-23 21:27:09 | 6912a336 | Merge pull request #60 from mnapoli/FileLoaders
+      2013-04-24 01:25:44 | 3966045e | Merge pull request #51 from mnapoli/3.0
+      2013-04-24 01:29:40 | b0cf6a41 | Composer description
+      2013-04-24 01:42:36 | 288b956c | Updated example intro
+      2013-04-24 01:51:04 | 01e191a3 | Updated docs and gh-pages (tag: 3.0.0)
+      2013-04-24 12:03:32 | 9b0ac3d3 | Website template
+      2013-05-01 23:39:13 | e0b4c060 | Added failing test case for #62
+      2013-05-05 02:47:47 | edff1467 | Refactored DI\Configuration into DI\Definition\DefinitionManager DefinitionManager::getDefinition now merges definitions when using aliases (#62) Cache has been moved into DefinitionManager: simpler and now caches DefinitionManager::getDefinition logic (tag: 3.0.1)
+      2013-05-22 01:23:12 | 34db17a4 | Merged cboden PR + fixed the behavior: only PHP-DI exceptions are now catched and rethrown
+      2013-05-22 11:58:30 | f7252a24 | Merge pull request #65 from mnapoli/error-handling (tag: 3.0.2)
+      2013-06-08 22:17:25 | 472ab6a1 | Configured code coverage reports
+      2013-06-08 22:20:52 | dbc74735 | Code coverage status
+      2013-06-09 14:33:31 | 5d32a393 | Used Ocramius ProxyManager to generate proxies
+      2013-06-09 15:17:47 | a110cef9 | Removed old Proxy classes
+      2013-06-09 15:18:21 | 16b95ff8 | Removed old Proxy classes
+      2013-06-09 19:58:11 | e4aca139 | Fixed over restrictive dependency to symfony/yaml
+      2013-06-10 10:32:33 | 5a5cbae2 | First step into #68 - Added ContainerBuilder
+      2013-06-10 11:23:40 | 78dd0727 | Fixed broken composer.json
+      2013-06-10 18:59:33 | f2387d23 | Fixed project dependencies and CI configuration
+      2013-06-10 19:04:03 | c07a5798 | Change log for 3.0.3 (tag: 3.0.3)
+      2013-06-10 19:32:26 | 9acdc40f | Improved Travis configuration
+      2013-06-10 19:33:19 | e22bd1f9 | #69 YamlDefinitionFileLoader crashes if YAML file is empty (test + fix) (tag: 3.0.4)
+      2013-06-10 19:35:51 | 4ef22d0e | Change log for 3.0.4
+      2013-06-11 13:46:20 | b6e468fc | #70 Definition conflict when setting a value for a class name
+      2013-06-11 13:46:55 | 55eb0f32 | Change log for 3.0.5 (tag: 3.0.5)
+      2013-06-11 22:21:38 | ae5a0c21 | Merge remote-tracking branch 'origin/master' into 3.1
+      2013-06-11 22:41:37 | 742ad7ef | Improved tests for lazy injection in properties
+      2013-06-12 12:48:02 | ccbc70f6 | Updated documentation for PHP-DI and ZF1 integration
+      2013-06-12 20:14:11 | 0b1d0fa6 | Change log for 3.1
+      2013-06-12 20:21:08 | fb4f7e9f | #74 Inject properties after calling constructor
+      2013-06-12 20:31:53 | 9331f7ac | #71 Auto-register the container as itself
+      2013-06-15 01:52:58 | 5df3219a | Added lazy parameter injection + tests, needs integration tests
+      2013-06-15 02:05:46 | 0ce59fea | Added parameter lazy injection tests + bugfix
+      2013-06-15 12:20:21 | 57ebcbde | Merge remote-tracking branch 'origin/3.1' into 3.1
+      2013-06-17 23:39:59 | 23322c02 | Method parameter lazy injection
+      2013-06-18 00:46:02 | 8fe331b9 | Tests for #72
+      2013-06-18 00:47:05 | dcb67950 | Build status
+      2013-06-18 00:47:55 | 59566176 | Merge remote-tracking branch 'origin/master' into Issue72
+      2013-06-18 13:36:14 | 6fef9747 | #76 Definition conflict when setting a closure for a class name
+      2013-06-18 13:37:44 | 227f7199 | Updated change log for 3.0.6 (tag: 3.0.6)
+      2013-06-18 13:45:42 | d50b3658 | Fixed unit tests for PHP 5.3 (a short array syntax slipped)
+      2013-06-18 20:14:10 | b3e7e996 | Merge remote-tracking branch 'origin/master' into Issue72
+      2013-06-18 20:48:27 | 39ccdea4 | #72 Handle order/priority of definition sources
+      2013-06-18 20:59:16 | 214cad86 | #72 Handle order/priority of definition sources
+      2013-06-18 21:09:20 | 08b702b8 | Merge pull request #77 from mnapoli/Issue72
+      2013-06-19 18:36:03 | 16e53a20 | #72 Documentation for Definition overriding
+      2013-06-19 18:44:54 | ddae0398 | #72 Documentation for Definition overriding
+      2013-06-19 18:45:56 | ae5a6d16 | #72 Documentation for Definition overriding
+      2013-06-23 22:09:41 | a53de404 | Deprecated usage of ContainerSingleton
+      2013-06-23 22:10:55 | b9106227 | 3.1 change log
+      2013-06-23 22:32:28 | 6e0e8cfe | #79 Impossible do define "null" value
+      2013-06-24 00:18:30 | 27cb928d | Added news
+      2013-06-24 00:18:41 | ab19f485 | 3.1 changelog
+      2013-06-24 00:19:47 | 22a9318b | News
+      2013-06-24 00:20:31 | c76d94e3 | News
+      2013-06-24 00:22:46 | a5515622 | Merge pull request #78 from mnapoli/3.1 (tag: 3.1.0)
+      2013-06-24 18:13:36 | 5fb7bd06 | Merge branch 'master' into 3.2
+      2013-06-24 21:02:18 | 51cf8aa1 | Improved ClassDefinitionHelper test
+      2013-06-24 21:59:12 | 21869612 | Added "How it works" documentation
+      2013-06-25 00:28:28 | 483003db | Fixed failing tests
+      2013-06-27 14:37:03 | f1999367 | Added badge in readme
+      2013-07-09 20:11:09 | c852304d | #48 Documentation for lazy injection
+      2013-07-10 23:51:31 | 745c58b0 | Renamed ContainerBuilder::setProxyGeneration into writeProxiesToFile for a clearer method name
+      2013-07-10 23:56:22 | ab7fec6b | Documentation for container configurations
+      2013-07-11 00:07:08 | 9521b573 | Added "@since" tag on ContainerBuilder
+      2013-07-11 00:11:12 | a661add0 | Improved Container's constructor for dependency injection, and deprecated methods that now exist in ContainerBuilder
+      2013-07-11 00:11:58 | ba46de64 | Added Container::getDefinitionManager
+      2013-07-11 00:14:54 | 82e0030b | Fixed obvious bug in ContainerBuilder
+      2013-07-11 00:17:05 | aa46c681 | Added DefinitionManager::getDefinitionsValidation()
+      2013-07-11 00:18:41 | 0452e67f | Renamed private DefinitionManager::definitionValidation to definitionsValidation
+      2013-07-11 00:23:09 | 05be1fce | ContainerBuilder tests + bugfix
+      2013-07-11 00:28:29 | 8223c4d1 | Change log update for 3.2
+      2013-07-12 17:10:08 | 7defb599 | #82 ValueDefinition is not cacheable anymore
+      2013-07-12 17:12:23 | aa60d91d | 3.1.1 change log (tag: 3.1.1)
+      2013-07-12 17:14:27 | 2816aacf | Merge remote-tracking branch 'origin/master' into 3.2
+      2013-07-20 01:35:47 | 864940f1 | Added "MIT license" in documentation
+      2013-07-21 20:47:57 | b94671b4 | Merge pull request #88 from JonathanLydall/patch-1
+      2013-07-23 17:14:44 | 2b5db259 | Updated changelog for 3.2
+      2013-07-23 17:34:26 | 57249a2e | News entry for 3.2
+      2013-07-23 17:36:33 | 3341ccb9 | #85 Documentation for ZF1 autoloader
+      2013-07-23 17:40:02 | 62a46018 | Updated gh-pages template
+      2013-07-23 17:46:31 | 3e89b108 | Updated gh-pages template
+      2013-07-23 17:47:12 | 819714f9 | Merge pull request #80 from mnapoli/3.2
+      2013-07-23 17:48:33 | 3ea42314 | Updated getting started
+      2013-07-23 17:54:10 | 20e75265 | Update news
+      2013-07-23 17:56:31 | 302191e6 | Typo (tag: 3.2.0)
+      2013-07-28 16:45:59 | 3b618ee2 | Renamed Container::inject in injectAll
+      2013-07-28 16:54:46 | e1831d8d | Refactored Factory a bit (DRY)
+      2013-07-28 16:59:12 | d4f978d8 | Updated test to not use deprecated functions
+      2013-07-28 17:46:02 | 3097835a | #86 Optimized definition lookup and Definition abstraction/merge handling
+      2013-07-28 17:49:29 | 545056da | 3.3 change log
+      2013-07-30 18:50:02 | 18c1e8a4 | Renamed injectAll to injectOn
+      2013-07-30 19:01:24 | 8e8a4385 | Refactorings and code readability improvements
+      2013-07-30 19:35:51 | 40848edd | 3.3 change log and news article
+      2013-07-30 19:40:19 | 6634a00b | Merge pull request #93 from drdamour/3.3
+      2013-07-30 20:02:44 | 759defed | Documentation for Container::injectOn
+      2013-07-30 20:04:21 | f0f76990 | Bump version number in getting started guide
+      2013-07-30 20:04:56 | 48de53e2 | Merge pull request #90 from mnapoli/3.3 (tag: 3.3.0)
+      2013-08-13 14:39:08 | 7a48aecf | Updated the contributing guide
+      2013-08-13 15:14:03 | 4d1fb059 | Tests reproducing #96 Handle optional parameters for constructor/method injection
+      2013-08-13 15:22:59 | 4b19f5e8 | Updated composer dependency
+      2013-08-13 15:23:12 | e7742ac4 | Prepared new version (3.4) in documentation
+      2013-09-03 00:29:00 | 9a9f3a67 | Merge pull request #104 from unkind/enhancement-check-is-not-a-dir
+      2013-09-03 01:45:54 | 0be003a4 | Merge pull request #105 from drdamour/FluentBuilder
+      2013-09-04 12:32:57 | dab7cb80 | Code formatting
+      2013-09-04 13:00:31 | 3b98db30 | #108 Allow to prefix/namespace the cache entries
+      2013-09-04 19:43:29 | 8b20ff1b | #109 Deprecate XML definitions
+      2013-09-05 20:00:13 | 2947db96 | Merge branch 'unkind-feature-array-as-valid-parameters-values' into 3.4
+      2013-09-05 20:05:14 | 56d605d6 | #106 Added changelog and improved tests
+      2013-09-09 00:01:47 | 52cea760 | Fix for #96 Handle optional parameters for constructor/method injection
+      2013-09-09 00:18:35 | 2d02aa4d | Fix for #96 Handle optional parameters for constructor/method injection
+      2013-09-24 18:59:04 | 0ae037c6 | Revert "#108 Allow to prefix/namespace the cache entries"
+      2013-09-24 19:04:20 | d9d2d9cc | #108 Documentation for cache prefix
+      2013-09-24 19:39:09 | 4d5cb8c5 | Improved tests
+      2013-09-24 20:14:28 | e154ab3f | #100 Tests and bugfix for constructor lazy injection
+      2013-09-24 20:15:21 | 21f36e7f | Change log for #100
+      2013-09-24 21:04:01 | 1850df91 | Merge branch '3.4' into feature/OptionalParameters
+      2013-09-24 21:14:16 | c3a73022 | Contributing
+      2013-09-24 21:18:04 | 22356d72 | Merge pull request #101 from mnapoli/feature/OptionalParameters
+      2013-09-24 21:18:22 | 9c7a4565 | Merge remote-tracking branch 'origin/3.4' into 3.4
+      2013-09-24 21:21:34 | 1942ab4f | 3.4 change log
+      2013-09-24 21:31:03 | ea77d82e | 3.4 news entry
+      2013-09-24 21:33:08 | 14ea2c8e | Merge pull request #102 from mnapoli/3.4 (tag: 3.4.0)
+      2013-09-25 12:05:35 | 444335cd | Fixed typo
+      2013-09-29 16:23:03 | 5e214421 | #110 Removed XML definitions
+      2013-09-29 16:53:34 | 578c9730 | #115 Added Container::has() method
+      2013-10-04 19:36:52 | e586018a | Removed unnecessary test
+      2013-10-09 00:34:20 | f8badb38 | #122 Removed Json definition support
+      2013-10-09 00:34:24 | 3f71a3d6 | Merge remote-tracking branch 'origin/4.0' into 4.0
+      2013-10-09 00:35:23 | 3b41f8bd | 4.0 changelog
+      2013-10-09 19:55:06 | 18301a9f | Removed deprecated ContainerSingleton
+      2013-10-09 20:16:21 | a65390b8 | Removed YAML definitions
+      2013-10-09 21:41:52 | a4aa3c14 | Started the definition refactoring for 4.0
+      2013-10-09 22:07:44 | 827ae511 | Definition refactoring
+      2013-10-09 22:10:30 | 0da83752 | Fixing tests
+      2013-10-09 22:31:40 | 9eee7ca1 | Fixing tests
+      2013-10-10 00:17:36 | 25165566 | Fixed some tests
+      2013-10-10 00:20:24 | 3c7c78f7 | Fixed some tests
+      2013-10-10 00:21:35 | 432f42be | Fixed some tests
+      2013-10-10 00:37:30 | b404ac34 | Fixed some tests
+      2013-10-10 00:49:43 | 814ddff9 | Change log
+      2013-10-10 19:24:00 | 42af7a2e | Removed DefinitionFileLoader since it's only PHP arrays now
+      2013-10-10 19:26:17 | 4e0fff08 | Fixed test
+      2013-10-10 19:46:49 | 743dd802 | Lazy injections declared at class level
+      2013-10-10 19:59:33 | d69c0490 | Simplified annotations to reflect new definition format
+      2013-10-10 20:12:29 | 63f18541 | Documentation update (removed YAML, updated annotations)
+      2013-10-10 20:19:19 | 8c89ea38 | PHP 5.5 CI
+      2013-10-11 13:39:21 | d9e809ef | Reorganized tests
+      2013-10-11 13:56:03 | 300b9253 | #124 Other annotations doesn't cause errors in PHP-DI anymore + importing the Inject annotation is now optional!
+      2013-10-11 13:59:48 | d902e993 | #124 Documentation update
+      2013-10-11 14:11:10 | 57078c96 | Change log and news entry for 3.5
+      2013-10-11 14:11:57 | cf374f08 | Bump version number in getting started guide
+      2013-10-11 14:13:25 | c33f4eff | News index (tag: 3.5.0)
+      2013-10-20 21:16:52 | 3c04c79c | Renamed Factory to Injector
+      2013-10-20 21:33:25 | 90ab8783 | Replaced PhpDocParser with mnapoli/PhpDocReader
+      2013-10-20 21:53:02 | 41e8975c | Cleaned up code
+      2013-10-20 22:13:25 | e70dce23 | Documentation update
+      2013-10-29 13:22:19 | 54cfe266 | #126 Container::set without effect if a value has already been set and retrieved
+      2013-10-29 13:22:31 | a039bcd5 | 3.5.1 Changelog (tag: 3.5.1, origin/3.x)
+      2013-10-29 13:35:59 | f1904ce4 | Website template update
+      2013-10-31 01:30:20 | b1e4f4e3 | Fixed wrong file permissions
+      2013-10-31 01:31:27 | 61718aed | Removed unused import
+      2013-11-08 23:04:03 | 69e03337 | Merge branch 'master' into 4.0
+      2013-11-08 23:09:49 | af4a73b9 | Merge branch '4.0' into feature/NewDefinitions
+      2013-11-08 23:13:18 | ea22cb74 | Fixed tests after merge conflicts
+      2013-11-08 23:16:12 | ec8dcedf | Tests using PHP 5.5 FTW
+      2013-11-09 16:53:38 | 26df9831 | #127 Support cases where PHP-DI is wrapped by another container like Acclimate + tests + doc
+      2013-11-11 03:43:11 | 6164195f | #128 Entry alias
+      2013-11-11 03:44:54 | 9a94274d | Merge pull request #123 from mnapoli/feature/NewDefinitions
+      2013-11-14 01:02:10 | a0d3c362 | Documentation categories
+      2013-11-23 00:38:22 | b728cdf1 | Renamed ClosureDefinition to CallableDefinition, and allowed any kind of callable, not just Closure
+      2013-11-23 01:48:40 | 570e5ad8 | Added a ContainerInterface with get/has
+      2013-11-23 20:24:33 | 7521560e | Refactored how definition are resolved: introduced the DefinitionResolver interface and implementations Improved and cleaned class dependencies
+      2013-11-23 20:35:24 | 6b0ff3b2 | Moved MethodInjection, PropertyInjection and UndefinedInjection in DI\Definition\ClassInjection
+      2013-11-23 22:12:29 | 02dcb506 | README
+      2013-11-24 04:55:39 | bff22799 | Rewrote the website
+      2013-11-24 04:57:49 | a5e41ff1 | Added badges in website home
+      2013-11-24 20:16:43 | 9d01e7ea | Website template update
+      2013-11-24 20:54:50 | 776d1b8f | Restored PHP 5.3 and 5.4 support
+      2013-11-24 20:59:27 | 0ad99079 | Restored PHP 5.3 and 5.4 support
+      2013-11-24 21:05:08 | 76c26a54 | Documentation: replaced "Reflection" with "Autowiring"
+      2013-11-24 21:45:40 | ac0e8672 | Restored PHP 5.3 support
+      2013-11-25 00:04:03 | 6dd3c797 | Updated website template
+      2013-11-30 14:04:36 | 046b96a7 | Added ContainerBuilder::addDefinitions(DefinitionSource) to enable lazy-loading of array configurations
+      2013-11-30 14:12:38 | 7e6a0a0f | Small optimization and code refactoring on AnnotationDefinitionSource
+      2013-11-30 14:13:51 | 6b628623 | Code formatting
+      2013-11-30 15:09:24 | 81e91c7a | #130 Replaced Entry::…() helpers by DI\…()
+      2013-11-30 15:24:03 | a65cfc13 | PSR-2
+      2013-11-30 15:27:18 | 9e6dc23a | Removed definition validation because it didn't do anything anymore
+      2013-11-30 22:03:06 | e62e84a1 | #130 Replaced Entry::…() helpers by DI\…() in the documentation
+      2013-11-30 22:10:47 | 1845a45e | #118 Documentation: injections depending on the environment
+      2013-11-30 22:25:16 | 38efe04b | Reworked the "Getting started" guide
+      2013-11-30 22:35:25 | 9a5ef6ae | Reworked the "Getting started" guide
+      2013-12-08 22:25:03 | 3d23d839 | Simplification of AnnotationDefinitionSource
+      2013-12-08 22:58:31 | 1557ad20 | #136 Re-introduce name-based parameter injection
+      2013-12-08 23:13:38 | be31cd78 | Fixed malformed annotations on test fixture
+      2013-12-09 00:26:01 | b80ee7a5 | #136 Re-introduce name-based parameter injection for annotations
+      2013-12-09 01:46:46 | 72ac1505 | "Best practices" guide
+      2013-12-09 01:56:43 | 781dfde5 | "Best practices" guide corrections
+      2013-12-11 02:36:12 | d00d9dd9 | Started refactoring the definition sources
+      2013-12-11 02:43:59 | d344124a | Improved lazy reading of a definition file
+      2013-12-11 03:36:25 | 322c63cc | Refactoring of the ArrayDefinitionSource, DefinitionManager, Container, ContainerBuilder
+      2013-12-11 23:24:15 | 6ea5f25a | Improved code coverage reports by using @covers annotations
+      2013-12-11 23:24:30 | b6082ca2 | Fixed a bug in AnnotationDefinitionSource
+      2013-12-11 23:24:47 | c9624356 | Removed CombinedDefinitionSource
+      2013-12-11 23:25:50 | f1d4f3b9 | Fixed test
+      2013-12-11 23:32:35 | c5848855 | Improved exception message in container
+      2013-12-12 02:51:07 | 61f03ade | Refactoring of DefinitionSources
+      2013-12-12 16:52:55 | 8bd26fa6 | Split file handling of ArrayDefinitionSource to new PHPFileDefinitionSource
+      2013-12-12 16:59:15 | 0edef765 | Merge pull request #140 from mnapoli/DefinitionSourceRefactoring
+      2013-12-12 16:59:36 | bf5d2b53 | Travis CI config
+      2013-12-12 16:59:42 | a07850db | Merge remote-tracking branch 'origin/4.0' into 4.0
+      2013-12-12 17:07:28 | c8e96d99 | Merge branch '4.0' into feature/ParameterName
+      2013-12-12 17:31:52 | 154b67f6 | #136 Re-introduce name-based parameter injection
+      2013-12-12 17:48:35 | ab6edc55 | Merge pull request #137 from mnapoli/feature/ParameterName
+      2013-12-12 17:47:43 | cf2d4fef | Tests: use @covers annotation for more accurate code coverage
+      2013-12-15 17:59:09 | 02097cd4 | Reworked website theme
+      2013-12-15 18:41:14 | 7942b7f6 | Website template: contributors list
+      2013-12-16 00:08:42 | b8ab3c2f | Moved DefinitionResolver inside DI\Definition\Resolver
+      2013-12-16 00:11:20 | 77ea0766 | Renamed ObjectDefinitionHelper to ClassDefinitionHelper
+      2013-12-16 00:16:22 | 8be9660c | Moved DefinitionHelper inside DI\Definition\Helper
+      2013-12-16 00:28:30 | b1a81412 | Added tests for Injectable
+      2013-12-16 00:31:17 | a0361761 | Improved tests for Inject
+      2013-12-16 00:47:33 | d0bbc134 | Renamed ObjectDefinitionHelperTest to ClassDefinitionHelperTest
+      2013-12-16 00:51:44 | d75ae1b4 | Improved ClassDefinitionHelper tests
+      2013-12-16 01:32:02 | 8f26c1f7 | Added phpdoc for ClassDefinitionHelper
+      2013-12-16 02:31:13 | 92eb931b | Fixes #99 - Parsing "@param" with PHP internal type throws exception
+      2013-12-16 02:33:11 | b29a655e | Updated changelog for #99
+      2013-12-17 00:34:15 | f5c14dfa | Travis config for CI on HHVM
+      2013-12-21 21:22:15 | 3ec15a2a | Renamed DI\Definition\ClassInjection namespace to ClassDefinition (to match the class name)
+      2013-12-21 21:26:24 | b1e9e236 | Added tests for MethodInjection
+      2013-12-21 21:28:04 | 5655b24e | Added tests for PropertyInjection
+      2013-12-21 21:40:20 | 35182667 | Improved tests for DefinitionManager
+      2013-12-21 22:05:29 | 46b6b526 | Added tests for ClassDefinitionResolver
+      2013-12-21 22:24:07 | 8b9d482f | Improved tests for ClassDefinitionResolver
+      2013-12-21 22:53:30 | bb585cee | Improved tests for ArrayDefinitionSource and fixed bug
+      2013-12-21 23:15:13 | 0cf07e08 | Improved ClassDefinitionHelper with shorter method names (`constructor`, `property`, `method`, ...)
+      2013-12-22 21:08:41 | 1e9c4db8 | Added CacheableDefinition interface
+      2013-12-27 06:08:12 | 3a149ab4 | Improved tests
+      2013-12-27 06:19:31 | 3c52c70b | Improved tests (tag: 4.0.0-beta1)
+      2014-01-07 20:53:01 | f6c41731 | Symfony 2 integration documentation
+      2014-01-07 20:53:35 | 1610edfb | Symfony 2 integration documentation
+      2014-01-07 20:57:30 | ca43dee3 | ZF 2 integration documentation
+      2014-01-07 21:17:40 | dab8d457 | Website template
+      2014-01-07 21:20:16 | 89dcedb4 | Documentation for entry alias
+      2014-01-07 21:50:29 | 69e8579f | Migration guide from 3.x to 4.0
+      2014-01-07 22:07:53 | a872d08c | Documentation update, especially to the "how it works" article
+      2014-01-08 23:19:22 | 0c9adc9d | Unused import
+      2014-01-08 23:19:49 | 06355e60 | Unused import
+      2014-01-09 00:33:02 | ef3375f8 | #141 Fixed source chaining, when chaining more than 2 array definitions
+      2014-01-09 01:11:36 | 3a5856ff | Improved comment on deprecated call to ProxyManager API
+      2014-01-10 20:15:49 | c536ffc7 | #144 ClassDefinitionHelper::methodParameter() didn't work correctly with '__construct()'
+      2014-01-11 18:14:34 | 1b5f5ac2 | Renamed Container::resolvedEntries to Container::singletonEntries, much clearer
+      2014-01-11 20:08:19 | c8ba5736 | Improved ClassDefinitionResolver tests
+      2014-01-11 20:31:58 | f98ebb72 | Typo
+      2014-01-11 21:06:46 | 3e8fb648 | #142 Factory interface + Container::make
+      2014-01-11 21:46:06 | 414b3f3d | Renamed CallableDefinition to FactoryDefinition (and associated classes)
+      2014-01-12 01:22:24 | 38872af6 | Typos
+      2014-01-12 02:24:18 | d80b1b2f | Renamed DefinitionSource parameter
+      2014-01-12 02:25:20 | cdbfa517 | Documentation update
+      2014-01-12 03:28:53 | c1d7d0c4 | Reworked the README and introduction to dependency injection
+      2014-01-12 03:35:31 | f785fe1f | Documentation update
+      2014-01-12 03:36:13 | b29ea534 | Documentation update
+      2014-01-12 03:41:36 | 9fc4614b | Documentation update for "Container configuration"
+      2014-01-12 03:45:49 | 29408ca1 | Website update
+      2014-01-14 15:38:45 | 73123357 | Bugfix and tests improvements (tag: 4.0.0-beta2)
+      2014-01-16 17:01:03 | b25b8007 | Added draft of news entry for v4.0
+      2014-01-16 17:51:37 | 96841777 | News entry: the new definition format for PHP-DI 4
+      2014-01-16 17:54:50 | 904e24d1 | Fixes in news entry: the new definition format for PHP-DI 4
+      2014-01-18 23:21:47 | f10df8f0 | Merge pull request #145 from lkysow/patch-1
+      2014-01-24 22:11:14 | be416a1a | #146 Tests and fix for injecting null values in parameters and properties
+      2014-01-24 23:07:49 | 1dee9727 | Fixed composer configuration
+      2014-01-25 05:00:50 | 0080a482 | #147 Rewrote website using Couscous
+      2014-01-25 05:02:05 | dc637c7f | Merge remote-tracking branch 'origin/master' into 4.0
+      2014-01-25 05:08:08 | 20c6e466 | #147 Rewrote website using Couscous
+      2014-01-25 17:22:09 | a938e4b2 | Updated lazy injection documentation
+      2014-01-25 17:24:15 | 26728575 | Updated performances documentation
+      2014-01-25 17:26:04 | 658e9386 | Updated the "scope" documentation
+      2014-01-25 17:46:26 | fff88991 | Added link to 3.* documentation in website
+      2014-01-25 17:52:19 | 62057196 | Merge pull request #119 from mnapoli/4.0
+      2014-01-25 18:23:17 | 7a2ef6bf | Updated the news article for 4.0
+      2014-01-26 18:01:14 | 3fcde48a | Fixed file permissions
+      2014-01-26 18:03:34 | 6a27eec2 | Removed user specific files in gitignore
+      2014-01-28 18:39:31 | 036cab32 | Fixes #151
+      2014-01-28 18:47:21 | ce65c292 | Closes #150: DI\object()->constructorParameter()
+      2014-01-30 18:33:00 | aa92cc54 | Renamed ContainerBuilder::useReflection in useAutowiring to be more consistent
+      2014-01-30 18:41:30 | 002c33ca | Best practices documentation
+      2014-01-30 18:44:36 | c0162aba | Improved definition documentation
+      2014-01-30 19:14:23 | 0bfa6168 | Merge branch '4.0'
+      2014-01-30 19:15:56 | 2219559e | Gitter badge the README
+      2014-01-28 20:20:06 | 1db19e9a | 4.0 news entry
+      2014-02-01 17:43:24 | 7c90f1f3 | Improved changelog
+      2014-02-01 18:01:59 | 0cbdf010 | Improved News section in the website
+      2014-02-01 18:07:53 | 5b35a232 | Move link to old documentation
+      2014-02-01 18:33:07 | 14da30bb | Improved the rendering of documentation on the website
+      2014-02-01 18:46:04 | c1e80142 | Simplified definitions documentation
+      2014-02-01 21:15:09 | 824ceee0 | 404 page for the website
+      2014-02-01 21:18:22 | d733333d | Improved news article
+      2014-02-01 21:20:48 | 8db1aaa9 | Fixed "getting started" documentation
+      2014-02-01 21:52:30 | 0d581047 | Fixed and improved documentation
+      2014-02-01 22:03:34 | d59185b8 | Renaming CSS files to exclude them from Github project language detection
+      2014-02-01 22:05:04 | 21944b82 | Renaming CSS files to exclude them from Github project language detection
+      2014-02-01 22:17:24 | 9a932093 | Fixed scopes documentation
+      2014-02-01 22:22:39 | 69bacf04 | Fixed website template
+      2014-02-04 14:22:57 | 6c1a1d4a | Improved documentation for migrating to v4 (tag: 4.0.0)
+      2014-02-04 17:46:21 | 13e3313e | Website template
+      2014-02-04 18:25:39 | ab535856 | Added a "Powerful" section to the home page
+      2014-02-07 16:56:40 | 3491a084 | Added definition "dumpers" to debug definitions
+      2014-02-23 01:56:05 | 77eec339 | Definition dumpers where not implementing the interface -_-
+      2014-02-23 02:09:06 | b56a0a5b | Fixed variables name
+      2014-02-23 02:22:43 | 64dda6c4 | Added DefinitionDumperDispatcher
+      2014-02-23 03:13:04 | 7ab85435 | #143 Better exception messages with definition dumps
+      2014-02-23 03:30:21 | 1ac5322d | #154 Improvements to the 4.0 migration guide
+      2014-03-16 19:31:31 | c60df75d | #138 Implementation of container-interop v1.0
+      2014-03-23 00:20:04 | 4b30cb1f | Added PHP 5.6 to the tests (tag: 4.1.0-beta1)
+      2014-03-25 22:51:50 | af629ff4 | closes #159 Autoregister Container *and* ContainerInterface
+      2014-04-01 18:57:50 | 8362026b | New blog post: 10 000 installs
+      2014-04-02 14:07:14 | 829b447b | #157 Removed a test that relied on a PHP bug
+      2014-04-02 14:11:18 | 6a7e43de | Merge remote-tracking branch 'origin/master' into 4.1
+      2014-04-02 14:11:42 | 5b1cad0e | #157 Removed HHVM from the allowed failures: HHVM support!
+      2014-04-14 18:11:27 | 09645683 | #158 Improved documentation for Symfony 2 integration
+      2014-04-14 18:16:01 | 05c7ca13 | mnapoli/PHP-DI-Symfony2#1 Documented FOSRestBundle incompatibility
+      2014-04-14 18:23:10 | 841f1191 | Changelog for 4.1
+      2014-04-01 18:23:40 | 5cbf889e | #148 Fixed documentation
+      2014-04-15 18:34:49 | 703004d7 | #148 Documentation for container features
+      2014-04-15 20:22:43 | 94d21c6e | #155 News entry for 4.1
+      2014-04-15 20:23:49 | dbb74593 | #155 Changelog for 4.1
+      2014-04-17 11:12:22 | f6eb3e51 | Merge pull request #155 from mnapoli/4.1 (tag: 4.1.0)
+      2014-04-17 15:22:29 | 54d13efe | Fixed a bug that would cause conflicts between DI\ContainerInterface and Interop\Container\ContainerInterface when included in a specific order (tag: 4.1.1)
+      2014-04-24 11:17:15 | 51b3b7dd | Merge pull request #161 from nishigori/fix-markdown-syntax
+      2014-04-24 13:15:13 | a7d7307a | One more silly badge showing the project is tested against HHVM!
+      2014-04-30 12:42:58 | afd41dfd | mnapoli/PHP-DI-ZF1#5 Improved ZF1's documentation for tests and recommended layout
+      2014-05-20 01:40:42 | f3d3c348 | WIP Calling functions and resolving their parameters with Container::call and InvokerInterface
+      2014-05-20 14:38:22 | 0872df89 | WIP Calling functions and resolving their parameters with Container::call and InvokerInterface
+      2014-05-21 11:39:57 | 0c76f660 | WIP Calling functions and resolving their parameters with Container::call and InvokerInterface
+      2014-05-21 16:39:43 | e4dc2945 | WIP Calling functions and resolving their parameters with Container::call and InvokerInterface
+      2014-05-21 17:03:55 | b510291f | Improved tests
+      2014-05-21 17:14:00 | f9834201 | Added functional tests for #162
+      2014-05-22 00:51:14 | 866aa53d | Added support for Container::call() with object methods (array-callables)
+      2014-06-02 12:07:15 | 860731c7 | Couscous update
+      2014-06-03 21:10:54 | 617f208d | #156 Wildcards in array definitions + tests
+      2014-06-03 21:34:26 | 4684f60d | Update README.md
+      2014-06-04 01:07:35 | f4c55913 | Merge pull request #166 from daniphp/patch-1
+      2014-06-04 15:34:59 | 6d400565 | Merge pull request #167 from avant1/4.2
+      2014-06-04 15:42:27 | dbe97f21 | Documentation for #164 (Prototype scope on "factory" definitions)
+      2014-06-04 16:13:07 | 6c7509e7 | Documentation for the container public API
+      2014-06-05 19:07:06 | f879d776 | Merge branch '4.2' into feature/CallFunction
+      2014-06-05 19:21:44 | 653f104b | Documentation for Container::call()
+      2014-06-05 19:44:06 | e569f34b | Container documentation
+      2014-06-05 19:46:29 | befa0800 | Container documentation
+      2014-06-06 18:13:03 | d710cd43 | #156 Wildcards will now match non-empty strings, and will not match across namespaces
+      2014-06-06 18:28:28 | 64745b75 | Code simplification in the definition dumper/Debug object (tag: 4.2.0-beta1)
+      2014-06-17 19:17:47 | d3c29721 | Merge branch 'uninstantiable-defaulted-constructor-param-issue' of https://github.com/ezzatron/PHP-DI into bug/168
+      2014-06-17 19:26:15 | c7e74d66 | Simplified the test for #168
+      2014-06-17 19:42:02 | d06958b8 | Bug #168 Default parameter values are used when a parameter is mapped to an unresolvable entry
+      2014-06-17 19:43:56 | d9d3b4d2 | Merge branch 'master' into 4.2
+      2014-07-12 18:22:46 | c3c57000 | Merge pull request #170 from tentacode/patch-1
+      2014-07-12 23:03:19 | 1150b455 | Merge pull request #169 from mnapoli/bug/168
+      2014-07-28 23:57:02 | ce461a72 | Updated code using PhpDocReader
+      2014-07-29 00:23:18 | 754dd992 | Added PHPUnit to require-dev
+      2014-07-29 16:31:24 | 83f99255 | #171 Autowiring now ignores optional parameters
+      2014-07-29 16:46:17 | 30c79696 | Changelog for 4.2
+      2014-07-29 16:56:54 | 4270c420 | Documentation for wildcards
+      2014-07-29 17:53:37 | ad13675a | 4.2 news entry
+      2014-07-29 18:04:54 | bd76cb10 | 4.2 news entry
+      2014-07-29 18:55:57 | 27cc1290 | 4.2 news entry
+      2014-07-29 18:56:29 | 66bb6382 | Merge pull request #165 from mnapoli/4.2 (tag: 4.2.0)
+      2014-07-29 19:22:36 | e358931f | Template update for 4.2 blog post
+      2014-07-29 20:19:31 | c04a1ab6 | Customized website template
+      2014-08-04 02:02:10 | 9839efe9 | Piwik ftw
+      2014-08-04 02:12:55 | 5c8835cf | Temporarily allow HHVM tests to fail since v3.2 broke everything
+      2014-08-04 20:14:45 | ec0a1aed | Fixed incorrect documentation
+      2014-08-04 20:38:45 | b44c3d17 | Merge branch 'master' of github.com:thispagecannotbefound/PHP-DI into 4.3
+      2014-08-04 20:39:43 | be8f2fd2 | Revert "The container auto-registers itself with the interop interface"
+      2014-08-04 20:45:23 | e43aad10 | PSR-4 fixes
+      2014-08-04 20:48:43 | 8086cf11 | Bugfix in #173
+      2014-08-05 12:27:49 | 167a4c7b | Redirect mnapoli.fr/PHP-DI/ to php-di.org
+      2014-08-06 20:07:08 | db31e01c | Fixed documentation that was still for v3
+      2014-08-07 02:54:51 | 0adede7b | Added explicit testing of PHP 5.3.3
+      2014-08-07 02:58:19 | b0277300 | Removed useless symfony/yaml dependency (duh…)
+      2014-08-07 03:20:08 | d98213d2 | Added PHP 5.3.3 support by fixing a bug that would only appear with that version
+      2014-08-07 03:30:08 | 11a94910 | Merge pull request #178 from mnapoli/php-5.3.3-support (tag: 4.2.1)
+      2014-08-07 11:29:51 | cf1cb112 | Updated the .gitignore
+      2014-08-07 11:30:11 | cd7063c1 | Merge branch 'master' into 4.3
+      2014-08-07 11:30:44 | 2f400611 | Merge branch 'env' of github.com:jmalloc/PHP-DI into 4.3
+      2014-08-07 11:35:38 | 342cc9dd | Tiny change in the environment variable dumper
+      2014-08-08 18:49:53 | d8890167 | Merge branch 'method-dumper' of github.com:jmalloc/PHP-DI
+      2014-08-08 18:50:28 | 9e6029df | Fixed test for PHP 5.3 compatibility (tag: 4.2.2)
+      2014-08-08 18:54:57 | c78a878f | Updated the changelog
+      2014-08-11 12:43:48 | 3885e1c1 | Merge branch 'master' into 4.3
+      2014-08-11 12:44:18 | 9432ac02 | Merge branch 'FactoryInterface-container-set' of github.com:drealecs/PHP-DI into 4.3
+      2014-08-12 17:46:06 | 9f392152 | Documentation warning for #182
+      2014-08-12 18:19:34 | b69c2aac | Documentation for #176: `DI\env()`
+      2014-08-12 18:23:41 | 2472e6e3 | Documentation for #181
+      2014-08-12 18:27:38 | 2ed19a2d | Changelog for 4.3
+      2014-08-12 18:42:48 | d220bb7d | News entry for 4.3
+      2014-08-12 20:05:56 | 2c40a327 | News entry for 4.3 + website update
+      2014-08-12 20:16:06 | 99939b3d | Merge pull request #174 from mnapoli/4.3 (tag: 4.3.0)
+      2014-08-12 20:22:36 | fcc18fc5 | Fixed typo in news post
+      2014-08-18 01:43:58 | 4e75eed5 | #185 Container::call() now supports callable objects
+      2014-08-18 01:57:33 | cf734c08 | #185 Refactored code by introducing a new CallableReflectionFactory class (+tests)
+      2014-08-18 02:02:13 | 0b4ba8e7 | Changed the URL to the project
+      2014-08-18 02:04:07 | f04ce141 | Merge branch 'master' into 4.4
+      2014-08-18 10:46:04 | 5ecb67f8 | Added tests for DI\Scope
+      2014-08-18 10:47:28 | cece2cc5 | Fixed code coverage annotations
+      2014-08-18 10:51:21 | b6c93273 | Added tests for EnvironmentVariableDefinitionHelper
+      2014-09-01 06:27:53 | 4da2dc3e | Merge branch 'master' of github.com:kdubois/PHP-DI into 4.4
+      2014-09-01 06:32:00 | 18595dc0 | Fixed PSR-2 following the merge
+      2014-09-01 07:00:46 | 56251f46 | Tests for #184
+      2014-09-01 07:09:04 | 8b6a4538 | Code refactoring
+      2014-09-25 02:43:55 | 2d5fec75 | Update definition-overriding.md
+      2014-09-27 10:54:34 | 5be6fb94 | Container::call() can now accept a callable class name, it will instantiate it using Container::get()
+      2014-09-27 11:06:17 | d323890d | Added tests for function call dumping for #173, #185 and #192
+      2014-09-27 11:10:42 | b966785e | Merge pull request #192 from mnapoli/feature/callable-class
+      2014-09-27 11:24:04 | 1b25a296 | 4.4 changelog
+      2014-09-27 12:01:42 | da5153fa | Code refactoring
+      2014-09-27 12:54:43 | 9dc1426d | Documentation for #184
+      2014-09-27 13:00:37 | e3522a3a | PHP 5.6 has been released
+      2014-09-27 13:17:37 | 24d96d46 | New blog post: PHP 5.6 is out and PHP-DI just got better
+      2014-09-27 14:23:30 | cde921b2 | Merge branch 'master' into 4.4
+      2014-09-27 14:32:07 | 806f17ef | Documentation for #185
+      2014-10-09 13:32:25 | 29cd268a | RAS
+      2014-10-12 10:07:41 | 32b6f33e | #187 4.4 news entry
+      2014-10-14 10:11:35 | 200c9199 | Merge pull request #187 from mnapoli/4.4
+      2014-10-14 10:13:10 | 556e3be6 | "Getting started" update (tag: 4.4.0)
+      2014-10-14 10:17:23 | 7b08676a | "Getting started" update
+      2014-10-20 23:27:21 | 0bde96e3 | Merge pull request #195 from anroots/master
+      2014-10-31 01:23:26 | 86b1d96f | Getting started guide
+      2014-10-31 01:24:55 | 12fbfa0a | Added branch alias for v5.0
+      2014-10-31 01:52:26 | a0ecf28b | #198 ProxyManager is now an optional dependency
+      2014-10-31 03:34:51 | 01812683 | #198 Abstracted the ProxyManager library behind an adapter class
+      2014-10-31 03:41:41 | 876bc25f | Updated Scrutinizer badge
+      2014-10-31 03:49:28 | 22d26be8 | Fixed an incorrect type-hint, thanks Scrutinizer!
+      2014-11-03 05:25:11 | a71f656f | Use the MIT "Expat" license model
+      2014-11-04 13:15:17 | de13eb81 | Added directories to exclude from the distribution (tag: 4.4.1)
+      2014-11-04 13:23:44 | fd721ef2 | Merge branch 'master' into 5.0
+      2014-11-10 04:37:46 | 0e267e20 | Fixes #201: Rare cases where "functions.php" is included twice leads to error (tag: 4.4.2)
+      2014-11-10 04:38:05 | dad96f16 | Merge branch 'master' into 5.0
+      2014-11-12 06:13:29 | f7e78ba6 | ContainerBuilder::addDefinitions() now accepts a filename or a ChainableDefinitionSource object
+      2014-11-12 06:17:53 | 3399e698 | Merge pull request #202 from mnapoli/container-builder
+      2014-11-12 06:18:24 | 27341c05 | Merge branch 'master' into 5.0
+      2014-11-15 09:48:40 | b150695b | Added a test for cache
+      2014-11-15 10:03:55 | f4fc1b5d | Moved the tests to PSR-4 and better namespaces
+      2014-11-18 08:00:41 | 8b913f33 | #204 run code coverage only for one PHP version
+      2014-11-18 08:06:35 | f5fa0679 | #204 run code coverage only for one PHP version
+      2014-11-18 08:13:14 | 979c0069 | #204 run code coverage only for one PHP version
+      2014-11-18 08:20:59 | 2b6a744a | Configured PHPUnit code coverage
+      2014-11-20 13:19:35 | 8b4feb8e | Merge branch 'master' into 5.0
+      2014-11-21 09:07:36 | e953bd81 | #207 Added ArrayDefinition: support for `DI\link()` in arrays
+      2014-11-27 04:38:29 | 9b1d6e02 | Merge pull request #209 from mnapoli/array-definition
+      2014-11-27 07:40:03 | cbf775bc | Fixed phpdoc that was lost on DI\* functions because of 0e267e2022 (tag: 4.4.3)
+      2014-11-27 07:42:03 | 150f4d99 | Merge branch 'master' into 5.0
+      2014-11-28 02:30:55 | 6d732b5b | Added more tests to the FactoryDefinitionResolver + better error handling
+      2014-11-28 02:33:42 | 5f7691c9 | Fixed a fatal error on PHP 5.3
+      2014-11-28 02:37:55 | 019c7812 | Fixing HHVM tests
+      2014-11-28 02:42:32 | 16fab8e5 | Merge pull request #210 from mnapoli/test-factory-definition-resolver (tag: 4.4.4)
+      2014-11-28 02:44:26 | a13db0a6 | Merge branch 'master' into 5.0
+      2014-11-29 05:56:08 | 80ef5f44 | Merge pull request #211 from Bilge/patch-1
+      2014-11-16 00:08:36 | 6f1a9cad | Migrated the website to Couscous 1.0
+      2014-12-02 07:17:56 | eff0aff5 | Simplified how definition overriding works in definition sources
+      2014-12-02 07:21:14 | 4fd3ca42 | Extracted code from ArrayDefinitionSource into abstract ChainableDefinitionSource
+      2014-12-11 08:13:23 | 8f9d1cc2 | #214 Attempt at introducing array definition extensions
+      2014-12-12 01:19:53 | c55b1260 | Added a constructor to ArrayDefinitionSource
+      2014-12-12 01:20:25 | 2c324795 | #216 Improved test (tag: 4.4.5)
+      2014-12-12 01:24:18 | d7f54f3c | Merge branch 'master' into 5.0
+      2014-12-12 05:20:33 | da58504e | Switched badges for consistent display
+      2014-12-17 07:42:09 | e2394a50 | #214 Replaced `DI\extend()->add()` to `DI\add()`
+      2014-12-17 07:49:43 | 4676e15f | Merge pull request #215 from mnapoli/array-extensions
+      2014-12-17 12:37:22 | dfe1d6ce | Added a "Support" page to the website
+      2014-12-17 13:05:47 | ec175b93 | Run tests with the lowest dependency versions
+      2014-12-17 13:05:56 | 44c1a5c8 | Updated Composer requirements after testing with lower dependency versions
+      2014-12-17 13:09:12 | 68a71f27 | Got the Travis config wrong
+      2014-12-17 13:59:13 | 3e20339e | Merge pull request #219 from mnapoli/composer-lowest
+      2015-01-10 12:52:23 | 92f54750 | Fixes #222 Bug when using a cache and manually setting a definition (tag: 4.4.6)
+      2015-01-16 06:30:45 | e358a09b | Merge branch 'master' into 5.0
+      2015-01-16 07:42:15 | 200b9897 | #203 String definitions: concatenate strings in the config
+      2015-01-16 07:50:11 | 89c5c025 | Update PHPUnit because we use latest additions
+      2015-01-16 07:53:13 | cea1c575 | Merge pull request #225 from mnapoli/scrutinizer-patch-1
+      2015-01-16 07:55:31 | c65d36fc | Merge pull request #224 from mnapoli/string-definitions
+      2015-01-16 07:57:18 | f59ccf41 | Update README.md
+      2015-01-27 05:51:26 | 0c4ba1a9 | Closure are casted to factory definitions automatically
+      2015-01-27 07:20:24 | 484ca34c | Added `DI\value()` helper to force defining values
+      2015-01-27 07:25:38 | 050fa5d9 | Updated the 5.0 changelog
+      2015-01-27 11:32:41 | 6f82d020 | Refactored definition tests
+      2015-01-27 12:00:43 | 401d374e | Changelog update
+      2015-01-28 11:29:46 | 4d9c4aba | Merge pull request #226 from mnapoli/cast-closure-to-factory
+      2015-01-28 11:58:58 | 639a3aa4 | Fixes #223 Removed deprecated DI\ContainerInterface
+      2015-01-28 12:02:04 | e2f160f3 | #223 changelog update
+      2015-01-29 05:54:38 | fcd7f79c | ContainerBuilder::addDefinitions() now can accept an array
+      2015-01-29 05:59:06 | 0a6d9c47 | Renamed test methods
+      2015-01-29 06:02:32 | ee514509 | Added tests
+      2015-02-04 05:37:28 | de4c7880 | New blog post "Syntactic sugar in PHP-DI 5"
+      2015-02-04 05:38:13 | a9d7515e | New blog post: link on home page
+      2015-02-05 05:53:27 | e01056a3 | Merge branch 'master' into 5.0
+      2015-02-05 06:46:55 | b708590e | More tests for Container::call()
+      2015-02-05 07:20:04 | bc174fd0 | Simplified the container by moving the dynamic dispatching to definition resolver into a new definition resolver
+      2015-02-15 11:44:46 | eb82adee | Typo
+      2015-02-26 06:31:11 | bc9cdc2e | Continuous integration on PHP 7 too
+      2015-02-26 06:40:00 | 36d0bbd9 | Merge pull request #232 from mnapoli/tests-php7
+      2015-03-02 12:16:11 | 76671289 | Added http://isitmaintained.com badges
+      2015-03-06 05:10:02 | 57491723 | #208 Added support for nested definitions
+      2015-03-07 09:14:44 | 2e2dced5 | Typo
+      2015-03-07 09:15:38 | 2796b556 | Removed useless code
+      2015-03-07 09:34:50 | 57b3d3de | New coding style for tests
+      2015-03-08 04:47:56 | 34207f41 | Support for dumping nested definitions
+      2015-03-08 07:04:47 | 62d33040 | Added test
+      2015-03-08 07:34:53 | b5f99521 | Improved test
+      2015-03-20 00:31:40 | 901367d8 | Merge pull request #236 from DHager/master
+      2015-03-21 04:10:57 | b6067e69 | #235 Replaced link() with get() and marked link() as deprecated
+      2015-03-21 04:21:51 | 1310445d | Merge pull request #238 from mnapoli/link-to-get
+      2015-03-21 04:25:52 | 8d51dbd3 | Merge branch 'master' into 5.0
+      2015-03-22 01:56:24 | 41962a12 | Update README.md
+      2015-03-24 08:51:39 | 265d8a1d | Fixes bug #240 A parent definition could be erased if no definition with the same name exist in sub-source (tag: 4.4.7)
+      2015-03-24 08:55:26 | b4691a2d | Merge branch 'master' into 5.0
+      2015-03-24 08:58:33 | 56ac462e | Fix #240 in branch v5.0
+      2015-04-09 14:39:59 | f54d3e8a | #214 Extend definitions
+      2015-04-09 15:00:47 | 5bd3d935 | Added tests
+      2015-04-11 05:11:54 | 673bfc44 | Removed useless class
+      2015-04-11 07:19:43 | 0c42b94a | Reverted #234 DI\object() extend the previous definition again
+      2015-04-11 08:49:33 | f2e35f48 | Renamed some definition sources to more explicit names
+      2015-04-11 08:50:51 | 35b5e23a | Removed useless method
+      2015-04-11 08:51:52 | a8f28d2d | Removed useless method
+      2015-04-11 09:02:08 | 5260f5ed | Added more tests
+      2015-04-11 09:14:02 | f3627249 | Added more tests
+      2015-04-11 09:18:39 | e9700032 | Added more tests
+      2015-04-11 09:19:52 | 06464588 | Added more tests
+      2015-04-11 09:54:24 | 69b4b98f | Merge pull request #246 from mnapoli/definition-source-refactoring
+      2015-04-12 08:21:50 | b0135eb8 | #193 DI\object()->method() now allows to call the same method twice
+      2015-04-12 08:31:21 | 65fd0d9f | Merge pull request #247 from mnapoli/multiple-method-call
+      2015-04-12 08:33:30 | 90707434 | Fix small issue
+      2015-04-12 08:49:58 | b0418a68 | Renamed ClassDefinition to ObjectDefinition
+      2015-04-12 08:58:02 | f5577a04 | Renamed definition resolvers to simpler names
+      2015-04-12 09:03:07 | c5518e49 | Fixed renaming after merge -_-
+      2015-04-12 09:13:26 | 92e2f01c | #205 Improved Symfony's integration documentation
+      2015-04-12 09:25:23 | 97415ef1 | Update README.md
+      2015-04-12 09:25:48 | 2bee8081 | Update README.md
+      2015-04-12 09:38:21 | 9ce8fd69 | Damn HHVM breaking for no reason
+      2015-04-13 01:16:08 | cb345bef | Website rewrite
+      2015-04-13 09:34:49 | db196829 | Website rewrite
+      2015-04-13 09:40:54 | 3a647da7 | Website rewrite
+      2015-04-13 09:59:31 | ef6a5c24 | Website rewrite
+      2015-04-14 10:32:53 | 51baafb1 | Website
+      2015-04-14 10:43:15 | 0f40a2aa | Website footer
+      2015-04-15 05:05:22 | e7d66d16 | Fix issues detected by Scrutinizer
+      2015-04-15 05:08:51 | 466991f7 | Fix issues detected by Scrutinizer
+      2015-04-15 05:11:58 | 6c7bea58 | Fix issues detected by Scrutinizer
+      2015-04-15 10:18:58 | 3b5135a6 | Website tweaks
+      2015-04-15 15:31:07 | 1f283533 | Website tweaks
+      2015-04-15 15:31:16 | d50ec604 | Removed support page
+      2015-04-15 15:41:17 | ed81d6e0 | Home page
+      2015-04-15 15:43:00 | 042269c8 | Home page
+      2015-04-15 15:46:18 | d0cfec5d | Website
+      2015-04-15 15:58:58 | dc4a3744 | Website
+      2015-04-16 03:53:39 | 47a7bcbd | #248 New DI\decorate() helper to decorate a previously defined entry using a callable
+      2015-04-16 04:40:12 | e8c5b6d6 | Added test
+      2015-04-16 05:15:21 | 6dff175c | Lazy initialization of definition dumpers
+      2015-04-16 05:40:03 | 90790100 | Simpler getting started
+      2015-04-16 07:20:37 | 25783a5d | Merge pull request #249 from mnapoli/decorate-definition
+      2015-04-16 07:37:48 | 937bcf5d | Website
+      2015-04-16 07:38:18 | aae8dcae | Merge branch 'website' into 5.0
+      2015-04-16 08:00:17 | ee6bb9ad | Migration guide to v5
+      2015-04-16 08:43:56 | fcef0239 | Bugfix + test
+      2015-04-16 11:17:09 | 7b739d11 | Website fixes
+      2015-04-16 11:30:42 | d562af86 | Silly documentation
+      2015-04-16 11:39:16 | c7cae493 | Fix test for PHP 5.3.3
+      2015-04-19 09:18:27 | d2f23d8a | A start at performance tests
+      2015-04-19 09:20:45 | 02e66d95 | Performance improvement: 9 less files included by default, less objects created by default
+      2015-04-19 11:08:42 | 2355394e | Optimization: avoid stat calls
+      2015-04-19 11:13:30 | b5555668 | #251 Annotations are now disabled by default
+      2015-04-20 08:38:22 | 4845fbc0 | Simpler scopes: one less Composer dependency and better performances
+      2015-04-20 08:49:13 | d6245133 | Merge pull request #252 from mnapoli/simpler-scopes
+      2015-04-20 11:06:41 | 99f1d38e | Improved the Performances documentation
+      2015-04-20 11:07:51 | 3f71bb6d | Improved the "Container configuration" documentation
+      2015-04-20 11:08:08 | ecdb2b57 | Page title
+      2015-04-20 11:09:08 | e7e618ee | Moved the annotations documentation into a separate article
+      2015-04-21 07:24:20 | 98ccec43 | Improved the "Scopes" documentation
+      2015-04-22 12:57:31 | 527b58cf | #241 #250 Container::call() now relies on the Invoker library + can invoke with numerically indexed array
+      2015-04-22 13:16:17 | 2f833cee | Updated dependency constraints
+      2015-04-22 13:16:39 | 86f85884 | Better documentation for Container::call()
+      2015-04-22 13:37:34 | c32a0f54 | Added a performance test for Container::call()
+      2015-04-22 13:37:56 | 8cf424a7 | Merge branch '5.0' into invoker
+      2015-04-22 13:41:40 | 68751d55 | Fix class name
+      2015-04-22 13:48:19 | ccb32af6 | Improve performance test
+      2015-04-22 13:48:35 | 5697ffd0 | Merge pull request #253 from mnapoli/invoker
+      2015-04-22 14:58:46 | eed5d343 | Performance tests for DI\factory()
+      2015-04-22 15:31:37 | bef8d06b | Stricter PHPUnit config
+      2015-04-23 10:26:02 | f88c294b | Ignore logo directory
+      2015-04-23 11:52:13 | 3a9f2143 | New favicon for the website
+      2015-04-24 12:44:03 | e8d95334 | Website tweaks
+      2015-04-24 13:00:45 | 10433727 | Homepage
+      2015-04-24 13:03:14 | 06fe0773 | Homepage
+      2015-04-24 16:31:25 | 6e2371eb | Documentation improvement
+      2015-04-25 02:19:50 | 4da8676b | Improved the container documentation
+      2015-04-25 05:05:04 | 2325afb1 | Update the requirement of Invoker (tag: 5.0.0-beta1)
+      2015-05-14 02:22:01 | 53c4abcd | PHP-DI now requires PHP 5.4 or greater!
+      2015-05-14 02:26:39 | 667d62eb | Removing workarounds that existed because of PHP 5.3 support
+      2015-05-14 02:41:37 | edef6493 | PHP 5.4 short arrays FTW!
+      2015-05-14 05:29:37 | f9eeb6e5 | Added more tests
+      2015-05-14 05:45:34 | 89ffa958 | Updated the migration guide
+      2015-05-14 05:58:15 | 21d3f59f | Updated the migration guide
+      2015-05-14 15:23:12 | 373158ef | Started writing PHP-DI 5.0 blog post
+      2015-05-14 16:17:51 | 513bc1e6 | PHP-DI 5.0 blog post
+      2015-05-14 18:25:40 | 8da7971b | PHP-DI 5.0 blog post
+      2015-05-15 08:42:06 | bbc31028 | Split and rewrote the documentation about definitions
+      2015-05-15 17:29:13 | 7afd2574 | Improved the "definition overriding" documentation (tag: 5.0.0-RC1)
+      2015-05-23 20:15:55 | 3ea1479b | Framework integrations have moved to the PHP-DI organization
+      2015-05-23 20:22:55 | 6159cbc0 | Updated description and homepage in composer.json
+      2015-05-23 20:28:56 | 9d4dcb34 | Rewriting "Getting started"
+      2015-05-23 20:29:02 | 3069ec5e | Merge branch '5.0' into getting-started-rewrite
+      2015-05-23 21:04:09 | 2901db73 | Rewriting "Getting started"
+      2015-05-23 21:09:20 | 183460be | Understanding dependency injection
+      2015-05-23 21:16:57 | 7a6db566 | Environments documentation
+      2015-05-24 12:23:28 | 7eb59a92 | Performances documentation
+      2015-05-24 13:23:30 | 9d2f01c2 | Bugfix: Container::call() type-hint injection wasn't using the root/wrapper container
+      2015-05-24 17:19:11 | 0da3e3bd | Silex integration
+      2015-05-24 18:12:53 | 66f89f42 | Add Silex logo
+      2015-05-24 20:27:58 | f0288e62 | Rewrote the "Definition overriding" guide
+      2015-05-24 21:08:52 | dfff31aa | Documented nesting definitions
+      2015-05-25 00:18:58 | 2edeea7e | 5.0 changelog
+      2015-05-26 09:39:26 | 3ec890c5 | Merge pull request #256 from holtkamp/patch-1
+      2015-06-01 17:40:27 | ca6a1aad | Doctrine annotations and cache are now optional dependencies for a lighter default package
+      2015-06-02 23:30:53 | e6be8bc7 | #262 Document to install doctrine cache and annotations if needed
+      2015-06-02 23:57:50 | 30899d4d | Merge pull request #262 from mnapoli/less-composer-dependencies
+      2015-06-04 14:55:16 | 927b36f3 | #263 Document the demo application (origin/5.0)
+      2015-06-05 11:31:16 | 9313eda8 | Merge pull request #265 from holtkamp/patch-2
+      2015-06-05 11:34:24 | ae151c39 | Container configuration documentation
+      2015-06-07 11:52:11 | b81a1712 | Merge pull request #200 from PHP-DI/5.0
+      2015-06-07 11:53:12 | 8b60764a | Rename the package to php-di/php-di
+      2015-06-07 12:00:52 | ba9b80bd | Move to the PHP-DI organization
+      2015-06-07 12:02:53 | cdc05725 | Fix badge
+      2015-06-07 12:05:53 | 3ccd90d0 | Fix badge
+      2015-06-07 12:07:11 | 2e9dd301 | Remove HHVM from allowed failures
+      2015-06-07 12:19:09 | 0447a554 | Fix a phpdoc
+      2015-06-07 16:47:54 | b3ce5a12 | Fixes #268 documentation for moving from mnapoli/php-di to php-di/php-di
+      2015-06-10 09:07:31 | 17fe697a | Fixing documentation
+      2015-06-10 09:13:15 | d900eb5d | The jumbotron was too tall, thanks @tentacode
+      2015-06-10 09:13:30 | f8705ad9 | Improving the latest news article
+      2015-06-10 09:16:52 | c3bbc0d3 | Latest blog post (tag: 5.0.0)
+      2015-06-10 11:52:25 | 03f0bbd4 | Website: disable Jekyll on GitHub pages
+      2015-06-10 12:59:55 | 6120e027 | Blog article
+      2015-06-22 23:44:00 | 03c31f36 | Add more tests to cover wildcards #275
+      2015-06-24 11:39:51 | 0f2a0fba | Merge pull request #276 from gomoob/master
+      2015-07-20 19:56:13 | a9b68184 | Merge pull request #280 from nstory/nstory-replace-mnapoli-package
+      2015-07-20 19:57:00 | b63eff11 | Fix indentation
+      2015-07-24 17:06:47 | 166e0431 | Tiny formatting update (tag: 5.0.1)
+      2015-07-24 17:56:17 | fd654d09 | Skip a test currently failing on HHVM because of facebook/hhvm#5781
+      2015-07-26 15:50:41 | 8fe5b9c7 | Fixes #271 Makes the website responsive
+      2015-07-26 15:56:50 | 563d41af | Fixes #270 Add a "Twitter" button in the footer (tag: 5.0.2, tag: 4.4.9)
+      2015-08-12 16:19:15 | 4a00d30f | Optimization of the ParameterResolver
+      2015-08-12 16:19:40 | c7c67c32 | Optimize the ResolverDispatcher
+      2015-08-12 16:29:10 | e025ebc1 | Remove the now useless AbstractFunctionCallDefinition
+      2015-08-12 16:46:41 | c59af31d | Merge pull request #290 from PHP-DI/performance-improvements (tag: 5.0.3)
+      2015-08-14 11:23:54 | 7dfc56c7 | Merge pull request #295 from mindplay-dk/patch-1
+      2015-08-14 14:58:36 | bd8c5f61 | Fix #298 Update ZF1 documentation
+      2015-08-23 14:45:02 | 8bd6ef13 | Merge pull request #301 from Rastusik/master
+      2015-08-25 21:03:38 | ed142926 | Fix #300 If an object definition "extends" an incompatible definition, ignore it instead of throwing an exception
+      2015-08-31 15:25:20 | 6915f6e2 | Merge pull request #303 from holtkamp/patch-3
+      2015-09-01 14:50:44 | 599867ce | Merge pull request #302 from PHP-DI/300
+      2015-09-01 14:55:05 | 3e6efc61 | Re-enable test failing on HHVM
+      2015-09-01 14:59:44 | 94a301ca | Disable test only for HHVM
+      2015-09-01 15:00:06 | f6839faf | Merge pull request #304 from PHP-DI/hhvm-build
+      2015-09-01 15:14:25 | 5259d938 | #291 Add more tests to cover lazy injections/proxies
+      2015-09-01 15:33:55 | bd44dee0 | Add test reproducing #257 and #274: injection in parent private properties
+      2015-09-01 15:56:22 | bcc2e2b6 | Fix #257 injection in parent private properties using annotations
+      2015-09-01 15:57:26 | a4d20bfc | Remove useless code
+      2015-09-01 16:06:02 | 11f01b52 | Merge pull request #305 from PHP-DI/257
+      2015-09-02 16:11:52 | a787b5ff | Fix #196 Document opcache configuration to avoid stripping annotations
+      2015-09-02 16:14:34 | 4103a8f4 | Small performance improvement based on profiling
+      2015-09-02 16:22:27 | c3df3f8e | Remove old binding for interface that was removed in 5.0
+      2015-09-02 19:50:29 | b8e9f51c | Fix Container::call() to work with embedded definitions in parameters (tag: 5.0.4)
+      2015-09-02 20:00:47 | d72acbc7 | Merge branch 'release-5.0.4'
+      2015-09-02 19:24:24 | 468c7db3 | #179 Resolve factories from the container using the invoker
+      2015-09-03 10:14:08 | 41270e83 | Merge pull request #310 from jdreesen/patch-1
+      2015-09-03 10:38:23 | dc1b010c | Merge pull request #307 from bradynpoulsen/bug/null_on_parameter_pass_by_reference
+      2015-09-05 21:20:51 | 83d042a7 | Merge pull request #311 from jdreesen/patch-1
+      2015-09-06 01:57:27 | 6564956e | Fix #296 Provide a faster ArrayCache implementation
+      2015-09-06 02:04:27 | 6724a451 | Upgrade minimum version required for Doctrine
+      2015-09-06 02:23:27 | 0da5acf4 | Merge pull request #313 from PHP-DI/array-cache
+      2015-09-06 11:37:04 | 193e79fa | More readable code
+      2015-09-06 11:39:42 | e03e5f38 | Optimization: remove useless checks
+      2015-09-06 11:54:28 | 8845c92c | Simplify the check if an environment variable is resolvable
+      2015-09-06 12:02:05 | 5a315a95 | Simpler check
+      2015-09-06 12:12:05 | 9a322ee6 | Fix #312 Move some checks from resolvers to definition sources
+      2015-09-06 12:23:39 | 25bf0094 | Merge pull request #314 from PHP-DI/optimizations
+      2015-09-06 15:45:18 | f75c27d3 | Optimization: remove useless checks
+      2015-09-06 17:15:44 | 58686c11 | Documentation for #308
+      2015-09-06 17:19:01 | babe49be | Changelog for #308
+      2015-09-06 17:19:45 | 308c2cfd | Merge pull request #308 from PHP-DI/179
+      2015-09-06 19:33:43 | d20d4537 | Merge pull request #316 from jdreesen/documentation-fixes
+      2015-09-06 19:34:16 | 19ed78bd | Merge pull request #317 from jdreesen/cs-fixes
+      2015-09-06 19:40:39 | 47aa5bbe | Fix #318 Container::call() no longer ignores parameter's default value
+      2015-09-06 19:59:21 | c76acebd | #315 Changelog for v5.1 (tag: 5.1.0-beta1)
+      2015-09-08 11:42:54 | fd21ee16 | Improve the ZF2 bridge documentation
+      2015-09-08 11:53:47 | 646c5dd2 | #315 News entry for 5.1.0 release
+      2015-09-08 11:55:12 | 4d5bd569 | Update README.md
+      2015-09-08 11:56:29 | f4a8088f | Link to 5.1 news entry in changelog (tag: 5.1.0)
+      2015-09-08 12:01:12 | 168172a0 | Exclude directories for website generation (origin/5.1)
+      2015-09-12 02:44:27 | 89042259 | Merge pull request #320 from jdreesen/cleanup
+      2015-09-14 11:58:38 | 8c9c1526 | Merge pull request #322 from jdreesen/fix-return-type
+      2015-09-15 21:55:24 | bd5229c8 | Merge pull request #323 from jdreesen/fix-typo
+      2015-09-16 01:13:16 | c9967ab0 | Merge pull request #321 from jdreesen/paamayim-nekudotayim
+      2015-09-16 23:07:36 | 3283745f | Refactor integration tests for annotations
+      2015-09-16 23:37:55 | 88412f0c | Refactor integration tests for error messages
+      2015-09-16 23:41:37 | 37a74035 | Clean up unused fixture classes
+      2015-09-16 23:46:29 | 945f95e8 | Improve exception messages
+      2015-09-16 23:50:39 | 43cfd8ee | Merge pull request #325 from jdreesen/edit-button
+      2015-09-17 12:30:17 | 6d05caa3 | Simplify error messages
+      2015-09-17 12:40:43 | 5c59263c | Simplify error messages
+      2015-09-17 13:04:07 | 8410e5b2 | Improve error messages for factories
+      2015-09-18 10:12:17 | 0cfa9fd3 | Merge pull request #326 from PHP-DI/exception_messages
+      2015-09-19 15:42:28 | ae0ece50 | Merge pull request #327 from jdreesen/improve-factory-tests
+      2015-09-19 15:45:19 | ecdb8414 | Merge pull request #328 from jdreesen/cleanup
+      2015-09-19 16:03:35 | df6b5ffa | Remove file docblocks
+      2015-09-19 16:17:42 | d841c4a9 | Applied fixes from StyleCI
+      2015-09-19 16:19:25 | 412b8267 | Merge pull request #331 from PHP-DI/analysis-86B6W8
+      2015-09-19 16:44:16 | 26adbf35 | Merge pull request #330 from PHP-DI/style
+      2015-10-05 20:14:13 | 9db48dc5 | Simplify factory tests
+      2015-10-05 20:18:46 | a928262c | Merge integration tests
+      2015-10-09 19:58:06 | 8bbe3b49 | Merge pull request #336 from MaxGfeller/add-composer-test-script
+      2015-10-18 16:22:27 | cee5d1cd | Upgarde to EasyMock 0.2
+      2015-10-05 20:14:13 | a913c5a0 | Simplify factory tests
+      2015-10-05 20:18:46 | 3342d97c | Merge integration tests
+      2015-10-18 16:23:16 | 0851b8d6 | Merge branch 'easymock'
+      2015-10-18 18:34:36 | 81b5fa89 | Merge branch 'ide-integration-docs' of https://github.com/avant1/PHP-DI into ide-docs
+      2015-10-18 19:02:47 | 217306c7 | #332 Improve IDE integration documentation
+      2015-10-23 10:40:18 | 1e8721c0 | #340 Make the demo more visible by adding it to the documentation sidebar
+      2015-10-27 00:14:07 | 9783d704 | Add Gitter chat on the website
+      2015-10-27 00:16:11 | 8d8f98a3 | Merge pull request #341 from PHP-DI/gitter
+      2015-11-15 18:45:11 | 91c8b9bb | Wording improvement on the home page
+      2015-11-20 23:04:18 | a9a846f5 | Fix documentation, fix #344
+      2015-11-20 23:07:40 | 3b30fcc9 | Remove failing badge
+      2015-11-29 13:59:01 | f7378d8a | Fix #335
+      2015-11-29 17:36:48 | aa5c46ea | Performance improvements for PR #345
+      2015-11-29 18:20:52 | 6aa07218 | Inject a new DI\Factory\RequestedEntry object instead of definitions into factories
+      2015-11-29 18:32:24 | 7fa8f7d9 | Changelog update for #347
+      2015-11-29 19:16:46 | 56b227db | Documentation for #347: service injection in factories
+      2015-11-29 19:17:06 | e95b0bc0 | Fix documentation code block
+      2015-11-29 23:40:37 | 773145e1 | Merge pull request #347 from PHP-DI/345 (tag: 5.2.0-beta1)
+      2015-12-07 11:08:14 | 08f4e19a | Merge pull request #348 from dmelo/patch-1
+      2015-12-07 13:17:48 | 3164cce3 | Fix Travis configuration
+      2015-12-07 13:18:50 | 0f3f2e9d | Applied fixes from StyleCI
+      2015-12-07 13:20:57 | 70055c58 | Merge pull request #350 from PHP-DI/analysis-zYEjAz
+      2015-12-08 21:53:14 | 25420953 | Simplify the value definition dumper
+      2015-12-08 21:55:29 | 322b9e57 | Migrate to the new travis platform
+      2015-12-20 14:49:31 | 0229505b | Complete the changelog for 5.2
+      2015-12-20 14:50:42 | 33b33077 | Improve the changelog for 5.2
+      2015-12-20 14:52:10 | 8e1d0e7f | Improve the changelog for 5.2
+      2015-12-20 16:14:30 | 37e31ce5 | News entry for 5.2 release
+      2015-12-20 16:36:35 | 220c89ba | Website: add an offset for headers so that they are not hidden behind the navbar when linking to them
+      2015-12-20 16:45:53 | 4aba69f9 | Add anchors to headers
+      2015-12-20 16:46:44 | e20ff1b4 | PHP 5.2 release notes (tag: 5.2.0)
+      2015-12-27 15:20:52 | f76dfdb1 | Add more performance tests
+      2015-12-27 19:02:48 | 4d0ca45d | Applied fixes from StyleCI
+      2015-12-27 19:03:01 | 97a40556 | Merge pull request #357 from PHP-DI/analysis-zRB67z
+      2015-12-29 16:19:22 | c1e35b59 | Merge pull request #358 from drealecs/patch-1
+      2016-01-03 14:27:46 | 0c0fa264 | Example simplification
+      2016-01-12 19:32:49 | f4f7ea99 | Merge pull request #364 from holtkamp/patch-3
+      2016-01-12 19:55:16 | d81d9164 | Revert "Fixed type-hint"
+      2016-01-12 19:55:49 | 3f54a9bd | Merge pull request #365 from PHP-DI/revert-364-patch-3
+      2016-01-14 23:57:27 | 4a493526 | Update badge
+      2016-01-15 00:05:51 | c33aff4b | Fix test
+      2016-01-15 00:34:38 | 27a7ce0e | Fix #366 Handle collisions between identical parent and child private properties
+      2016-01-15 00:46:36 | f3ae41b4 | Merge pull request #367 from PHP-DI/fix-366 (tag: 5.2.1)
+      2016-01-24 02:50:47 | 5e66d587 | Merge pull request #370 from jdreesen/docs
+      2016-01-24 02:53:52 | 7b12173b | Make the link to edit the current page on GitHub point to the rendered file
+      2016-01-24 03:12:19 | d838c44b | Improve PHP-DI's homepage
+      2016-01-24 03:19:00 | b2886db1 | Simplify a documentation piece
+      2016-01-24 03:42:25 | 63b952ac | Merge pull request #371 from jdreesen/docs
+      2016-01-24 15:47:27 | 0bc92793 | Merge pull request #372 from jdreesen/docs
+      2016-01-25 23:36:44 | b56d1f02 | Improving annotations documentation
+      2016-01-25 23:39:41 | a82e033b | Fix #374 Document annotation injection by parameter name
+      2016-01-25 23:40:03 | dd8f824d | Fix #373 Document that annotations must use double quotes
+      2016-01-25 23:50:30 | e6f30a33 | Improve the annotations documentation
+      2016-01-25 23:52:08 | fd1be80d | Applied fixes from StyleCI
+      2016-02-01 23:26:01 | ae1b6eba | Merge pull request #375 from PHP-DI/analysis-Xaj6v7
+      2016-02-04 15:25:41 | 6746722e | Update the Silex documentation following https://github.com/PHP-DI/Silex-Bridge/releases/tag/1.4.0
+      2016-02-10 01:00:00 | f574bcc8 | Add tests covering #379 (tag: 5.2.2)
+      2016-02-10 01:15:07 | cdffc65b | Add image to the readme
+      2016-02-10 01:29:09 | 1c72ced8 | Introduction in the README
+      2016-02-28 11:47:20 | 0ca02e4f | Merge pull request #387 from themagnifico/patch-1
+      2016-03-04 17:31:58 | b3fb555d | Merge pull request #389 from mopahle/master
+      2016-03-08 21:39:15 | 8bb9aa45 | Refactor and redesign the "frameworks" section of the home page
+      2016-03-08 21:54:55 | f5f1aa23 | Fix navbar link
+      2016-03-08 21:55:28 | e1ab1168 | #177 Add documentation for the Slim bridge
+      2016-03-08 22:16:31 | 95f0e3a2 | #177 News article for the Slim bridge
+      2016-03-08 23:50:39 | 3267fb1b | Typos
+      2016-03-09 23:09:24 | b3dded2d | Merge pull request #390 from PHP-DI/slim
+      2016-03-09 23:13:16 | 0a73b06d | Fix link
+      2016-03-09 23:23:33 | 5a29c3a3 | Add links to headers on the home page
+      2016-03-12 02:22:54 | b158caa6 | Merge pull request #392 from siwinski/pr-remove-exec-bit
+      2016-03-15 21:59:10 | f53004cf | Merge pull request #394 from kocsismate/case-sensitivity-warning
+      2016-03-22 00:22:51 | f95da041 | Update Silex documentation following PHP-DI/Silex-Bridge#16 by @felixfbecker
+      2016-03-28 01:18:09 | c1d3e019 | Merge pull request #398 from Rastusik/master
+      2016-04-06 14:06:49 | 29c265f2 | Fixes #402 PhpFileCache is not compatible with PHP-DI
+      2016-05-06 20:56:24 | 9f07ef61 | Remove Piwik tracking
+      2016-05-07 00:24:39 | 60dc70be | Improve the documentation sidebar by highlighting the active item (#406)
+      2016-05-11 10:53:39 | 1602506e | Add HTML tags to the website template to facilitate Algolia's indexation
+      2016-05-11 15:37:32 | 401a2196 | Add Algolia search (#407)
+      2016-05-13 22:34:16 | 19e18c1b | Strip HTML tags from search events reported to Google Analytics
+      2016-05-14 00:18:47 | a051a719 | Track only searches with at least 3 characters
+      2016-05-15 11:59:45 | 500db5d4 | Self resolving definitions (#356)
+      2016-05-15 11:57:06 | 3c033cce | Improve performance test
+      2016-05-15 11:49:02 | 5bb67bfa | Optimize method
+      2016-05-15 12:14:47 | 36a090bc | Code simplification
+      2016-05-15 12:16:50 | ae2bb05d | Remove unused import
+      2016-05-15 13:23:20 | 43b33024 | Require PHP 5.5 or above (#408) (tag: 5.3.0-beta1)
+      2016-05-15 13:15:31 | 4c9e1951 | Add PhpStorm meta file for better autocompletion in the tests
+      2016-05-15 22:25:45 | 52a7420f | Remove unused test fixture
+      2016-05-15 22:43:29 | c6c932e6 | Simplify a fixture file
+      2016-05-22 18:07:30 | a14711cf | Changelog and news entry for the 5.3.0 release
+      2016-05-29 02:00:31 | 03e33738 | Add call to action at the end of the DI introduction
+      2016-05-29 11:07:19 | ad0c4e08 | Applied fixes from StyleCI (#417)
+      2016-05-23 17:04:45 | 72e09621 | Allow compatibility with ProxyManager 2.0
+      2016-05-29 12:15:51 | 534434e2 | Merge pull request #414 from PHP-DI/proxymanager-2
+      2016-05-29 12:28:03 | 11f1a582 | Add #412 and #414 to the 5.3 changelog
+      2016-05-29 12:29:02 | 1feeef3b | Merge pull request #413 from PHP-DI/release-5.3
+      2016-05-24 20:39:13 | 11121dab | Remove definition dumpers: definitions can now cast to string directly
+      2016-05-29 12:54:16 | 279c4f03 | Merge pull request #416 from PHP-DI/remove-dumpers
+      2016-06-01 20:23:41 | 854a6d8f | Provide container-interop-implementation (#420) (tag: 5.3.0)
+      2016-06-01 23:04:42 | bfec9b35 | Fix invalid YAML
+      2016-06-01 23:13:39 | adb8426b | Publish the 5.3 release blogpost (origin/5.3)
+      2016-06-12 11:12:28 | a70ee3b5 | Improve exception message for factories when autowiring is disabled (#423)
+      2016-07-10 19:46:02 | f3acb12a | Fix tests following update to the latest PHP-DI/Invoker
+      2016-07-10 20:16:37 | ea145d21 | Cache wildcard definitions (#429)
+      2016-07-11 21:22:55 | 0b1967b1 | Fix example in Symfony documentation
+      2016-07-11 21:23:58 | f63efd7e | Update Symfony documentation about FOSRestBundle
+      2016-07-11 21:26:44 | fc4c3f95 | Add "Total download" badges in the README
+      2016-07-14 19:27:34 | 2d843fc5 | Fix tests following update to the latest PHP-DI/Invoker
+      2016-07-14 19:38:51 | 211024d4 | Improve performance tests
+      2016-07-14 20:03:15 | d7ac5984 | Make test compatible with all versions of PHP-DI/Invoker
+      2016-07-14 20:31:59 | 64fa5b7b | Merge branch 'fix-362' of https://github.com/predakanga/PHP-DI into factory-parameters
+      2016-07-15 15:38:33 | 9845d40a | Merge pull request #432 from predakanga/fix-431 (tag: 5.4.0-beta1)
+      2016-07-21 13:18:17 | 510c065c | Run tests on PHP 7.1
+      2016-08-23 22:30:15 | a9b72591 | #421 Lock the ContainerBuilder once the container has been built
+      2016-08-23 22:41:14 | 8b963973 | Merge pull request #436 from PHP-DI/lock-containerbuilder
+      2016-08-23 22:44:40 | 408d892f | 5.4 changelog
+      2016-08-23 22:53:54 | 955e17cf | Blog post for PHP-DI 5.4
+      2016-08-23 23:13:29 | f6e68a61 | Improve blog post
+      2016-08-23 23:14:24 | aab4cc22 | Fix image link
+      2016-08-23 23:18:00 | e3483934 | Publish latest blog post (tag: 5.4.0)
+      2016-12-28 01:23:52 | a26e961a | Remove the deprecated `DI\link()` function
+      2016-12-28 19:59:45 | 67f583e7 | Require PHP 7
+      2016-12-28 20:09:14 | 4cf3db86 | Drop HHVM support since it's not compatible with PHP 7 entirely
+      2016-12-28 20:15:54 | 76cb0e03 | Since PHP 7 is required, require ~2.0 for ProxyManager
+      2016-12-29 10:53:00 | 27ce2fc9 | Run tests on PHP nightly but allow it to fail
+      2017-01-01 18:41:04 | 8edfc1f2 | Allow to build the container without parameters
+      2017-01-01 18:58:29 | 535d636e | Merge pull request #448 from PHP-DI/new-container-without-parameters
+      2017-01-01 22:22:11 | 9ba37c4c | Start refactoring `object()` into `create()`
+      2017-01-01 22:29:15 | b84e9463 | Travis: never notify of successful builds
+      2017-01-01 22:31:35 | 77e83563 | Fix PHPUnit cover annotation
+      2017-01-04 23:27:09 | 989460da | Replace object() with create() in most places
+      2017-01-04 23:34:49 | b23eaca0 | Add tests for ObjectDefinition
+      2017-01-04 23:35:27 | c2cee942 | Fix test
+      2017-01-04 23:40:06 | f24d7498 | Add more tests on ObjectDefinition
+      2017-01-04 23:47:47 | 14ae540d | Test that create() overrides the previous entry
+      2017-01-06 20:31:38 | 2d5fdff9 | Inline method to optimize performances
+      2017-01-06 20:34:45 | 4fae6fb1 | Inline method to optimize performances
+      2017-01-06 20:36:29 | 778d8c48 | Inline method to optimize performances
+      2017-01-06 20:50:22 | 9183d844 | Trick to optimize performances
+      2017-01-06 21:03:39 | 7cbab59e | Trick to optimize performances
+      2017-01-06 21:34:22 | 9fbf45f9 | Optimization: check self-resolving definitions early and remove the resolver
+      2017-01-06 21:44:04 | 7b435561 | Optimization: reduce the number of `if` that runs
+      2017-01-07 01:43:51 | 1a496919 | Remove check of obvious invalid value
+      2017-01-07 01:59:04 | 3adc708e | Fix style
+      2017-01-07 01:59:49 | 79625829 | Remove useless test following removal
+      2017-01-07 02:32:13 | c4ae10b3 | Merge pull request #447 from PHP-DI/php7
+      2017-01-08 02:20:52 | 1b1cb76c | Merge pull request #450 from PHP-DI/optimizations
+      2017-01-08 02:24:41 | 0ec871ee | Merge branch '6.0' into refactor-object-to-create
+      2017-01-08 02:31:04 | 6be42614 | Test that create() overrides autowiring (and does not inherit it)
+      2017-01-08 02:41:51 | 090fcee0 | `DI\create()` does not have `constructorParameter()` and `methodParameter()` methods...
+      2017-01-08 21:27:23 | f664110d | Rename `DI\object()` to `DI\autowire()`
+      2017-03-16 19:40:14 | 5211b8e1 | Merge pull request #460 from syhol/patch-1
+      2017-03-20 22:08:55 | 50e34a14 | Refactoring to allow using `DI\autowire()` in definition arrays
+      2017-03-20 22:11:52 | b7133c8e | Fix code style (applied patch from StyleCI)
+      2017-03-20 22:40:33 | b62f06ca | Implement PSR-11
+      2017-03-20 22:44:09 | 49133c58 | Apply fixes from StyleCI
+      2017-03-20 22:44:25 | 2916f887 | Merge pull request #462 from PHP-DI/analysis-z4b0Bw
+      2017-03-21 00:47:36 | 4129e51b | Fix performance test
+      2017-03-23 00:09:54 | 4ec345f6 | Merge pull request #461 from PHP-DI/psr-11 (tag: 5.4.1)
+      2017-03-23 00:16:25 | 2e8d1344 | Merge branch 'master' into 6.0
+      2017-03-23 00:37:36 | 08afcf77 | Fix #451 Rename DefinitionException to InvalidDefinition
+      2017-03-23 00:41:59 | 1464bcf3 | Merge pull request #464 from PHP-DI/rename-exception
+      2017-03-23 00:53:51 | 51d797aa | Fix #242 Error in case a definition is not indexed by a string
+      2017-03-23 00:56:38 | 65779641 | Merge pull request #465 from PHP-DI/fix-242
+      2017-03-27 22:30:46 | bbe2ed4b | Merge pull request #466 from siwinski/add-psr-container-implementation-composer-provide (tag: 5.4.2)
+      2017-04-08 01:13:03 | edce89e5 | Remove the HHVM badge
+      2017-04-11 22:42:20 | 8ecded47 | Merge pull request #467 from rayward/autoregister-interface (tag: 5.4.3)
+      2017-04-15 15:24:33 | 625eb073 | Merge branch 'master' into 6.0
+      2017-04-15 15:24:56 | d333ac60 | Merge remote-tracking branch 'origin/6.0' into 6.0
+      2017-04-15 15:25:57 | 21ac5bfc | Merge branch '6.0' into refactor-object-to-create
+      2017-04-15 15:27:22 | 412797f8 | Exception was renamed in main branch
+      2017-04-15 16:25:32 | 5a1fbb47 | #449 Update the documentation to replace object() with create() and autowire()
+      2017-04-15 16:25:44 | 38df223b | Remove wrong TODO
+      2017-04-15 18:58:41 | d572413e | Add changelog for #449
+      2017-04-15 19:08:22 | b6eb5ccb | Migration guide for #449
+      2017-04-15 19:09:37 | ff03746f | Merge pull request #449 from PHP-DI/refactor-object-to-create (tag: 6.0.0-alpha1, origin/6.0)
+      2017-04-15 19:30:05 | 3c2b882f | Fix #351 Simplify Doctrine's annotation autoloader
+      2017-04-17 19:09:21 | 6f6b380d | Fix #376 Replace Doctrine Cache with PSR-16
+      2017-04-17 22:21:47 | bcd354c8 | Merge pull request #469 from PHP-DI/psr-16
+      2017-04-19 17:16:10 | 29b176e7 | Merge pull request #474 from juliangut/cache-key-chars
+      2017-04-19 17:17:44 | a352f93e | Merge pull request #471 from holtkamp/patch-1
+      2017-04-19 22:30:28 | 3c99e522 | Merge pull request #475 from holtkamp/patch-phpdoc-return-this-in-definitionHelper
+      2017-04-20 00:07:26 | bb714d42 | Enforce stricter typing with PHP 7
+      2017-04-20 00:20:38 | 9f8c660a | Merge pull request #481 from PHP-DI/php7-strict-types
+      2017-04-22 18:33:33 | b041f656 | Coding style fixes
+      2017-04-22 18:38:36 | 56c8c76f | Code style
+      2017-04-22 23:35:17 | 7e918bd5 | Merge pull request #482 from juliangut/cache-keys
+      2017-04-29 12:01:44 | fc4c54e0 | Merge pull request #484 from juliangut/definitions_dump
+      2017-05-04 00:40:28 | c77a4400 | Merge pull request #485 from juliangut/psr11
+      2017-05-22 23:44:14 | 930ec1ec | Merge pull request #489 from Muukuro/patch-1
+      2017-05-24 19:56:13 | 00dee13a | Add performance test with cache (APCu)
+      2017-05-28 18:30:41 | 05837d43 | Compile the container for optimum performances
+      2017-05-28 18:30:57 | 1060692d | Apply fixes from StyleCI
+      2017-05-28 18:46:54 | 9376022e | Use a more recent version of PHPUnit
+      2017-05-28 18:50:32 | d636a8ba | Exclude the template file from PHPUnit's code coverage tool
+      2017-05-29 20:36:06 | 29c4a167 | Compile array definitions
+      2017-05-30 22:12:15 | 8a6f305d | Compile object definitions
+      2017-05-30 22:28:55 | 5b0f5098 | Apply fixes from StyleCI
+      2017-05-30 23:04:08 | c4258275 | Handle singleton values in the compiled container
+      2017-05-30 23:06:50 | 69a3d86d | Move and rename BaseDefinitionTest into BaseContainerTest
+      2017-05-30 23:13:51 | 361e8fd0 | Remove duplicated tests
+      2017-05-30 23:14:10 | 8e96da37 | Cover Container::call() for the compiled container
+      2017-05-30 23:17:49 | 15570262 | Cover exception messages for the compiled container
+      2017-05-30 23:25:35 | a691d4c1 | Add Container::has() to the compiled container
+      2017-05-30 23:29:36 | f52d01c7 | Refactor the compiled container in its own class
+      2017-05-30 23:44:58 | 89eab902 | Do not require the covers annotation anymore in PHPUnit
+      2017-05-31 15:18:59 | 4767ac74 | Rename test class
+      2017-05-31 15:25:39 | 3c8737d4 | Cover Container::make() for the compiled container
+      2017-05-31 15:30:11 | 9d2dedf9 | Compile to a specific file instead of a directory
+      2017-05-31 15:56:21 | cd763574 | Cover Container::injectOn() for the compiled container
+      2017-05-31 15:57:49 | a6d16f96 | Apply fixes from StyleCI
+      2017-05-31 17:01:40 | b08ca392 | Remove the cache since it's now obsolete thanks to compilation
+      2017-05-31 17:04:47 | e9a1ddf0 | Apply fixes from StyleCI
+      2017-05-31 18:49:46 | 1078a91e | Compile lazy objects
+      2017-05-31 18:50:04 | 4025faa6 | Apply fixes from StyleCI
+      2017-06-02 22:28:33 | 1c8030ed | Remove useless test
+      2017-06-02 23:25:24 | e3bed235 | Refactor the big InjectionTest into more precise tests
+      2017-06-02 23:31:40 | e847ed0c | Apply fixes from StyleCI
+      2017-06-03 10:26:39 | 3a2b0cf4 | Refactor InheritanceTest to cover the compiled container too
+      2017-06-03 10:28:09 | dfe1306a | Fix warning
+      2017-06-03 10:30:33 | 202f445d | Refactor ProxyTest to cover the compiled container too
+      2017-06-03 10:33:06 | f7c084d5 | Add tests
+      2017-06-03 10:46:20 | 83470373 | Handle circular dependencies in the compiled container
+      2017-06-03 10:46:31 | ee27f483 | Apply fixes from StyleCI
+      2017-06-03 11:25:51 | 51443ae4 | Make the compiled container work with a delegate container
+      2016-05-15 22:32:03 | 4c2a75f3 | Fixes #409 Remove scopes
+      2017-06-03 12:52:40 | af288c62 | Merge pull request #410 from PHP-DI/remove-scopes
+      2017-06-03 12:59:10 | c5dc07d3 | Merge branch 'master' into compiler
+      2017-06-03 13:03:04 | b3ac6f51 | Remove `@coversNothing` annotations: every test covers a feature
+      2017-06-03 13:13:33 | afa026ff | Cover factory definitions for the compiled container
+      2017-06-03 13:17:40 | 9b144b3b | Fix the creation of the directory containing the compiled container
+      2017-06-03 13:21:25 | 126460ff | Upgrade regression tests to cover the compiled container
+      2017-06-03 13:22:54 | 8656f276 | Fix minimum dependency failing the tests in Travis
+      2017-06-03 13:35:22 | ffa8041d | Cover decorator definitions for the compiled container
+      2017-06-03 13:35:36 | 7f290cce | Apply fixes from StyleCI
+      2017-06-03 13:40:03 | 5d59bfa9 | Cover wildcard definitions for the compiled container
+      2017-06-03 13:43:53 | fe5a03b0 | Refactor AnnotationsTest to cover the compiled container too
+      2017-06-03 13:46:38 | c9afa3ba | Move tests for the has() method
+      2017-06-03 13:48:54 | 2ebc1535 | Move tests for the set() method
+      2017-06-03 13:50:26 | 2f40d543 | Extract more logical tests
+      2017-06-03 13:51:18 | c47df0cc | Remove TODO
+      2017-06-03 14:10:56 | c1004e34 | Support private and protected property injection in the compiled container
+      2017-06-03 16:03:46 | 8fb847ab | Refactor how the compiled container is stored and loaded to allow building the same container multiple times in the same process
+      2017-06-03 16:34:14 | f3947a02 | Update benchmarks for the compiled container
+      2017-06-03 16:34:23 | 55087679 | Apply fixes from StyleCI
+      2017-06-03 17:15:58 | 2137be98 | Test and improve error messages for the compilation process
+      2017-06-03 17:16:15 | 5aae95dc | Apply fixes from StyleCI
+      2017-06-04 09:43:39 | de239aeb | Remove sub-function in a critical path of the compiled container
+      2017-06-04 10:22:41 | bdf8af95 | Test the compiler and improve error cases
+      2017-06-04 10:23:00 | 1c051cb4 | Apply fixes from StyleCI
+      2017-06-04 10:25:29 | 9fe740b9 | Add Slim to the "getting started" guide
+      2017-06-04 11:26:05 | 032d933b | Update the documentation regarding the compiled container
+      2017-06-04 11:27:32 | cf99283f | Update the changelog regarding the compiled container
+      2017-06-04 11:56:51 | 069a8a16 | Cover an error message with a test
+      2017-06-04 12:37:10 | 2afd9c2b | Forbid setting definitions at runtime on a compiled container
+      2017-06-04 12:48:06 | ab24212e | Merge pull request #494 from PHP-DI/compiler
+      2017-06-04 12:56:18 | 61c28c69 | Changelog for #463: drop container-interop support
+      2017-06-04 12:56:45 | ac78a399 | Remove mention of the cache in the 6.0 changelog since the cache is now gone
+      2017-06-04 13:00:56 | 670bf92e | Move the StyleCI config in the repository and enable strict types
+      2017-06-04 13:13:25 | aa578988 | Apply fixes from StyleCI
+      2017-06-04 13:22:41 | a4515e25 | Fix wrong types found using strict types
+      2017-06-04 13:27:01 | 2bdf35ed | Merge branch 'master' into yuloh-nested-array-definitions
+      2017-06-04 13:42:20 | c2d4a524 | Merge pull request #497 from PHP-DI/styleci (tag: 6.0.0-alpha2)
+      2017-06-04 14:48:38 | a38bb9a2 | Apply #490 to the compiled container and improve tests
+      2017-06-04 14:49:25 | 88748053 | Merge remote-tracking branch 'origin/master'
+      2017-06-04 14:59:11 | 7536b877 | Cover #343 with tests now that it's fixed
+      2017-06-04 15:00:27 | 9118362e | Cover #343 with tests now that it's fixed
+      2017-06-04 15:09:35 | b7a913f9 | Remove dead code
+      2017-06-04 17:01:29 | c059f67d | Fix #498 and #488 Standardize resolution of nested definitions everywhere
+      2017-06-04 17:14:04 | d7966f9f | Merge pull request #499 from PHP-DI/standardize-nested-definitions
+      2017-06-04 17:18:09 | 06a3b622 | Remove a useless directory level
+      2017-06-04 17:21:22 | 6c88369a | Update the documentation for PHP 7.0
+      2017-06-04 17:28:23 | dd4a72cf | Fix #495 Document the external API of PHP-DI's classes
+      2017-06-04 18:11:16 | ecab701e | Fix the build on PHP 7.2
+      2017-06-05 15:26:46 | ec4c132e | Merge pull request #500 from sagikazarmark/patch-1 (tag: 6.0.0-alpha3)
+      2017-06-06 23:55:01 | 2b79d70d | Show the build status of the master branch
+      2017-06-11 20:36:37 | 6b554930 | Merge pull request #505 from juliangut/container-debug
+      2017-06-11 22:12:15 | b13cce52 | Improve factory performance tests
+      2017-06-11 22:12:16 | e5cd8a56 | Apply fixes from StyleCI
+      2017-06-11 22:12:30 | 473d895f | Simplify running performance tests with a Makefile
+      2017-06-07 10:12:09 | 6ec16dfd | Compile factories
+      2017-06-12 00:30:48 | 1621cedf | Code simplification
+      2017-06-12 23:31:09 | c4f260e3 | Remove unnecessary platform config in composer.json
+      2017-06-12 23:38:14 | 1d473216 | Require nikic/php-parser because we use it directly
+      2017-06-12 23:42:02 | 1effa929 | Move the compilation of closures to a private method
+      2017-06-12 23:45:12 | 880994c3 | Rename variable for better readability
+      2017-06-12 23:49:22 | a0b90a3c | Remove useless variable
+      2017-06-18 21:11:16 | fbf89a0e | Merge pull request #508 from juliangut/definitions-dump
+      2017-06-18 21:42:32 | 379b4f32 | Rename the `compile()` method to `enableCompilation()`
+      2017-06-21 22:42:52 | f00e466d | Merge pull request #511 from rquadling/patch-2
+      2017-06-30 23:41:06 | 7f0b5bf4 | Improve the documentation
+      2017-06-30 23:42:59 | 2238a9a9 | Trim extra slashes
+      2017-06-30 23:46:57 | 8ea28bcc | Validate the compiled container's class name
+      2017-06-30 23:47:55 | 24e441f7 | Clarify comment
+      2017-06-30 23:56:12 | 55f76402 | Merge pull request #509 from PHP-DI/rename-compile
+      2017-07-01 00:03:14 | 5c797a03 | Merge branch 'master' into compile-factories
+      2017-07-01 00:25:23 | 22d232fb | Refactor closure compilation to require less Composer dependencies
+      2017-07-02 23:10:19 | 5a160c95 | Fix #512 Remove `replace` clause
+      2017-07-16 14:36:48 | 5540f716 | Merge pull request #507 from PHP-DI/compile-factories (tag: 6.0.0-alpha4)
+      2017-07-30 00:16:40 | 8a242027 | Fix overriding annotations with config + refactoring
+      2017-07-30 00:22:25 | ce140e7a | Simplify code in Container
+      2017-07-30 00:28:43 | 1074adb0 | #516 Remove DI\InvokerInterface in favor of Invoker\InvokerInterface
+      2017-07-30 00:28:59 | 44a1683b | Merge pull request #517 from PHP-DI/bugfix
+      2017-06-05 23:48:24 | 2b390bd9 | Cover #501 with tests to reproduce issues with nested autowire() definitions
+      2017-07-30 18:40:01 | 3d57084e | Merge pull request #518 from PHP-DI/remove-invoker-interface
+      2017-08-05 23:33:42 | 99de099f | Fix #520: Error if an optional parameter is before required parameters
+      2017-08-05 23:34:04 | f36e08ab | Apply fixes from StyleCI
+      2017-08-05 23:37:04 | 0a071302 | Fix what StyleCI broke
+      2017-08-06 17:05:21 | d3a6f75e | Merge pull request #521 from PHP-DI/fix-520
+      2017-08-06 17:40:35 | 846564a9 | Fix #502: Document PSR-11 migration for factories
+      2017-08-19 17:01:44 | 2d360405 | Add tags for Composer
+      2017-08-19 17:02:04 | 36e97080 | Apply fixes from StyleCI
+      2017-08-19 17:21:41 | 27c8ae92 | Require php-cs-fixer
+      2017-08-19 17:21:56 | 323f76ec | Fix the php-cs-fixer configuration
+      2017-08-19 17:24:46 | 59033910 | Fix code formatting
+      2017-08-19 17:25:03 | 2877a2f8 | Apply fixes from StyleCI
+      2017-08-21 08:49:26 | ec8120ee | Improve the documentation following this question: https://stackoverflow.com/q/45787466
+      2017-08-28 08:06:14 | 569aa630 | Merge pull request #524 from mx1700/master
+      2017-10-22 19:15:26 | c8f0b8a2 | Add gitstats configuration file
+      2017-10-30 22:07:25 | 3d887643 | Merge pull request #532 from holtkamp/patch-2
+      2017-11-03 00:49:28 | 10f7846a | Cover #536 with a test case
+      2017-11-03 00:49:53 | 16cbd787 | Use `::class` notation for class name
+      2017-11-03 00:56:21 | 46bc0253 | Merge pull request #538 from PHP-DI/pr-536
+      2017-11-03 22:30:05 | 5720858e | Compile decorator definitions
+      2017-11-04 00:22:10 | 4d66a1a1 | Merge pull request #539 from PHP-DI/compile-decorators
+      2017-11-04 11:42:55 | 32fb5b33 | Emphasize a note in the performances documentation
+      2017-11-04 11:43:16 | d93e0352 | Allow to pass a `$previous` exception in the InvalidDefinition exception
+      2017-11-04 11:44:34 | 759207d6 | Traverse definitions to handle nested definitions properly
+      2017-11-04 13:12:09 | e771b2e6 | Extract definition normalization into a dedicated class
+      2017-11-04 13:43:12 | fd7bde0f | Make definition names settable to remove `EntryReference`
+      2017-11-04 13:48:15 | ca699451 | Rename `AliasDefinition` to `Reference`
+      2017-11-04 13:53:35 | b6ff39dd | Remove special cases for DefinitionHelpers that are not needed anymore
+      2017-11-04 15:17:16 | c0c467be | Remove the `EnvironmentVariableDefinitionHelper` class
+      2017-11-04 15:22:40 | 06161399 | Remove the `StringDefinitionHelper` class
+      2017-11-04 15:26:48 | e3d002a9 | Remove the `ValueDefinitionHelper` class
+      2017-11-04 15:33:12 | 1940ca11 | Remove the `ArrayDefinitionExtensionHelper` class
+      2017-11-04 17:06:12 | baf7de19 | Remove useless test now that definitions are already processed
+      2017-11-04 17:11:21 | 5a6ab8a9 | Remove unused method
+      2017-11-04 17:16:13 | ed79a8d7 | Rename "sub-definition" to "extended definition"
+      2017-11-04 17:23:16 | 40cfc13e | Simplify how definition extensions are technically implemented
+      2017-11-04 17:25:25 | 02231ae0 | Remove useless method
+      2017-11-04 17:27:52 | b4ede149 | Merge branch 'master' into handle-nested-definitions
+      2017-11-04 17:38:36 | 79712dc2 | Cover #487 with a test case
+      2017-11-04 17:40:42 | 7cc2ca28 | Coding style fixes
+      2017-11-04 18:33:05 | f902438d | #540 changelog
+      2017-11-04 18:37:37 | f5685616 | #540 documentation
+      2017-11-10 17:35:37 | bc7d1aad | Merge pull request #545 from pmlt/fix-throwables-causing-circular-exceptions
+      2017-11-04 17:25:25 | 3f838e7a | Remove useless method
+      2017-11-10 23:59:23 | f79950e3 | Fix coding style
+      2017-11-11 00:31:16 | 73ba9f7d | Merge branch 'master' into handle-nested-definitions
+      2017-11-11 00:51:10 | 4e1fd0e0 | Merge pull request #540 from PHP-DI/handle-nested-definitions
+      2017-11-11 14:33:12 | 6b9342ad | Remove unnecessary line following merging #545 (tag: 5.4.4)
+      2017-11-11 18:14:44 | 268357ae | Merge pull request #548 from gabriel-caruso/phpunit
+      2017-11-11 19:56:36 | c0a54319 | Fix code formatting
+      2017-11-11 20:04:34 | 00b275b1 | Merge pull request #549 from PHP-DI/reintegrate-533
+      2017-11-12 20:02:11 | c7afdd4a | Merge pull request #551 from gabriel-caruso/phpunit-6
+      2017-11-12 20:07:12 | ab4d7039 | Document that HHVM is no longer supported
+      2017-11-12 20:08:09 | 0b010aeb | Remove PHPUnit warning when a test does not contain assertions
+      2017-11-12 20:15:27 | 5704c3ae | Remove outdated comment
+      2017-11-12 20:50:27 | e2049c8c | Improve the documentation for lazy injection (origin/documentation-lazy-injection)
+      2017-11-12 20:51:17 | 38b35cdb | Merge pull request #552 from PHP-DI/documentation-lazy-injection
+      2017-11-14 23:12:06 | 6cb173ab | Update the documentation following Slim-Bridge 1.1.0
+      2017-11-25 11:40:40 | 7ecb2b14 | Rename the exception `AnnotationException` to `InvalidAnnotation`
+      2017-11-25 11:50:53 | de1809e5 | #537 Improve the documentation regarding the removal of scopes
+      2017-11-25 11:56:12 | fc560800 | Fix #537 Improve the documentation for `Container::make()`
+      2017-11-25 11:59:25 | 9b0f88ac | Website home: PHP-DI 6!
+      2017-11-25 12:13:27 | 4b4e0441 | Rework a bit the website home by adding more links
+      2017-11-28 10:23:34 | ae600a5f | Run tests on PHP 7.2
+      2017-11-28 20:22:42 | b89e5d11 | Merge pull request #558 from PHP-DI/mnapoli-patch-1
+      2017-11-30 23:48:01 | f0af649e | Merge pull request #559 from carusogabriel/refactoring-tests
+      2017-12-01 15:45:44 | 0e210bd4 | Require a stable version for coveralls to try to fix the build
+      2017-12-03 11:20:27 | 93ac9f14 | Update the changelog for 5.4.x versions (tag: 6.0.0-beta1)
+      2017-12-09 15:08:07 | 6afc6290 | Cover #452 with a test: PHP 7.1's nullable types
+      2018-01-06 12:36:40 | fba8f1ed | Speed up Travis builds
+      2018-01-06 14:28:10 | 6748f3f7 | Remove unused container method
+      2018-01-07 01:20:47 | 26fcc6e0 | Restore a definition cache for autowiring and Container::make() performances
+      2018-01-07 01:28:26 | 37449630 | Add pull request link in the changelog
+      2018-01-07 01:40:03 | 251ecae6 | Fix coding style
+      2018-01-07 10:54:19 | 0f0da2a2 | Fix coding style
+      2018-01-09 10:49:55 | 7f8f2e27 | #565 Compile recursively all references found during compilation
+      2018-01-09 21:49:02 | c2973610 | Store each definition in a separate cache entry
+      2018-01-09 21:54:04 | a9abb281 | Add integration tests for the cache
+      2018-01-09 21:54:32 | 9077949e | Merge branch 'master' into apcu-cache
+      2018-01-09 21:55:15 | c8df9840 | Fix coding style
+      2018-01-09 21:56:58 | cb610d0a | Merge branch 'apcu-cache' into compile-recursively
+      2018-01-13 14:27:04 | 437d5b27 | Move the `Compiler` class into the `Compiler` namespace
+      2018-01-13 14:52:41 | a664d4c8 | Recursively compile all referenced entries
+      2018-01-13 14:54:25 | 360bf15c | Merge pull request #564 from PHP-DI/apcu-cache
+      2018-01-14 11:48:26 | d8910042 | Merge pull request #566 from PHP-DI/compile-recursively
+      2018-01-14 12:06:33 | d9a69d47 | Add tests to check that some entries are indeed compiled
+      2018-01-14 12:10:24 | 589556e1 | Rename `ContainerBuilder::isCompiled()` to `isCompilationEnabled()`
+      2018-01-14 12:14:54 | defa62e7 | Improve gitstats config (tag: 6.0.0-beta2)
+      2018-01-19 23:07:37 | f1b7b112 | Merge pull request #568 from carusogabriel/assertions
+      2018-01-20 01:19:20 | 10d069e6 | Fix #567 Ignore errors for invalid referenced definitions during compilation
+      2018-01-20 12:05:22 | 6fb19783 | Fix test that should expect an exception
+      2018-01-20 12:06:29 | f2ddc119 | Fix setting the correct variable in the Compiler
+      2018-01-20 12:11:49 | e4c85d75 | Merge pull request #569 from PHP-DI/567-silence-some-errors-at-compilation (tag: 6.0.0-beta3)
+      2018-01-28 01:49:31 | 0c396d60 | Merge pull request #572 from muglug/master
+      2018-01-30 10:05:53 | b9a58e57 | Fix coding style
+      2018-02-03 15:49:24 | e4debc35 | Fix #575: Revert "Remove unused container method"
+      2018-01-20 00:57:55 | 4c0b6fe4 | PHP-DI 6 blog post about the compiled container
+      2018-02-10 14:32:54 | d320f688 | Document #487 to address #576: nested closures were not documented
+      2018-02-19 23:32:56 | 39e0421f | 6.0 blog article
+      2018-02-19 23:36:04 | 259b405a | Add a link to the v5 documentation
+      2018-02-19 23:36:50 | c70406f5 | Reorder the menu
+      2018-02-19 23:42:00 | a03d6b9d | Add support section
+      2018-02-20 10:25:11 | e10b1738 | Update 22-php-di-6-0-released.md
+      2018-02-20 10:27:46 | 4773f764 | Update 6.0 changelog to link to the news article (tag: 6.0.0)
+      2018-02-28 10:13:13 | e06622fd | Merge pull request #580 from lookyman/phpstan
+      2018-03-21 23:59:56 | d43dbcc9 | Merge pull request #586 from odahcam/develop
+      2018-04-21 20:01:33 | 03c04607 | Merge pull request #595 from alexecus/patch-1
+      2018-04-21 20:12:05 | 05aab9ca | Fix #526 Support optional parameters in factories
+      2018-04-21 20:21:15 | 7d0112fb | Merge pull request #597 from PHP-DI/fix-526
+      2018-04-21 20:26:24 | 9653e905 | Changelog update
+      2018-04-21 20:37:24 | d5383022 | Fix #585 Add support PHP-Parser 4.0
+      2018-04-21 20:39:49 | dfad09b6 | Update changelog
+      2018-04-21 20:44:02 | 1a469705 | Fix #582 Register `ContainerInterface` to point to the wrapper container if it was defined
+      2018-04-21 20:47:16 | b632aef4 | Update the README image to high resolution (tag: 6.0.1)
+      2018-04-23 09:54:40 | 71a7f2ed | Fix potential regression introduced when fixing #582 (tag: 6.0.2)
+      2018-06-11 09:08:19 | e686033d | Merge pull request #603 from odahcam/patch-1
+      2018-06-11 09:09:33 | 4c77276e | Remove note in autowiring: there are no property injection in autowiring
+      2018-06-11 09:14:15 | cdcf21d2 | Adjust the documentation about property injection
+      2018-06-30 19:17:26 | 8201deeb | Merge pull request #607 from elie29/master
+      2018-06-30 19:22:03 | bddb6f68 | Fix code style
+      2018-06-30 19:26:22 | 744fa568 | Remove Scrutinizer
+      2018-07-12 19:55:41 | 19647e82 | Merge pull request #610 from elie29/master
+      2018-07-16 23:32:59 | b6eb2520 | Remove the scrutinizer badge
+      2018-07-16 23:39:12 | be33a813 | Add link to https://prettyci.com
+      2018-07-16 23:44:43 | f8cd1437 | Add missing framework logo
+      2018-07-16 23:44:56 | 9054cf14 | Improve links metadata in the website
+      2018-07-30 22:29:10 | 858d6260 | Merge pull request #611 from ferdypruis/ferdypruis-patch-1
+      2018-08-25 16:05:30 | fe027463 | Split test in 2 for clarity
+      2018-08-25 16:05:46 | 20178374 | Add a test for wildcards pointing to static names
+      2018-08-25 16:06:15 | 20f3e79e | Refactor wildcard replacements into `ObjectDefinition` to avoid normalizing twice
+      2018-08-25 16:09:16 | e1166cdf | Add tests for `ObjectDefinition::replaceWildcards()` (origin/wildcard-autowire)
+      2018-08-26 01:21:38 | 61ef5c9f | Merge pull request #616 from ArtFireCom/wildcard-autowire (tag: 6.0.3)
+      2018-08-31 23:58:48 | 3639e6c8 | Merge pull request #617 from b1rdex/patch-1
+      2018-09-01 00:08:38 | c15dea72 | Fix #614: regression in `Container::set()`
+      2018-09-01 00:13:20 | 2c7a3a6b | Merge pull request #622 from PHP-DI/v6_di_get_autowire_interface (tag: 6.0.4)
+      2018-09-02 21:40:17 | ef261dcf | Add PrettyCI badge
+      2018-09-17 16:15:01 | a9892481 | Update php-cs-fixer rules after the latest version
+      2018-09-17 18:34:44 | 5e8b8099 | Merge pull request #627 from juliangut/variadic-add-definitions (tag: 6.0.5)
+      2018-10-07 23:45:55 | c1094375 | Merge pull request #631 from omarkdev/phpcs-allow-risky
+      2018-10-08 04:59:01 | 66ecb4f0 | Merge pull request #630 from omarkdev/early-return
+      2018-11-01 18:27:05 | 516caff6 | Merge pull request #636 from holtkamp/patch-3
+      2019-02-24 20:44:12 | e459f0a9 | Simplify #645 (origin/improve-645)
+      2019-02-28 17:45:49 | f16f27b7 | Merge pull request #645 from bbaga/master (tag: 6.0.6)
+      2019-03-07 23:01:57 | 9cfb4bd0 | Merge pull request #605 from holtkamp/hash-compiled-container-function-names
+      2019-03-07 23:02:32 | 78326779 | Fix coding style (tag: 6.0.7)
+      2019-03-14 19:35:58 | 3b04ed9b | Update README.md
+      2019-04-02 23:11:33 | 5fe47fc2 | Revert "Fix coding style"
+      2019-04-02 23:11:53 | eba6f051 | Revert "Merge pull request #605 from holtkamp/hash-compiled-container-function-names"
+      2019-04-02 23:25:18 | a634876c | Merge pull request #654 from PHP-DI/revert-6.0.7 (tag: 6.0.8)
+      2019-04-21 17:30:25 | 65987ec2 | Merge pull request #653 from Aijoona/missing-factory-resolver-parameters
+      2019-06-21 10:27:48 | 806ca40b | Merge pull request #671 from djmetzle/patch-1
+      2019-07-08 10:24:22 | 00a5eb0f | #674 Special interpretation of `\DI\value` in `\DI\Container::se… (#675) (tag: 6.0.9)
+      2019-07-30 10:34:16 | 4e6b8710 | Fix license file so that it is detected as MIT
+      2019-07-31 20:02:45 | 0744c67f | Create FUNDING.yml
+      2019-07-31 20:19:27 | 07d8fd0c | Professional support is available via Tidelift
+      2019-07-31 20:20:38 | 5cd462b9 | Fix link
+      2019-07-31 20:21:12 | 3d755689 | Update README.md
+      2019-08-09 15:36:00 | 56ba82f7 | Create SECURITY.md
+      2019-09-08 23:31:53 | 38397cf4 | Update the Slim documentation for supporting v4
+      2019-09-08 23:35:36 | b891248f | Merge pull request #682 from PHP-DI/slim4
+      2019-09-24 10:02:01 | a84d9a72 | Merge pull request #685 from BenMorel/patch-1
+      2019-10-14 10:04:16 | e4d09c54 | Merge pull request #690 from drealecs/patch-2
+      2019-10-15 10:25:21 | 5715da8f | Update FUNDING.yml
+      2019-10-19 20:25:20 | e1123b81 | Add links for enterprise support via Tidelift
+      2019-10-21 14:58:24 | a6c813bf | Merge pull request #686 from diesse/diesse-almost-idempotent-compiled-container (tag: 6.0.10)
+      2019-10-31 16:16:27 | 3237097c | Merge pull request #692 from holtkamp/patch-3
+      2019-12-03 20:39:07 | 479d0e70 | Merge pull request #696 from SvenRtbg/patch-1
+      2019-12-12 10:54:34 | 882abee8 | Merge pull request #697 from ovos/feature/travis-enable-apcu
+      2019-12-12 10:58:02 | 9bdcc2f4 | Merge pull request #698 from ovos/feature/sourcecache-namespaced (tag: 6.0.11)
+      2019-12-14 11:51:14 | e7507cd9 | Merge pull request #699 from jdreesen/patch-1
+      2019-12-15 11:29:30 | 969aebe2 | Merge pull request #700 from jdreesen/update-phpstan
+      2020-03-19 16:48:51 | fd4b2d07 | Fix coding style following php-cs-fixer update
+      2020-03-19 16:49:27 | eab9fa6c | Fix code formatting
+      2020-03-19 16:55:27 | 45de5354 | Fix phpstan config
+      2020-03-19 16:55:54 | b5d273d2 | Exclude file from git
+      2020-03-19 16:57:04 | ee052459 | Run phpstan on PHP 7.4
+      2020-03-20 16:24:52 | df96a01a | Merge pull request #709 from Jaumo/use-definition-cache-for-inject-on
+      2020-03-24 11:16:21 | 7e92bdb6 | Merge pull request #710 from jdreesen/patch-1
+      2020-03-27 11:58:19 | a8aad42e | Add sponsors
+      2020-04-06 12:54:49 | 69238bd4 | Merge pull request #708 from Jaumo/typed-property-support (tag: 6.1.0)
+      2020-05-11 22:05:56 | b9ccf44d | Move to HTTPS
+      2020-05-24 17:16:13 | da1fc4f1 | Fix PHPUnit config
+      2020-05-24 17:25:26 | 142d2502 | Fix missing return (phpstan error)
+      2020-06-10 18:55:46 | 8aded075 | Upgrade to the latest Opis/closure version to support static variables
+      2020-06-10 19:04:01 | 37448ac8 | Add more tests and comments
+      2020-06-10 19:06:30 | 988e0e56 | Fix phpstan error
+      2020-06-10 19:07:52 | d18fc36a | Merge branch 'master' into closure-serialization
+      2020-06-10 19:26:00 | 5ca8b43f | Merge pull request #717 from PHP-DI/closure-serialization (tag: 6.2.0)
+      2020-06-18 12:50:12 | b22086bf | Refactor test class: import classes
+      2020-06-18 12:54:32 | 6875fe55 | Fix #719 by upgrading opis/closure (tag: 6.2.1)
+      2020-07-18 12:47:24 | e1d8bb19 | Merge pull request #721 from iruzevic/hotfix/resolver-dispatcher-namespace
+      2020-07-20 21:07:59 | a714628f | Merge pull request #723 from iruzevic/hotfix/resolver-dispatcher-namespace
+      2020-08-01 20:41:10 | 9218e546 | Fix for supporting PHP 8
+      2020-08-01 23:06:34 | 1c0a168b | Drop support for phpdoc types with @Inject by moving to PHP 7.4+
+      2020-08-01 23:39:15 | dde46274 | Remove the obsolete `ignorePhpDocErrors` option
+      2020-08-01 23:41:13 | 0f3b69fd | Fix code formatting
+      2020-08-02 00:16:03 | 15afdada | Improve type declarations following the PHP 7.4 requirement
+      2020-08-02 00:17:44 | 3d9ac0c6 | Fix coding style
+      2020-08-02 00:18:06 | 4cdea6cb | Remove useless config files
+      2020-08-02 00:24:22 | a74041b9 | Update dependency versions to fix tests
+      2020-08-02 10:54:11 | 35854423 | Improve support for PHP 8
+      2020-08-23 17:40:44 | dee116bb | Merge pull request #729 from nightlinus/master
+      2020-08-23 19:23:17 | 40140b5b | Merge pull request #728 from nightlinus/atomic_writes_in_compiler (tag: 6.2.2)
+      2020-09-08 00:14:29 | f4d00b2d | Merge pull request #734 from emirodriguez/master
+      2020-09-24 15:21:43 | 63c44464 | Merge pull request #736 from kakenbok/master (tag: 6.2.3)
+      2020-08-02 10:54:11 | 482b7153 | Improve support for PHP 8
+      2020-09-28 15:22:01 | 15ef9d57 | Inject via PHP 8 attributes
+      2020-10-01 14:44:12 | 96a9ddb0 | Merge pull request #739 from juliangut/hotfix/tempnam-streams (tag: 6.2.4)
+      2020-10-05 16:41:42 | 4aeb4ac2 | Merge pull request #738 from PHP-DI/php8-attributes (tag: 7.0.0-beta1)
+      2020-10-05 17:11:47 | b7d3d8f7 | Fix PHP 8 attributes 🤦 (tag: 7.0.0-beta2)
+      2020-10-12 15:53:53 | 0ca3e76b | Fix wrong test
+      2020-10-12 16:12:59 | 8e71cec5 | Merge branch 'master' into php8
+      2020-10-12 16:18:14 | 8b969615 | Fix class import
+      2020-10-12 16:21:29 | b255918d | Allow installing PHPUnit 9
+      2020-10-12 16:24:33 | a5ebc18a | Add GitHub CI to run tests on PHP 8
+      2020-10-12 16:47:14 | 4ec6caf5 | Simplify PHP requirements in the codebase
+      2020-10-12 16:48:31 | d609e3b0 | Fix CI
+      2020-10-12 16:50:47 | f260b975 | Fix version requirements
+      2020-10-12 16:57:48 | a34a3e38 | Fix commands in CI
+      2020-10-12 17:04:21 | c66fdd81 | Fix CI command
+      2020-10-12 17:10:30 | 7a041980 | Fix CI for PHP 8
+      2020-10-12 17:11:18 | 4134a09f | Fix code formatting
+      2020-10-12 17:15:28 | 224aea9b | Fix invalid workflow syntax
+      2020-10-12 17:21:58 | 6fd73038 | Use Composer 2 for PHP 8
+      2020-10-12 17:29:39 | 68b34174 | Remove Travis
+      2020-10-12 17:39:15 | 955cacea | Merge pull request #737 from PHP-DI/php8 (tag: 6.3.0)
+      2020-10-12 17:41:30 | 4b4e31f1 | Merge branch 'master' into v7
+      2020-10-12 17:46:17 | 0ea9d81a | Update CI for v7
+      2020-10-22 22:16:11 | 2a8bb30a | Support PHP 8 attributes at the parameter level
+      2020-10-22 22:18:46 | f31f16a2 | Merge pull request #741 from PHP-DI/v7-php8-parameter-attributes
+      2020-10-26 13:35:30 | 09ccbeb8 | Install Composer 1 by default to support PHP 7.2
+      2020-10-28 19:37:59 | 7ab5ac6d | Merge pull request #742 from KarelWintersky/patch-1
+      2020-12-11 11:20:09 | dc320bdc | Ignore template file from CS
+      2020-12-19 15:46:22 | 33eb4194 | Merge pull request #755 from alexkuc/fix-752
+      2021-01-25 17:12:29 | 4ac510ea | Merge pull request #764 from ovos/feature/phpstan-ignore-psr-container-exception
+      2021-01-25 17:13:09 | 30f5d97d | Merge pull request #763 from ovos/feature/csfix
+      2021-02-27 19:57:07 | a1be38db | Test and document using PHP 8 named arguments for config
+      2021-02-27 21:09:59 | b6de725c | Require PHP 8.0 and use stricter types/fix warnings
+      2021-02-27 21:28:24 | 95a1a77b | Fix psalm warnings
+      2021-02-27 21:28:33 | 18b192fa | Require PHP 8
+      2021-02-27 21:40:48 | 91d2f1a3 | Psalm templates
+      2021-02-27 22:14:03 | 20873db6 | More psalm fixes
+      2021-02-27 22:29:33 | bc862ffb | Replace phpstan with psalm
+      2021-02-27 22:29:58 | 2017dc5b | Fix code formatting
+      2021-03-06 23:27:40 | 849a06a2 | Merge pull request #766 from PHP-DI/php8-only
+      2021-03-06 23:31:43 | da0912c9 | Fixes after upping the requirement to PHP 8
+      2021-01-15 13:32:16 | 5762e370 | Update dev dependency (tag: 7.0.0-beta3)
+      2021-03-06 23:33:37 | ad2ba805 | Merge branch 'master' into v7
+      2021-03-06 23:34:17 | d8429438 | Fix minimum stability
+      2021-03-06 23:37:20 | 9df69768 | Require psr/container 1.1 to strictly type parameters
+      2021-03-06 23:44:03 | ec8fbdb7 | Remove now useless test
+      2021-03-06 23:44:10 | 42916472 | Run APCu tests in CI
+      2021-03-06 23:45:27 | 902cc91e | Support psr/container 2.0
+      2021-03-06 23:48:44 | efa8ccde | Run APCu tests in CI
+      2021-03-24 23:56:08 | 3ef33a11 | Update src/Definition/Resolver/EnvironmentVariableResolver.php
+      2021-03-25 13:29:47 | 78278800 | Merge pull request #757 from angelxmoreno/feature/754-replace-getenv (tag: 6.3.1)
+      2021-04-02 21:38:52 | 957f926e | Allow to create the container with definitions
+      2021-04-02 21:42:21 | afb1ca74 | Remove obsolete ContainerBuilder::buildDevContainer()
+      2021-04-02 21:53:08 | 99b0104f | Improve the "Getting started" documentation
+      2021-04-02 23:53:08 | 50819b58 | Fix CS
+      2021-04-04 15:54:36 | 9eaa05e9 | Merge pull request #769 from PHP-DI/simpler-container-creation
+      2021-04-19 12:57:12 | 470f2031 | Update sponsors
+      2021-04-19 15:36:31 | b71d94b4 | Fix PHPStan issues
+      2021-04-20 15:24:31 | 12a15cc2 | Merge pull request #775 from martinssipenko/psr-exceptions (tag: 6.3.2)
+      2021-05-01 19:26:47 | da8e476c | Merge pull request #777 from rdarcy1/compiled-env-vars (tag: 6.3.3)
+      2021-05-04 15:38:30 | ad8eff8c | Merge pull request #778 from SvenRtbg/patch-1
+      2021-05-16 10:54:58 | 8fefce37 | Merge pull request #780 from verfriemelt-dot-org/patch-1
+      2021-05-24 15:12:01 | d629cc78 | Merge pull request #784 from elie29/ene/fix-broken-link
+      2021-06-10 11:04:48 | f53bcba0 | Merge pull request #786 from martin-heralecky/atomic-create-compilation-directory (tag: 6.3.4)
+      2021-08-29 12:18:36 | 18345ed6 | Merge pull request #790 from drealecs/patch-3
+      2021-09-02 12:49:58 | b8126d06 | Merge pull request #792 from rdarcy1/class-string-params (tag: 6.3.5)
+      2022-03-02 12:20:54 | 6fb2268f | Merge pull request #806 from ivastly/patch-1
+      2022-04-09 18:00:03 | 05aacc90 | Require PHP 7.4 to support PHP 8.1
+      2022-04-09 19:42:10 | a6a7d9e7 | Remove useless variable
+      2022-04-09 19:42:54 | bf04f2f4 | Simplify CI config
+      2022-04-09 19:46:00 | 3275bff8 | Remove unused import
+      2022-04-09 19:46:38 | ae0f1b3b | Merge pull request #811 from PHP-DI/fix/php-81-serializable (tag: 6.4.0, origin/6.4)
+      2022-04-09 19:56:55 | 6cb9fa20 | Merge master into v7
+      2022-04-09 19:57:31 | d01fdf94 | Simplify method
+      2022-04-09 20:31:45 | aa0ea10a | Various code fixes and improvements (PHPStorm warnings)
+      2022-04-09 20:37:26 | 236f4346 | Upgrade php-cs-fixer
+      2022-04-09 20:37:50 | 1117da70 | Force strict types
+      2022-04-09 20:45:03 | 891bd5ed | Improve code style
+      2022-04-09 21:26:45 | c3891b0b | Drop support for `@Inject` annotations in favor of attributes
+      2022-04-12 17:47:56 | 8d355595 | Merge pull request #812 from PHP-DI/drop-annotations
+      2022-05-20 20:24:20 | e0137dc1 | Merge pull request #819 from alessiodebernardi/alessiodebernardi-docs-typo-fix
+      2022-07-18 12:19:16 | 42154431 | Fix tests
+      2022-07-18 12:27:59 | d5bb9fbc | Upgrade PHP-CS-Fixer
+      2022-07-18 12:29:49 | 35a7d3df | Merge pull request #820 from SvenRtbg/patch-1
+      2022-07-18 12:30:16 | 9a1d0e8f | Merge pull request #822 from PHP-DI/phpcsfixer
+      2022-07-18 12:33:26 | 35f16fc5 | Merge branch 'master' into v7
+      2022-07-18 12:44:55 | 5458204c | Merge remote-tracking branch 'origin/v7' into v7
+      2022-08-21 14:43:36 | 594efd27 | Fix cs build
+      2022-08-21 15:10:13 | 6d4ac8be | Merge pull request #826 from PHP-DI/fix-build
+      2022-08-21 15:14:29 | a5b25dec | Merge branch 'master' into v7
+      2022-08-21 15:44:36 | 6e8d9f56 | Fix build
+      2022-10-27 16:15:11 | f616db91 | Merge pull request #828 from rob4226/cache-docs
+      2022-11-13 17:18:29 | 4a87afed | Merge pull request #829 from takaram/upgrade-phpstan
+      2022-11-16 13:54:21 | 29a894e9 | Merge pull request #830 from takaram/fix-php-cs-fixer
+      2023-01-08 21:53:37 | a3265194 | Merge branch 'master' into v7
+      2023-01-08 22:14:13 | 8948ffbc | Prepare the blog post for the 7.0 release (tag: 7.0.0-rc1)
+      2023-01-09 11:10:53 | f5401939 | Merge pull request #837 from szepeviktor/patch-3
+      2023-01-09 14:03:51 | ea93a1fb | Merge pull request #839 from jdreesen/patch-1
+      2023-01-09 18:44:10 | 6d9eab06 | Merge pull request #841 from ldebrouwer/ldebrouwer/correct-type-hints
+      2023-01-12 16:43:47 | 0f08e310 | Merge pull request #726 from PHP-DI/v7
+      2023-01-12 17:04:25 | 08c67956 | Update README
+      2023-01-12 17:08:11 | f0ca9a0e | Update website menu (tag: 7.0.0)
+      2023-01-14 01:29:59 | 907426a4 | Merge pull request #843 from hemberger/container-interface
+      2023-01-14 01:30:45 | 1c7f1cc9 | Merge pull request #842 from hemberger/builder-template (tag: 7.0.1)
+      2023-02-07 20:34:03 | 5d1a8664 | Merge pull request #849 from hemberger/issue-844 (tag: 7.0.2)
+      2023-03-08 11:18:54 | 10fc1626 | Merge pull request #850 from lcharette/patch-1
+      2023-03-08 18:02:30 | a7717c7a | Merge pull request #851 from lcharette/master
+      2023-06-16 11:54:49 | 32bf08a4 | Fix build
+      2023-06-16 11:56:43 | d2b57eca | Support PHP 8.1 for ProxyManager
+      2023-06-16 11:58:58 | 3366ab6e | Merge pull request #857 from PHP-DI/fix-build
+      2023-06-17 13:21:14 | d5dad250 | Merge pull request #856 from apeschar/readonly-promoted-prop (tag: 7.0.3)
+      2023-08-08 18:59:16 | 8ed79468 | Merge pull request #860 from kocsismate/fix-public-readonly-property-injection (tag: 7.0.4)
+      2023-08-10 17:57:56 | 9ea40a5a | Merge pull request #859 from zorac/enum_value_definitions (tag: 7.0.5)
+      2023-09-05 11:46:44 | d7d14a78 | Merge pull request #862 from 050media/issue-861
+      2023-09-05 11:48:20 | 5205b3e5 | Update ObjectDefinition.php
+      2023-09-05 11:49:02 | 36eb5eac | Update Compiler.php
+      2023-09-18 13:06:59 | 9db56865 | Merge pull request #863 from williamdes/patch-1
+      2023-10-11 11:48:14 | bb5dd2a8 | Fix build (HEAD -> master, origin/master, origin/HEAD)
+
+Menno Holtkamp (26):
+      2015-05-25 19:23:02 | f9ccc152 | Fixed path to Dispatcher class
+      2015-06-04 22:28:58 | 2abe66b6 | Update container-configuration.md
+      2015-06-04 23:17:55 | 54e81ea7 | Suggest to disable annotations when errors prevail
+      2015-08-31 14:55:13 | 4e389bcb | Fixed link to Couscous website
+      2016-01-12 19:32:06 | 990fa262 | Fixed type-hint
+      2016-05-29 11:08:19 | dd22e257 | Explicitly set FileWriterGeneratorStrategy (#412)
+      2017-04-18 20:39:45 | 7e4314a4 | Return proper type AutowireDefinitionHelper in PHPDoc
+      2017-04-19 22:27:24 | e92c55db | Use @return $this in PHPDoc to allow fluent method calls in IDE’s
+      2017-10-30 17:10:18 | e6ccd352 | Update README.md
+      2017-10-30 21:15:00 | e135882c | Add getDefinition() which uses a local cache of already fetched Definitions.
+      2017-10-31 17:58:17 | ec40fe52 | Unset fetchedDefinition when Definition is updated
+      2017-11-05 18:32:49 | eed5b866 | Rename $fetchedDefinitions to $definitionCache
+      2017-11-05 18:33:11 | e842322e | Completely clear definitionCache after setting a new one
+      2018-06-12 16:30:27 | 3cb2d517 | Use hashed values for method names in the CompiledContainer
+      2018-06-13 11:52:25 | ecb2bbdc | Processed feedback
+      2018-06-13 16:22:40 | bad691c0 | Added some tests
+      2018-06-13 16:23:10 | b81b6d8a | Use proper compilation dir
+      2018-06-13 16:34:32 | aca43d2a | Add check to ensure equal entryNames point to the same methodNames as well
+      2018-06-12 16:30:27 | dbee2496 | Use hashed values for method names in the CompiledContainer
+      2018-06-13 11:52:25 | 904f844a | Processed feedback
+      2018-06-13 16:22:40 | 504699e5 | Added some tests
+      2018-06-13 16:23:10 | a0bbb461 | Use proper compilation dir
+      2018-06-13 16:34:32 | 8f803084 | Add check to ensure equal entryNames point to the same methodNames as well
+      2018-09-22 21:39:38 | ef582b1b | Merge branch 'hash-compiled-container-function-names' of https://github.com/holtkamp/PHP-DI into hash-compiled-container-function-names
+      2018-11-01 13:35:16 | b60815e7 | Prevent use of strings to refer to class names
+      2019-10-31 15:32:28 | 7731c7b1 | Improve documentation concerning CompositeContainer
+
+jdreesen (24):
+      2015-09-06 16:21:55 | 400defa7 | Fix CS
+      2015-09-06 16:18:49 | e8a62d6d | Fix some typos
+      2015-09-12 02:22:44 | f2fadd82 | Delete unused class
+      2015-09-14 08:44:02 | ea81e57c | Fix return type annotation
+      2015-09-15 21:12:58 | 023138f0 | Fix argument names
+      2015-09-12 19:15:44 | 530a940f | Let Invoker::call() determine if the factory definition is a valid callable
+      2015-09-13 16:45:59 | d97865b7 | Add unit tests for the FactoryResolver using the container
+      2015-09-14 09:18:36 | 6404c5e4 | Require version 1.1 of php-di/invoker at minimum
+      2015-09-15 22:05:49 | cb87e189 | Add documentation for 'Class::method' syntax and arbitrary container entry names for factories
+      2015-09-15 22:30:54 | d8e310a0 | Update changelog for #272 and #321
+      2015-09-16 23:14:22 | 6ed66117 | Add an 'edit this page' button to the documentation
+      2015-09-17 23:22:33 | 75a7865c | Improve factory definition/resolver tests
+      2015-09-18 22:15:43 | a34cb2a5 | Fix some leftovers from #326
+      2015-09-18 22:34:16 | e1d6a5eb | Delete unused use statements
+      2015-09-18 22:37:12 | d66258bc | Fix CS: replace double quotes with single quotes
+      2015-09-19 15:32:59 | 4c0262df | Fix function description
+      2015-09-21 23:26:39 | 86e05de2 | Allow injection of any container object as factory parameter via type hinting
+      2015-09-22 21:37:51 | 4119b241 | Add documentation for arbitrary container object injection into factories
+      2015-09-22 21:41:04 | 71e368de | Update changelog for #333
+      2016-01-23 21:50:21 | a3851882 | Add link to the IDE integration docs
+      2016-01-23 21:59:26 | c9559c38 | Link to the ZF2 documentation instead of the repo
+      2016-01-23 22:53:24 | d5addd9f | Add ZF2 integration link and logo to the home page
+      2016-01-24 03:26:50 | 496c44a5 | Add link to the ZF2 bridge repo to the docs
+      2016-01-24 14:56:00 | 8dce8bf6 | s/Github/GitHub/g
+
+Julián Gutiérrez (23):
+      2017-04-19 16:09:44 | 041ac961 | PSR16 cache key char restriction
+      2017-04-20 01:16:45 | eb5c640b | FQN as cache keys
+      2017-04-21 00:59:44 | ce6a37c0 | test back slashes transformation as cache keys
+      2017-04-21 17:46:02 | 4175d213 | transform all PSR-16 key invalid chars
+      2017-04-27 00:50:08 | a023dc4d | ensure definitions dump
+      2017-04-27 01:31:30 | 6df41f30 | drop container-interop
+      2017-04-29 11:01:04 | 0892472d | revert inheritdoc and add changelog line
+      2017-04-29 11:04:13 | 20574d87 | fix styling
+      2017-04-29 11:07:29 | 23d45940 | update php-di/invoker to version 2
+      2017-06-10 00:44:17 | 62f34f10 | container entries debug
+      2017-06-10 00:47:22 | 7dc6d497 | fix Closures styling
+      2017-06-11 00:44:20 | 8700dd24 | type hinting and exception type
+      2017-06-11 00:52:13 | 05b42c06 | move to integration tests
+      2017-06-11 01:55:39 | e1438ac1 | changelog update
+      2017-06-16 01:30:54 | 30269ebf | format debug dump entries
+      2017-06-18 20:17:27 | 6d253168 | fix styling
+      2017-11-01 02:26:16 | e452003f | configure compiled container parent class
+      2018-09-17 15:39:27 | 687c5e83 | support variadic parameter on addDefinitions
+      2018-09-17 15:39:27 | 1be86047 | support variadic parameter on addDefinitions
+      2018-09-17 17:32:33 | ca31d345 | Merge branch 'variadic-add-definitions' of github.com:juliangut/PHP-DI into variadic-add-definitions
+      2018-09-17 17:33:27 | fef27140 | revert dockblock
+      2018-09-17 17:42:13 | c898d59a | dockblock variadic syntax tamed
+      2020-10-01 14:05:43 | 7e1d9c05 | suppress notice when tempfile in system tempdir
+
+Jacob Dreesen (12):
+      2015-09-03 09:11:16 | 6a86ccaa | Remove duplicate word
+      2015-09-05 17:27:13 | bad18dd6 | Fix typos and improve wording a bit
+      2018-01-30 00:28:53 | f1b3f742 | Fix small typo
+      2019-12-12 11:49:19 | ae6486e9 | Enable PHP 7.4 on travis
+      2019-12-13 15:26:11 | 242bc7f5 | Upgrade to PHP ^7.2 and PHPUnit ^8.5
+      2019-12-13 16:14:14 | f0872038 | Fix test namespace
+      2019-12-13 17:59:28 | ac8d7306 | Run PHPStan only on PHP 7.2
+      2019-12-15 00:43:40 | 44b89c04 | Upgrade to PHPStan 0.12
+      2019-12-15 01:12:22 | 502f2e49 | Run PHPStan on travis only once
+      2020-03-24 02:10:11 | fe8619f6 | Fix comment
+      2023-01-09 13:52:56 | be4a41af | Fix typo
+      2023-01-09 13:53:53 | 39b2557c | Fix typo
+
+Domenic Muskulus (8):
+      2013-03-17 18:09:05 | cd5dabd4 | #28 Adds scope feature
+      2013-03-17 19:33:41 | 9e8180d2 | #28 Documentation
+      2013-03-21 23:27:50 | 15485f64 | Avoids circular dependencies
+      2013-03-21 23:29:00 | d0990ecb | Merge remote-tracking branch 'upstream/3.0' into dev
+      2013-03-23 01:33:30 | 70e6980c | Converted spaces to tabs (indentation)
+      2013-03-23 14:20:02 | 345f70f2 | Fixed scopes documentation as the default scope is 'singleton'.
+      2013-03-28 02:30:16 | 6de8e5e6 | Added missing @author
+      2013-04-05 02:50:36 | e6b58efc | Implemented JSON, YAML and XML DefinitionFileLoaders (see #58)
+
+Elie NEHME (7):
+      2018-06-23 18:17:17 | 33f88d53 | Added instructions of using PHP-DI with Zend Expressive
+      2018-06-23 20:08:02 | baa9f6ab | Merge branch 'master' into master
+      2018-06-24 22:05:58 | 5202a958 | Added instructions of using PHP-DI with Zend Expressive
+      2018-06-24 22:07:55 | ee4bdebc | Added instructions of using PHP-DI with Zend Expressive
+      2018-07-02 13:07:51 | 353e36e4 | Added zend expressive documentation link
+      2021-05-24 11:23:55 | 84662aad | Broken Link: Integration - Zend Expressive #773
+      2021-05-24 15:06:37 | 9000d488 | use zend-expressive as key
+
+Kevin Dubois (6):
+      2014-08-13 23:14:34 | 723a7b57 | Merge remote-tracking branch 'origin/patch-2'
+      2014-08-15 01:32:25 | 07acb3a3 | making code a bit more readable
+      2014-08-15 19:22:03 | eef0d5b3 | changing variable name to be PSR-2 compliant
+      2014-08-18 20:53:23 | df177157 | Remove Autowiring changes and add option to ignore annotation misconfigurations
+      2014-08-21 19:04:46 | 10e9091c | update phpdocreader to the version that supports ignoring docblocks
+      2014-08-25 18:45:04 | d8b149c9 | fixing indentation and docblock
+
+Marcos Felipe (6):
+      2018-10-03 04:27:17 | c012b42d | Simplify conditions from OjbectCreationCompiler
+      2018-10-03 04:29:46 | d6b74d46 | Adds ternary operator to simplify else
+      2018-10-03 04:33:36 | 0cedf833 | Apply ternary operator to simplify elsewq
+      2018-10-07 04:03:17 | 34ae9a46 | rever ParameterResolver
+      2018-10-07 04:08:07 | e518c155 | set allow risky in php_cs
+      2018-10-08 03:43:18 | fa4322be | Revert comments
+
+Angel X. Moreno (5):
+      2020-12-29 10:18:17 | 08da8bf3 | replace getenv with $_ENV
+      2020-12-29 16:54:18 | 5170dd6b | proper use of Null coalescing operator
+      2020-12-29 17:36:32 | 20ce25a1 | tests expect false to be returned
+      2020-12-29 17:37:09 | b7893acc | lint
+      2020-12-29 17:44:21 | 5f4d3ba5 | lint
+
+Matthew Brown (5):
+      2018-01-25 02:26:12 | 30fc6e80 | Fix issues found by static analysis
+      2018-01-26 20:01:58 | 8f295a4b | Remove unnecessary return types
+      2018-01-26 22:43:34 | 13b49018 | Add all missing return types
+      2018-01-26 23:24:41 | 57797485 | Remove property docblocks
+      2018-01-27 19:21:04 | c7e5f31b | Remove unwanted return types
+
+Quim Calpe (5):
+      2015-11-14 01:40:33 | 3d7d9d99 | Allow injection of current definition instance as factory parameter
+      2015-11-14 02:13:45 | 0c2cd1ab | update change-log with PR number
+      2015-11-16 15:04:25 | c7020df7 | Add tests for FactoryParameterResolver
+      2015-11-16 17:34:38 | 42f0a173 | Merge branch 'master' into factory_closure_injection
+      2015-11-16 17:37:22 | c17949fe | Update to FactoryParameterResolverTest new EasyMock version
+
+diesse (5):
+      2019-10-02 16:35:46 | 3488c2d9 | Make compiled container (almost) idempotent
+      2019-10-02 16:41:55 | 7d0f6e76 | Fix typo
+      2019-10-02 16:49:15 | 93de585d | Fix CS
+      2019-10-21 14:07:24 | 481a23f7 | Add description for Compiler 'counter' fields
+      2019-10-21 14:08:26 | 571055d6 | Fix CS
+
+Bela Bagameri (4):
+      2019-02-15 16:56:25 | e0296eb6 | Adding support for proxy class generation on container compilations
+      2019-02-15 18:38:59 | 0e8ed40e | Formatting issues fixed
+      2019-02-18 12:26:43 | 4d8d114f | Changes proposed on the pull request
+      2019-02-18 12:59:49 | b15f8e78 | Formatting issues fixed
+
+Gabriel Caruso (4):
+      2017-11-11 18:09:42 | a9a79633 | Use PHPUnit\Framework\TestCase instead of PHPUnit_Framework_TestCase
+      2017-11-12 01:19:31 | f17427e4 | Update to PHPUnit 6
+      2017-11-30 17:20:01 | 081936e9 | Use assertNull
+      2018-01-19 19:16:37 | 75aa70c8 | Use assertInstanceOf
+
+James Harris (4):
+      2014-08-06 07:01:22 | d2c3559b | Implemented a new container definition for reading environment variables.
+      2014-08-07 06:46:11 | af97a6b9 | Added test for DI\env() with null default value.
+      2014-08-07 07:16:16 | 022865fe | Implemented dumper for EnvironmentVariableDefinition.
+      2014-08-08 03:47:18 | b5bae632 | Added support for methods (array-style callable) to FunctionCallDefinitionDumper
+
+mnapoli (4):
+      2012-09-04 18:09:54 | 239ef9d5 | Added composer
+      2012-09-04 18:26:31 | 24673b1e | Added composer
+      2012-09-07 20:10:52 | 98417060 | Draft of Proxy class
+      2012-10-22 18:33:02 | f4a74973 | Documentation
+
+Abel de Beer (3):
+      2014-07-30 16:55:50 | d71f196d | Container::call() resolves array callable using class name
+      2014-07-30 17:13:14 | 9812c104 | Replaces tabs with spaces
+      2014-07-31 18:59:42 | 7610310b | The container auto-registers itself with the interop interface
+
+Albert Peschar (3):
+      2023-06-15 15:06:14 | ce5ce3d1 | Don't inject promoted properties
+      2023-06-15 15:13:03 | 5b217e0d | Add integration test for promoted properties
+      2023-06-15 15:17:03 | 3973d1d9 | Skip readonly test on PHP 8.0
+
+Alexandru Pătrănescu (3):
+      2015-12-29 15:10:01 | ed6b450e | set composer sample doctrine/cache version
+      2019-10-14 04:06:07 | 58d978e6 | fix PhpStorm metadata for container get according to new format
+      2021-08-08 20:56:48 | 146eac65 | Mention that DI\get() can also be used to map interfaces to implementation
+
+Anatoly Pashin (3):
+      2018-08-27 07:54:41 | 210dccb9 | Update Container.php
+      2020-05-17 21:03:35 | 779d2085 | Add support for compilation of the short closures
+      2020-05-17 21:06:16 | 2a16f4d4 | Drop nikic/php-parser
+
+Anatoly Pulyaevskiy (3):
+      2015-07-24 05:44:59 | 775158e6 | Improved exception message on unknown method argument
+      2015-07-24 05:57:46 | c0475c08 | Replaced ::class with class FQN to support earlier PHP versions
+      2015-07-24 06:07:57 | 9dd4049b | Switched to setExpectedException() instead of regex version to support older versions of phpunit
+
+Dan Hemberger (3):
+      2023-01-13 22:11:30 | aa95b8ed | ContainerBuilder: template on container class
+      2023-01-13 22:54:15 | c038619a | CompiledContainer: match Container interface
+      2023-02-07 12:10:11 | 77cdfef3 | ContainerBuilder: fallback typehints for PhpStorm
+
+Jason R. McNeil (3):
+      2018-08-25 09:34:49 | db294778 | Adds support for autowire of __construct for wildcards
+      2018-08-25 17:47:45 | 00172657 | Merge pull request #1 from PHP-DI/wildcard-autowire
+      2018-08-25 19:14:01 | 936fd385 | Remove unused import
+
+Mark Rigby-Jones (3):
+      2023-08-08 12:46:01 | a9584ed8 | Add tests for enum cases as value definitions
+      2023-08-08 12:46:24 | 09e38216 | Fix #825 by allowing compilation of enum value definitions
+      2023-08-08 19:05:28 | 0466e4f5 | Fix job failures
+
+Rasta (3):
+      2015-08-21 01:32:13 | e29cfbcb | docs updated for zf2 pridge
+      2015-08-23 13:15:16 | d885114d | zf2 bridge docs fine tuning
+      2016-03-27 22:49:32 | cdde6444 | zf2 readme fix - application.config.php instead of module.config.php
+
+SvenRtbg (3):
+      2019-12-03 20:32:23 | 0903e603 | Add 6.0 migration link
+      2021-05-04 15:05:14 | af0d2956 | Improve DI\add description
+      2022-05-21 23:13:18 | d68774ae | Document inability to autowire php-internal classes
+
+keosion (3):
+      2014-12-11 12:57:35 | 4c4e2fe2 | BugFix : Use ChainableDefinitionSource sources
+      2014-12-12 00:03:44 | 1cd05537 | Create a fixture for ArrayDefinitionSource
+      2014-12-12 00:03:51 | 9dd33c5f | Add new test for adding ArrayDefinitionSources
+
+predakanga (3):
+      2016-07-09 09:53:56 | 6a8483db | Added support for parameters on factory definitions, fixes #362
+      2016-07-15 12:15:56 | a270406b | Fix Factory parameter resolution order, incl. tests
+      2016-07-15 12:28:05 | 3bd9bf89 | Fixed StyleCI issues
+
+wilrik (3):
+      2023-08-31 16:30:02 | 0001956b | Added happy path test for wildcard definition in global namespace
+      2023-08-31 16:30:43 | 7f175c64 | Added failing test for issue #861
+      2023-08-31 16:40:24 | 9d5fc524 | Fixed issue #861 by starting regex match from beginning of definition string
+
+Ben Peachey (2):
+      2013-01-30 00:13:27 | 825b2728 | Removes explicit PHPUnit call from .travis.yml
+      2013-01-30 12:32:40 | d0b6410a | Adds PHP-Bench to Composer dev requirements.
+
+Benjamin Zikarsky (2):
+      2020-03-20 14:44:19 | 90988ca6 | Make `injectOn` use the definition cache
+      2020-03-18 16:25:56 | 9ef7b48c | Add autowiring-support for PHP7.4 typed properties
+
+Bradyn Poulsen (2):
+      2015-09-02 18:11:52 | 69ae17de | Fixed php-di#306 modifying ParameterResolver and ObjectCreator
+      2015-09-02 21:22:18 | a8ae27f2 | remove error suppression. implemented unit tests for parameter by reference
+
+Chris Boden (2):
+      2013-05-19 22:48:12 | 061b77a6 | Better exceptions
+      2013-05-19 23:02:13 | 2c4b950f | updated/fixed unit tests
+
+Ivan Ruzevic (2):
+      2020-07-17 17:39:26 | 231025b7 | moved inline namespace calls to use
+      2020-07-19 23:41:10 | e18d2ba6 | moved inline namespace calls to use
+
+Jeff Flitton (2):
+      2013-07-24 20:26:32 | aed11852 | Added Container->inject function to inject into an existing instance (i.e. for unit testing a controller).
+      2013-07-25 00:11:39 | dcf94414 | Adding tests for performing injection on existing objects.
+
+Karel Wintersky (2):
+      2020-10-28 14:30:14 | 34c1b2f3 | Update .gitattributes
+      2020-10-28 17:38:26 | dba2743d | Update .gitattributes
+
+Kirill Krolik (2):
+      2014-06-04 13:01:51 | 2dfa47cb |  #164 Prototype scope on "factory" definitions
+      2015-09-23 20:17:49 | 5746aff7 | Add IDE integration docs section
+
+Kocsis Máté (2):
+      2016-03-15 20:55:44 | 053f4190 | Added paragraph about annotation case-sensitivity
+      2016-03-15 21:43:20 | bfa4ec72 | Corrected sentence
+
+Louis Charette (2):
+      2023-03-08 05:15:30 | aadf3199 | Fix `useAttributes` missing attribute
+      2023-03-08 17:39:20 | ed750801 | Add note about class import
+
+Luc (2):
+      2023-01-09 18:21:20 | 60116115 | Update src/Definition/Helper/CreateDefinitionHelper.php
+      2023-01-09 18:21:26 | 7a174030 | Update src/Definition/Helper/CreateDefinitionHelper.php
+
+Luiz Machado (2):
+      2018-06-07 14:45:03 | a13f2c9c | note about injectable properties on constructor
+      2018-06-07 14:48:57 | ac8af4d0 | added some notes about property injections
+
+Michal Kruczek (2):
+      2021-01-21 00:38:15 | 4a570b71 | adding leading backslash to all native constants
+      2021-01-21 13:55:22 | 87b53f12 | add psr container exception to the ignored errors
+
+Máté Kocsis (2):
+      2023-08-08 13:28:19 | 8b4e84e5 | Fix property injection of public readonly properties
+      2023-08-08 13:29:48 | 15e4b16a | Do not call ReflectionProperty::setAccessible() on PHP 8.1+
+
+Nikita Konstantinov (2):
+      2013-08-31 03:56:47 | c7bc49dc | Check if file is not a dir
+      2013-09-03 02:20:07 | 0c82da8f | Allow indexed non-empty arrays being valid parameter values
+
+Philippe Milot (2):
+      2017-11-10 00:13:15 | 3380bb6b | Fix handling of PHP 7 Throwables during resolving
+      2017-11-10 16:26:55 | 2a6528d6 | Add test case for Throwable handling
+
+Rasmus Schultz (2):
+      2015-08-13 22:49:53 | b3acef6d | Update php-definitions.md
+      2015-08-14 01:01:05 | 671197e3 | Update php-definitions.md
+
+Robin D'Arcy (2):
+      2021-04-30 18:12:16 | acdf6ca7 | Get env vars from $_ENV and $_SERVER in compiled container
+      2021-09-01 19:47:38 | 7501607e | Add @template return types
+
+Shawn Iwinski (2):
+      2016-03-11 21:07:48 | a9925849 | Remove executable bit
+      2017-03-26 21:57:59 | 16a43870 | Add psr/container-implementation Composer provide
+
+Stas (2):
+      2018-08-31 22:33:10 | 075163da | Test to make sure container can set and resolve interface - issue 641
+      2018-08-31 22:41:42 | d91bd65c | Fix assert
+
+Thomas Steur (2):
+      2017-11-24 21:10:50 | 424f4cd2 | Fix make() fails when using decorate
+      2017-11-28 00:10:58 | bdd57015 | Add test for #554
+
+Valentin Starck (2):
+      2019-03-31 06:30:04 | 34925f32 | Fixes FactoryResolver#resolve ignoring passed parameters
+      2019-03-31 22:01:53 | 7e674e63 | Added integration test: ContainerMakeTest#testFactoryFunctionForwardsPassedParameters
+
+drdamour (2):
+      2013-07-30 19:20:48 | aa7f1389 | For #87 changed the annotation type parser to resolve with use statements & aliases prior to local namespace to match how php5 resolver works.
+      2013-09-02 01:48:31 | 1141df4f | For #98 switched builder to a fluent interface
+
+kdubois (2):
+      2014-08-13 02:40:37 | db203066 | Update AnnotationDefinitionSource.php
+      2014-08-13 02:43:37 | c067b6b9 | Update ContainerBuilder.php
+
+nightlinus (2):
+      2020-08-23 15:35:43 | 6750b960 | Replace ob_get_contents() + ob_end_clean() with ob_get_clean()
+      2020-08-23 15:47:01 | 95a3ec1a | Make Compiler save file atomically
+
+takaram (2):
+      2022-11-13 09:14:16 | 1efcf428 | Upgrade PHPStan to 1.9
+      2022-11-15 17:40:13 | ac8af61b | Fix PHP-CS-Fixer Build
+
+Alessio Debernardi (1):
+      2022-05-20 16:59:13 | f019fa6c | Fixed typo in understanding-di docs section
+
+Alex Tenepere (1):
+      2018-04-15 17:23:18 | 495ed1ac | Added correct class path for Container
+
+Alexander Kucheryuk (1):
+      2020-12-18 02:09:50 | dd35ce27 | Update docs (php-definitions: static methods)
+
+Alexandru Patranescu (1):
+      2014-08-11 03:52:50 | 556f06bf | auto-register also the DI\FactoryInterface and DI\InvokerInterface
+
+Ando "David" Roots (1):
+      2014-10-20 14:12:44 | 76eedb8f | Improve wording of a paragraph in understanding-di.md
+
+Angel S. Moreno (1):
+      2021-03-22 08:10:42 | fb326343 | Update src/Definition/Resolver/EnvironmentVariableResolver.php
+
+Baptiste GAILLARD (1):
+      2015-06-24 11:17:14 | b9690689 | Make unit tests pass in Windows
+
+Benjamin Morel (1):
+      2019-09-23 22:49:56 | 4b1ebd51 | Fix doc
+
+Bilge (1):
+      2014-11-29 05:41:53 | 3e9a7e9d | Added fluent interface to ContainerBuilder::addDefinitions.
+
+Christoph Ziegenberg (1):
+      2016-04-05 17:08:43 | 5e26926a | Replaced wrong semicolon
+
+Darien Hager (1):
+      2015-03-19 23:54:02 | 8d6ddcaf | Change documentation to use "safer" example of factory() closure. This example is compatible with SymfonyContainerBridge.
+
+Daryl Metzler (1):
+      2019-06-21 04:43:51 | 1818c43f | fix grammar/working in the docs
+
+Diogo Oliveira de Melo (1):
+      2015-12-07 03:06:42 | aa2c2a8a | Change PHP's reflection link
+
+Dominic Businaro (1):
+      2016-11-29 01:27:15 | 8cc06e5c | Corrected word
+
+Erin Millard (1):
+      2014-06-13 08:27:38 | 93bda7b2 | Demonstration of uninstantiable defaulted constructor parameter injection issue.
+
+Ferdy Pruis (1):
+      2018-07-30 12:31:06 | be7cd98e | Use fqn to helpers in example code
+
+Gabriel Pillet (1):
+      2014-07-12 18:21:55 | cbe4bc9a | Removing ArrayServiceDefinition from getting started
+
+Holtkamp (1):
+      2019-03-04 17:53:48 | f3c5484a | Merge branch 'master' of git://github.com/PHP-DI/PHP-DI into hash-compiled-container-function-names
+
+Jens Struwe (1):
+      2020-09-24 14:54:19 | e6d91ffd | Silenced Error Removing tmp. Container File #735
+
+JonathanLydall (1):
+      2013-07-21 13:29:33 | 6a02f052 | Fix getting-started.md so that `composer.json` contains valid JSON
+
+Luc De Brouwer (1):
+      2023-01-09 17:36:32 | d3e0057d | Correct type hints to prevent tooling like PHPStan from raising issues.
+
+Luiz Filipe Machado Barni (1):
+      2018-03-21 19:54:17 | 98190afb | chore(home): updated main img
+
+Luke Kysow (1):
+      2014-01-18 02:48:49 | 4f3813ec | Fix typo
+
+Lukáš Unger (1):
+      2018-02-27 19:12:10 | 2d59564c | Static analysis with PHPStan
+
+Maciej Holyszko (1):
+      2019-12-12 03:01:14 | 72566184 | enable apcu on travis + php 7.3
+
+Markus Opahle (1):
+      2016-03-04 17:13:10 | d5bff80c | Improve exception message
+
+Martin Heralecký (1):
+      2021-06-09 14:36:36 | bc1431b0 | atomic creation of compilation directory
+
+Martins Sipenko (1):
+      2021-04-20 13:15:15 | 4fd0bb4d | Make InvalidDefinition exception implement ContainerExceptionInterface
+
+Matt Allan (1):
+      2017-05-22 19:39:25 | 51817587 | Recursively resolve array definitions
+
+Max Gfeller (1):
+      2015-10-09 17:52:31 | 7a916246 | Add `composer test` script
+
+Muukuro (1):
+      2017-05-22 11:34:37 | 05db6f16 | Update autowiring.md (link to PHP manual)
+
+Márk Sági-Kazár (1):
+      2017-06-05 13:32:04 | 3eea9297 | Fix typo
+
+Nathan Story (1):
+      2015-07-10 23:09:14 | ddfc9e04 | Add replace clause to composer.json for mnapoli package
+
+Nicklasos (1):
+      2016-04-14 12:53:41 | 290fce1f | Add configuring slim section. (#403)
+
+Nuno Maduro (1):
+      2016-08-29 09:16:56 | 3a3c9153 | Adds missing phpdocs (#437)
+
+Ray Ward (1):
+      2017-04-11 00:46:28 | 13d12848 | Register the container against the PSR ContainerInterface.
+
+Richard Quadling (1):
+      2017-06-21 16:33:41 | e10c78d7 | Update annotations.md
+
+Rob (1):
+      2022-09-29 03:53:30 | 454aaac2 | Add docs for cache namespace feature
+
+Scrutinizer Auto-Fixer (1):
+      2015-01-16 07:52:31 | a4af82bd | Scrutinizer Auto-Fixes
+
+Simon Holloway (1):
+      2017-03-16 14:37:58 | 738527aa | Use variadic args in constructor
+
+Vasiliy Pyatykh (1):
+      2022-03-02 01:08:00 | 907541f2 | Update autowiring.md
+
+Viktor Szépe (1):
+      2023-01-09 02:27:20 | 921a1c85 | Remove non-analyzed vendor directory from Psalm ignores
+
+William Desportes (1):
+      2023-09-13 12:04:40 | f6f35bb6 | Update .gitattributes
+
+Woody Gilk (1):
+      2022-03-17 21:40:07 | d1996d94 | Support PHP 8.1, drop 7.2
+
+bbaga (1):
+      2019-02-25 10:29:46 | ee0a72d0 | Merge pull request #1 from PHP-DI/improve-645
+
+daniphp (1):
+      2014-06-03 23:42:40 | ff374ce9 | Update definition.md
+
+emirodriguez (1):
+      2020-09-07 21:08:16 | e097a1b4 | Fix typo
+
+master (1):
+      2016-02-09 16:53:29 | 2d86df44 | Fix #379 Regex characters on container keys are escaped
+
+mg (1):
+      2019-11-28 21:42:10 | 1159a742 | SourceCache: namespacing cache keys
+
+nishigori (1):
+      2014-04-24 11:24:31 | 305c5d3f | Fix markdown syntax
+
+themagnifico (1):
+      2016-02-27 14:18:13 | 16db5367 | Update autowiring.md
+
+zhangxx (1):
+      2017-08-28 05:02:38 | 619e4a45 | Fix #522: Compile does not work on Windows
+
+Сергей Мальчиц (1):
+      2019-07-04 04:37:07 | 7ee0fcf4 | #674 Special interpretation of `\DI\value` in `\DI\Container::set`
+
+ಠ_ಠ (1):
+      2021-05-15 10:03:18 | f51d4fed | typo fix
+
