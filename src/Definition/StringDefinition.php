@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace DI\Definition;
 
 use DI\DependencyException;
-use DI\Zeal\Psr\Container\ContainerInterface;
-use DI\Zeal\Psr\Container\NotFoundExceptionInterface;
+use Psr\Container\ContainerInterface;
+use Psr\Container\NotFoundExceptionInterface;
 use RuntimeException;
 
 /**

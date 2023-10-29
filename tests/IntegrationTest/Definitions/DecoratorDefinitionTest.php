@@ -6,7 +6,7 @@ namespace DI\Test\IntegrationTest\Definitions;
 
 use DI\ContainerBuilder;
 use DI\Test\IntegrationTest\BaseContainerTest;
-use DI\Zeal\Psr\Container\ContainerInterface;
+use Psr\Container\ContainerInterface;
 use DI\Definition\Exception\InvalidDefinition;
 use function DI\create;
 use function DI\decorate;

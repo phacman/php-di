@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace DI\Test\IntegrationTest;
 
 use DI\ContainerBuilder;
-use DI\Zeal\Invoker\NotCallableException;
-use DI\Zeal\Invoker\NotEnoughParametersException;
+use Invoker\Exception\NotCallableException;
+use Invoker\Exception\NotEnoughParametersException;
 use stdClass;
 use function DI\create;
 use function DI\get;

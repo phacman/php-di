@@ -20,18 +20,18 @@ use DI\Definition\Source\SourceChain;
 use DI\Definition\ValueDefinition;
 use DI\Invoker\DefinitionParameterResolver;
 use DI\Proxy\ProxyFactory;
-use DI\Zeal\Invoker\AssociativeArrayResolver;
-use DI\Zeal\Invoker\DefaultValueResolver;
-use DI\Zeal\Invoker\InvocationException;
-use DI\Zeal\Invoker\Invoker;
-use DI\Zeal\Invoker\InvokerInterface;
-use DI\Zeal\Invoker\NotCallableException;
-use DI\Zeal\Invoker\NotEnoughParametersException;
-use DI\Zeal\Invoker\NumericArrayResolver;
-use DI\Zeal\Invoker\ResolverChain;
-use DI\Zeal\Invoker\TypeHintContainerResolver;
-use DI\Zeal\Psr\Container\ContainerInterface;
 use InvalidArgumentException;
+use Invoker\Exception\InvocationException;
+use Invoker\Exception\NotCallableException;
+use Invoker\Exception\NotEnoughParametersException;
+use Invoker\Invoker;
+use Invoker\InvokerInterface;
+use Invoker\ParameterResolver\AssociativeArrayResolver;
+use Invoker\ParameterResolver\Container\TypeHintContainerResolver;
+use Invoker\ParameterResolver\DefaultValueResolver;
+use Invoker\ParameterResolver\NumericArrayResolver;
+use Invoker\ParameterResolver\ResolverChain;
+use Psr\Container\ContainerInterface;
 
 /**
  * Dependency Injection Container.

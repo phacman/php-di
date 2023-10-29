@@ -7,8 +7,8 @@ namespace DI\Test\IntegrationTest;
 use DI\Container;
 use DI\ContainerBuilder;
 use DI\FactoryInterface;
-use DI\Zeal\Invoker\InvokerInterface;
-use DI\Zeal\Psr\Container\ContainerInterface;
+use Invoker\InvokerInterface;
+use Psr\Container\ContainerInterface;
 
 /**
  * Test entries registered by default.

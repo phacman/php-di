@@ -10,7 +10,7 @@ use DI\Test\IntegrationTest\Definitions\AttributesTest\AutowiredClass;
 use DI\Test\IntegrationTest\Definitions\AttributesTest\ConstructorInjection;
 use DI\Test\IntegrationTest\Definitions\AttributesTest\NonAnnotatedClass;
 use DI\Test\IntegrationTest\Definitions\AttributesTest\PropertyInjection;
-use DI\Zeal\ProxyManager\Proxy\LazyLoadingInterface;
+use ProxyManager\Proxy\LazyLoadingInterface;
 use stdClass;
 use function DI\autowire;
 use function DI\create;
@@ -120,7 +120,7 @@ class AttributeTest extends BaseContainerTest
 namespace DI\Test\IntegrationTest\Definitions\AttributesTest;
 
 use DI\Attribute\Inject;
-use DI\Zeal\ProxyManager\Proxy\LazyLoadingInterface;
+use ProxyManager\Proxy\LazyLoadingInterface;
 use stdClass;
 
 class NonAnnotatedClass

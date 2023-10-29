@@ -4,8 +4,8 @@ declare(strict_types=1);
 
 namespace DI;
 
-use DI\Zeal\Psr\Container\ContainerExceptionInterface;
 use Exception;
+use Psr\Container\ContainerExceptionInterface;
 
 /**
  * Exception for the Container.

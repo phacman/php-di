@@ -7,7 +7,7 @@ namespace DI\Invoker;
 use DI\Definition\Definition;
 use DI\Definition\Helper\DefinitionHelper;
 use DI\Definition\Resolver\DefinitionResolver;
-use DI\Zeal\Invoker\ParameterResolver;
+use Invoker\ParameterResolver\ParameterResolver;
 use ReflectionFunctionAbstract;
 
 /**

@@ -10,7 +10,7 @@ use DI\Definition\Exception\InvalidDefinition;
 use DI\Factory\RequestedEntry;
 use DI\Test\IntegrationTest\BaseContainerTest;
 use DI\Test\UnitTest\Definition\Resolver\Fixture\NoConstructor;
-use DI\Zeal\Psr\Container\ContainerInterface;
+use Psr\Container\ContainerInterface;
 use stdClass;
 use function DI\autowire;
 use function DI\create;

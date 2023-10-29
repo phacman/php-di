@@ -7,8 +7,8 @@ namespace DI\Test\IntegrationTest;
 use DI\Container;
 use DI\ContainerBuilder;
 use DI\FactoryInterface;
-use DI\Zeal\Psr\Container\ContainerInterface;
-use DI\Zeal\Invoker\InvokerInterface;
+use Psr\Container\ContainerInterface;
+use Invoker\InvokerInterface;
 use stdClass;
 use function DI\add;
 use function DI\autowire;
@@ -93,11 +93,11 @@ class ContainerDebugTest extends BaseContainerTest
             $container->debugEntry(FactoryInterface::class)
         );
         $this->assertMatchesRegularExpression(
-            '/^Object \(\n {4}class = #NOT INSTANTIABLE# DI\\\Zeal\\\Invoker\\\InvokerInterface\n/',
+            '/^Object \(\n {4}class = #NOT INSTANTIABLE# Invoker\\\InvokerInterface\n/',
             $container->debugEntry(InvokerInterface::class)
         );
         $this->assertMatchesRegularExpression(
-            '/^Object \(\n {4}class = #NOT INSTANTIABLE# DI\\\Zeal\\\Psr\\\Container\\\ContainerInterface\n/',
+            '/^Object \(\n {4}class = #NOT INSTANTIABLE# Psr\\\Container\\\ContainerInterface\n/',
             $container->debugEntry(ContainerInterface::class)
         );
 

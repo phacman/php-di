@@ -15,7 +15,7 @@ use DI\Test\IntegrationTest\Definitions\CreateDefinitionTest\PropertyInjection;
 use DI\Test\IntegrationTest\Definitions\ObjectDefinition\Class1;
 use DI\Test\IntegrationTest\Definitions\ObjectDefinition\Class2;
 use DI\Test\IntegrationTest\Definitions\ObjectDefinition\Class3;
-use DI\Zeal\ProxyManager\Proxy\LazyLoadingInterface;
+use ProxyManager\Proxy\LazyLoadingInterface;
 use stdClass;
 use function DI\create;
 use function DI\get;
@@ -313,7 +313,7 @@ class CreateDefinitionTest extends BaseContainerTest
 
 namespace DI\Test\IntegrationTest\Definitions\CreateDefinitionTest;
 
-use DI\Zeal\ProxyManager\Proxy\LazyLoadingInterface;
+use ProxyManager\Proxy\LazyLoadingInterface;
 use stdClass;
 
 class Property
