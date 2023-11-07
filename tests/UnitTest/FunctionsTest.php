@@ -17,15 +17,6 @@ use DI\Definition\ObjectDefinition;
 use DI\Definition\StringDefinition;
 use DI\Definition\ValueDefinition;
 use PHPUnit\Framework\TestCase;
-use function DI\add;
-use function DI\autowire;
-use function DI\create;
-use function DI\decorate;
-use function DI\env;
-use function DI\factory;
-use function DI\get;
-use function DI\string;
-use function DI\value;
 
 /**
  * Tests the helper functions.
@@ -37,7 +28,7 @@ class FunctionsTest extends TestCase
      */
     public function test_value()
     {
-        $definition = value('foo');
+        $definition = \DI\value('foo');
 
         $this->assertInstanceOf(ValueDefinition::class, $definition);
         $this->assertEquals('foo', $definition->getValue());
@@ -48,14 +39,14 @@ class FunctionsTest extends TestCase
      */
     public function test_create()
     {
-        $helper = create();
+        $helper = \DI\create();
 
         $this->assertInstanceOf(CreateDefinitionHelper::class, $helper);
         $definition = $helper->getDefinition('entry');
         $this->assertInstanceOf(ObjectDefinition::class, $definition);
         $this->assertEquals('entry', $definition->getClassName());
 
-        $helper = create('foo');
+        $helper = \DI\create('foo');
 
         $this->assertInstanceOf(CreateDefinitionHelper::class, $helper);
         $definition = $helper->getDefinition('entry');
@@ -68,14 +59,14 @@ class FunctionsTest extends TestCase
      */
     public function test_autowire()
     {
-        $helper = autowire();
+        $helper = \DI\autowire();
 
         $this->assertInstanceOf(AutowireDefinitionHelper::class, $helper);
         $definition = $helper->getDefinition('entry');
         $this->assertInstanceOf(ObjectDefinition::class, $definition);
         $this->assertEquals('entry', $definition->getClassName());
 
-        $helper = autowire('foo');
+        $helper = \DI\autowire('foo');
 
         $this->assertInstanceOf(AutowireDefinitionHelper::class, $helper);
         $definition = $helper->getDefinition('entry');
@@ -88,7 +79,7 @@ class FunctionsTest extends TestCase
      */
     public function test_factory()
     {
-        $helper = factory(function () {
+        $helper = \DI\factory(function () {
             return 42;
         });
 
@@ -104,7 +95,7 @@ class FunctionsTest extends TestCase
      */
     public function test_decorate()
     {
-        $helper = decorate(function () {
+        $helper = \DI\decorate(function () {
             return 42;
         });
 
@@ -120,7 +111,7 @@ class FunctionsTest extends TestCase
      */
     public function test_get()
     {
-        $reference = get('foo');
+        $reference = \DI\get('foo');
 
         $this->assertInstanceOf(Reference::class, $reference);
         $this->assertEquals('foo', $reference->getTargetEntryName());
@@ -131,7 +122,7 @@ class FunctionsTest extends TestCase
      */
     public function test_env()
     {
-        $definition = env('foo');
+        $definition = \DI\env('foo');
 
         $this->assertInstanceOf(EnvironmentVariableDefinition::class, $definition);
         $this->assertEquals('foo', $definition->getVariableName());
@@ -143,7 +134,7 @@ class FunctionsTest extends TestCase
      */
     public function test_env_default_value()
     {
-        $definition = env('foo', 'default');
+        $definition = \DI\env('foo', 'default');
 
         $this->assertInstanceOf(EnvironmentVariableDefinition::class, $definition);
         $this->assertEquals('foo', $definition->getVariableName());
@@ -156,7 +147,7 @@ class FunctionsTest extends TestCase
      */
     public function test_env_default_value_null()
     {
-        $definition = env('foo', null);
+        $definition = \DI\env('foo', null);
 
         $this->assertInstanceOf(EnvironmentVariableDefinition::class, $definition);
         $this->assertEquals('foo', $definition->getVariableName());
@@ -169,7 +160,7 @@ class FunctionsTest extends TestCase
      */
     public function test_add_value()
     {
-        $definition = add('hello');
+        $definition = \DI\add('hello');
         $definition->setName('foo');
 
         $this->assertInstanceOf(ArrayDefinitionExtension::class, $definition);
@@ -183,7 +174,7 @@ class FunctionsTest extends TestCase
      */
     public function test_add_array()
     {
-        $definition = add(['hello', 'world']);
+        $definition = \DI\add(['hello', 'world']);
         $definition->setName('foo');
 
         $this->assertInstanceOf(ArrayDefinitionExtension::class, $definition);
@@ -197,7 +188,7 @@ class FunctionsTest extends TestCase
      */
     public function test_string()
     {
-        $definition = string('bar');
+        $definition = \DI\string('bar');
 
         $this->assertInstanceOf(StringDefinition::class, $definition);
         $this->assertEquals('bar', $definition->getExpression());

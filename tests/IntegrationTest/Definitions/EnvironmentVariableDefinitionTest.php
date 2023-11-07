@@ -7,8 +7,6 @@ namespace DI\Test\IntegrationTest\Definitions;
 use DI\ContainerBuilder;
 use DI\Test\IntegrationTest\BaseContainerTest;
 use DI\Definition\Exception\InvalidDefinition;
-use function DI\env;
-use function DI\get;
 
 /**
  * Test environment variable definitions.
@@ -28,7 +26,7 @@ class EnvironmentVariableDefinitionTest extends BaseContainerTest
         }
 
         $builder->addDefinitions([
-            'var' => env('USER'),
+            'var' => \DI\env('USER'),
         ]);
         $container = $builder->build();
 
@@ -44,7 +42,7 @@ class EnvironmentVariableDefinitionTest extends BaseContainerTest
         $this->expectException(InvalidDefinition::class);
         $this->expectExceptionMessage('The environment variable \'PHP_DI_DO_NOT_DEFINE_THIS\' has not been defined');
         $builder->addDefinitions([
-            'var' => env('PHP_DI_DO_NOT_DEFINE_THIS'),
+            'var' => \DI\env('PHP_DI_DO_NOT_DEFINE_THIS'),
         ]);
         $container = $builder->build();
 
@@ -57,7 +55,7 @@ class EnvironmentVariableDefinitionTest extends BaseContainerTest
     public function test_nonexistent_env_variable_with_default_value(ContainerBuilder $builder)
     {
         $builder->addDefinitions([
-            'var' => env('PHP_DI_DO_NOT_DEFINE_THIS', '<default>'),
+            'var' => \DI\env('PHP_DI_DO_NOT_DEFINE_THIS', '<default>'),
         ]);
         $container = $builder->build();
 
@@ -71,7 +69,7 @@ class EnvironmentVariableDefinitionTest extends BaseContainerTest
     public function test_nonexistent_env_variable_with_null_as_default(ContainerBuilder $builder)
     {
         $builder->addDefinitions([
-            'var' => env('PHP_DI_DO_NOT_DEFINE_THIS', null),
+            'var' => \DI\env('PHP_DI_DO_NOT_DEFINE_THIS', null),
         ]);
         $container = $builder->build();
 
@@ -85,7 +83,7 @@ class EnvironmentVariableDefinitionTest extends BaseContainerTest
     public function test_nonexistent_env_variable_with_other_entry_as_default(ContainerBuilder $builder)
     {
         $builder->addDefinitions([
-            'var' => env('PHP_DI_DO_NOT_DEFINE_THIS', get('foo')),
+            'var' => \DI\env('PHP_DI_DO_NOT_DEFINE_THIS', \DI\get('foo')),
             'foo' => 'bar',
         ]);
         $container = $builder->build();

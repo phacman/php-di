@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace DI\Test\UnitTest\Definition\Source\Fixtures;
 
 use DI\Attribute\Inject;
-use stdClass;
 
 class AttributeFixture
 {
@@ -68,7 +67,7 @@ class AttributeFixture
     }
 
     #[Inject(['foo'])]
-    public function optionalParameter(stdClass $optional1 = null, stdClass $optional2 = null)
+    public function optionalParameter(\stdClass $optional1 = null, \stdClass $optional2 = null)
     {
     }
 

@@ -9,16 +9,6 @@ use DI\ContainerBuilder;
 use DI\FactoryInterface;
 use Psr\Container\ContainerInterface;
 use Invoker\InvokerInterface;
-use stdClass;
-use function DI\add;
-use function DI\autowire;
-use function DI\create;
-use function DI\decorate;
-use function DI\env;
-use function DI\factory;
-use function DI\get;
-use function DI\string;
-use function DI\value;
 
 /**
  * Tests container debugging.
@@ -51,31 +41,31 @@ class ContainerDebugTest extends BaseContainerTest
         $builder = new ContainerBuilder();
 
         $builder->addDefinitions([
-            'create' => create(Container::class),
-            'autowire' => autowire(Container::class),
-            'factory' => factory(function () {
+            'create' => \DI\create(Container::class),
+            'autowire' => \DI\autowire(Container::class),
+            'factory' => \DI\factory(function () {
                 return true;
             }),
             'callback' => function () {
                 return true;
             },
-            'decorator' => decorate(function () {
+            'decorator' => \DI\decorate(function () {
                 return true;
             }),
-            'alias' => get('value'),
-            'environment' => env('foo'),
-            'array' => add(['foo', 'bar']),
-            'string' => string('foo'),
-            'float' => value(1.5),
-            'bool' => value(true),
-            'str' => value('string'),
-            'null' => value(null),
+            'alias' => \DI\get('value'),
+            'environment' => \DI\env('foo'),
+            'array' => \DI\add(['foo', 'bar']),
+            'string' => \DI\string('foo'),
+            'float' => \DI\value(1.5),
+            'bool' => \DI\value(true),
+            'str' => \DI\value('string'),
+            'null' => \DI\value(null),
         ]);
 
         /** @var Container $container */
         $container = $builder->build();
 
-        $container->set('entry_object', new stdClass());
+        $container->set('entry_object', new \stdClass());
         $container->set('entry_array', ['foo', 'bar']);
         $container->set('entry_int', 100);
         $container->set('entry_bool', false);

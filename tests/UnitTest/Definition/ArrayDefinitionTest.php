@@ -6,8 +6,6 @@ namespace DI\Test\UnitTest\Definition;
 
 use DI\Definition\ArrayDefinition;
 use PHPUnit\Framework\TestCase;
-use function DI\env;
-use function DI\get;
 
 /**
  * @covers \DI\Definition\ArrayDefinition
@@ -59,8 +57,8 @@ class ArrayDefinitionTest extends TestCase
     public function should_cast_to_string_with_nested_definitions()
     {
         $definition = new ArrayDefinition([
-            get('foo'),
-            env('foo'),
+            \DI\get('foo'),
+            \DI\env('foo'),
         ]);
         $str = '[
     0 => get(foo),

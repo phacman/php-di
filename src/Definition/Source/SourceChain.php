@@ -6,7 +6,6 @@ namespace DI\Definition\Source;
 
 use DI\Definition\Definition;
 use DI\Definition\ExtendsPreviousDefinition;
-use LogicException;
 
 /**
  * Manages a chain of other definition sources.
@@ -64,13 +63,13 @@ class SourceChain implements DefinitionSource, MutableDefinitionSource
     public function addDefinition(Definition $definition) : void
     {
         if (! $this->mutableSource) {
-            throw new LogicException("The container's definition source has not been initialized correctly");
+            throw new \LogicException("The container's definition source has not been initialized correctly");
         }
 
         $this->mutableSource->addDefinition($definition);
     }
 
-    private function resolveExtendedDefinition(ExtendsPreviousDefinition $definition, int $currentIndex)
+    private function resolveExtendedDefinition(ExtendsPreviousDefinition $definition, int $currentIndex) : void
     {
         // Look in the next sources only (else infinite recursion, and we can only extend
         // entries defined in the previous definition files - a previous == next here because

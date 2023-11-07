@@ -14,9 +14,7 @@ use DI\Definition\Source\ReflectionBasedAutowiring;
 use DI\Definition\Source\SourceCache;
 use DI\Definition\Source\SourceChain;
 use DI\Proxy\ProxyFactory;
-use Exception;
 use InvalidArgumentException;
-use LogicException;
 use Psr\Container\ContainerInterface;
 
 /**
@@ -129,7 +127,7 @@ class ContainerBuilder
 
         if ($this->sourceCache) {
             if (!SourceCache::isSupported()) {
-                throw new Exception('APCu is not enabled, PHP-DI cannot use it as a cache');
+                throw new \Exception('APCu is not enabled, PHP-DI cannot use it as a cache');
             }
             // Wrap the source with the cache decorator
             $source = new SourceCache($source, $this->sourceCacheNamespace);
@@ -179,7 +177,7 @@ class ContainerBuilder
      * @param class-string<Container> $containerParentClass Name of the compiled container parent class. Customize only if necessary.
      * @psalm-param class-string<T> $containerParentClass
      *
-     * @psalm-return self<T>
+     * @psalm-return static<ContainerClass>
      */
     public function enableCompilation(
         string $directory,
@@ -249,7 +247,7 @@ class ContainerBuilder
                 'The proxy directory must be specified if you want to write proxies on disk'
             );
         }
-        $this->proxyDirectory = $proxyDirectory;
+        $this->proxyDirectory = $writeToFile ? $proxyDirectory : null;
 
         return $this;
     }
@@ -329,7 +327,7 @@ class ContainerBuilder
     private function ensureNotLocked() : void
     {
         if ($this->locked) {
-            throw new LogicException('The ContainerBuilder cannot be modified after the container has been built');
+            throw new \LogicException('The ContainerBuilder cannot be modified after the container has been built');
         }
     }
 }

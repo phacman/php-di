@@ -9,11 +9,9 @@ use DI\Test\IntegrationTest\BaseContainerTest;
 use DI\Test\IntegrationTest\Definitions\NestedDefinitionsTest\AllKindsOfInjections;
 use DI\Test\IntegrationTest\Definitions\NestedDefinitionsTest\Autowireable;
 use DI\Test\IntegrationTest\Definitions\NestedDefinitionsTest\AutowireableDependency;
-use stdClass;
 use function DI\autowire;
 use function DI\create;
 use function DI\env;
-use function DI\factory;
 use function DI\get;
 
 class NestedDefinitionsTest extends BaseContainerTest
@@ -30,15 +28,15 @@ class NestedDefinitionsTest extends BaseContainerTest
             'object' => env('PHP_DI_DO_NOT_DEFINE_THIS', create('stdClass')),
             'objectInArray' => env('PHP_DI_DO_NOT_DEFINE_THIS', [create('stdClass')]),
             'autowired' => env('PHP_DI_DO_NOT_DEFINE_THIS', autowire(Autowireable::class)),
-            'factory' => env('PHP_DI_DO_NOT_DEFINE_THIS', factory(function () {
+            'factory' => env('PHP_DI_DO_NOT_DEFINE_THIS', \DI\factory(function () {
                 return 'hello';
             })),
         ]);
         $container = $builder->build();
 
         $this->assertEquals('bar', $container->get('link'));
-        $this->assertEquals(new stdClass, $container->get('object'));
-        $this->assertEquals([new stdClass], $container->get('objectInArray'));
+        $this->assertEquals(new \stdClass, $container->get('object'));
+        $this->assertEquals([new \stdClass], $container->get('objectInArray'));
         $this->assertEquals(new Autowireable(new AutowireableDependency), $container->get('autowired'));
         $this->assertEquals('hello', $container->get('factory'));
     }
@@ -50,14 +48,14 @@ class NestedDefinitionsTest extends BaseContainerTest
     public function should_allow_nested_definitions_in_factories(ContainerBuilder $builder)
     {
         $builder->addDefinitions([
-            'factory' => factory(function ($entry) {
+            'factory' => \DI\factory(function ($entry) {
                 return $entry;
-            })->parameter('entry', [create(stdClass::class), autowire(Autowireable::class)]),
+            })->parameter('entry', [create(\stdClass::class), autowire(Autowireable::class)]),
         ]);
 
         $factory = $builder->build()->get('factory');
 
-        $this->assertEquals(new stdClass, $factory[0]);
+        $this->assertEquals(new \stdClass, $factory[0]);
         $this->assertEquals(new Autowireable(new AutowireableDependency), $factory[1]);
     }
 
@@ -71,8 +69,8 @@ class NestedDefinitionsTest extends BaseContainerTest
             AllKindsOfInjections::class => create()
                 ->constructor(create('stdClass'))
                 ->property('property', autowire(Autowireable::class))
-                ->method('method', factory(function () {
-                    return new stdClass;
+                ->method('method', \DI\factory(function () {
+                    return new \stdClass;
                 })),
         ]);
         $container = $builder->build();
@@ -80,8 +78,8 @@ class NestedDefinitionsTest extends BaseContainerTest
         $object = $container->get(AllKindsOfInjections::class);
 
         $this->assertEquals(new Autowireable(new AutowireableDependency), $object->property);
-        $this->assertEquals(new stdClass, $object->constructorParameter);
-        $this->assertEquals(new stdClass, $object->methodParameter);
+        $this->assertEquals(new \stdClass, $object->constructorParameter);
+        $this->assertEquals(new \stdClass, $object->methodParameter);
     }
 
     /**
@@ -99,8 +97,8 @@ class NestedDefinitionsTest extends BaseContainerTest
                     autowire(Autowireable::class),
                 ])
                 ->method('method', [
-                    factory(function () {
-                        return new stdClass;
+                    \DI\factory(function () {
+                        return new \stdClass;
                     }),
                 ]),
         ]);
@@ -109,8 +107,8 @@ class NestedDefinitionsTest extends BaseContainerTest
         $object = $container->get(AllKindsOfInjections::class);
 
         $this->assertEquals(new Autowireable(new AutowireableDependency), $object->property[0]);
-        $this->assertEquals(new stdClass, $object->constructorParameter[0]);
-        $this->assertEquals(new stdClass, $object->methodParameter[0]);
+        $this->assertEquals(new \stdClass, $object->constructorParameter[0]);
+        $this->assertEquals(new \stdClass, $object->methodParameter[0]);
     }
 
     /**
@@ -123,8 +121,8 @@ class NestedDefinitionsTest extends BaseContainerTest
             AllKindsOfInjections::class => autowire()
                 ->constructorParameter('constructorParameter', create('stdClass'))
                 ->property('property', autowire(Autowireable::class))
-                ->methodParameter('method', 'methodParameter', factory(function () {
-                    return new stdClass;
+                ->methodParameter('method', 'methodParameter', \DI\factory(function () {
+                    return new \stdClass;
                 })),
         ]);
         $container = $builder->build();
@@ -132,8 +130,8 @@ class NestedDefinitionsTest extends BaseContainerTest
         $object = $container->get(AllKindsOfInjections::class);
 
         $this->assertEquals(new Autowireable(new AutowireableDependency), $object->property);
-        $this->assertEquals(new stdClass, $object->constructorParameter);
-        $this->assertEquals(new stdClass, $object->methodParameter);
+        $this->assertEquals(new \stdClass, $object->constructorParameter);
+        $this->assertEquals(new \stdClass, $object->methodParameter);
     }
 
     /**
@@ -151,8 +149,8 @@ class NestedDefinitionsTest extends BaseContainerTest
                     autowire(Autowireable::class),
                 ])
                 ->methodParameter('method', 'methodParameter', [
-                    factory(function () {
-                        return new stdClass;
+                    \DI\factory(function () {
+                        return new \stdClass;
                     }),
                 ]),
         ]);
@@ -161,8 +159,8 @@ class NestedDefinitionsTest extends BaseContainerTest
         $object = $container->get(AllKindsOfInjections::class);
 
         $this->assertEquals(new Autowireable(new AutowireableDependency), $object->property[0]);
-        $this->assertEquals(new stdClass, $object->constructorParameter[0]);
-        $this->assertEquals(new stdClass, $object->methodParameter[0]);
+        $this->assertEquals(new \stdClass, $object->constructorParameter[0]);
+        $this->assertEquals(new \stdClass, $object->methodParameter[0]);
     }
 
     /**
@@ -182,7 +180,7 @@ class NestedDefinitionsTest extends BaseContainerTest
                 'array' => [
                     'object' => create('stdClass'),
                 ],
-                'factory' => factory(function () {
+                'factory' => \DI\factory(function () {
                     return 'hello';
                 }),
             ],
@@ -193,11 +191,11 @@ class NestedDefinitionsTest extends BaseContainerTest
         $expected = [
             'env'    => 'bar',
             'link'   => 'bar',
-            'object' => new stdClass,
-            'objectInArray' => [new stdClass],
+            'object' => new \stdClass,
+            'objectInArray' => [new \stdClass],
             'autowired' => new Autowireable(new AutowireableDependency),
             'array' => [
-                'object' => new stdClass,
+                'object' => new \stdClass,
             ],
             'factory' => 'hello',
         ];
@@ -217,7 +215,7 @@ class NestedDefinitionsTest extends BaseContainerTest
             'env' => env('PHP_DI_DO_NOT_DEFINE_THIS', function () {
                 return 'hello';
             }),
-            'factory' => factory(function ($entry) {
+            'factory' => \DI\factory(function ($entry) {
                 return $entry;
             })->parameter('entry', function () { return 'hello'; }),
             'object' => create(AllKindsOfInjections::class)

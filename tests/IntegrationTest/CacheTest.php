@@ -4,7 +4,6 @@ declare(strict_types=1);
 namespace DI\Test\IntegrationTest;
 
 use DI\ContainerBuilder;
-use stdClass;
 use function DI\create;
 use DI\Definition\ObjectDefinition;
 use DI\Definition\Source\SourceCache;
@@ -46,7 +45,7 @@ class CacheTest extends BaseContainerTest
         $builder->enableCompilation(self::COMPILATION_DIR, self::generateCompiledClassName());
         $builder->enableDefinitionCache();
         $builder->addDefinitions([
-            'foo' => create(stdClass::class),
+            'foo' => create(\stdClass::class),
         ]);
         $container = $builder->build();
         $container->get('foo');
@@ -64,9 +63,9 @@ class CacheTest extends BaseContainerTest
         $builder->enableCompilation(self::COMPILATION_DIR, self::generateCompiledClassName());
         $builder->enableDefinitionCache();
         $container = $builder->build();
-        $container->get(stdClass::class);
+        $container->get(\stdClass::class);
 
-        $cachedDefinition = apcu_fetch(SourceCache::CACHE_KEY . stdClass::class);
+        $cachedDefinition = apcu_fetch(SourceCache::CACHE_KEY . \stdClass::class);
         self::assertInstanceOf(ObjectDefinition::class, $cachedDefinition);
     }
 }

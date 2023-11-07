@@ -4,9 +4,7 @@ declare(strict_types=1);
 
 namespace DI\Compiler;
 
-use ArrayIterator;
 use function chmod;
-use Closure;
 use DI\Definition\ArrayDefinition;
 use DI\Definition\DecoratorDefinition;
 use DI\Definition\Definition;
@@ -21,15 +19,12 @@ use DI\Definition\ValueDefinition;
 use DI\DependencyException;
 use DI\Proxy\ProxyFactory;
 use function dirname;
-use Exception;
 use function file_put_contents;
 use InvalidArgumentException;
 use Laravel\SerializableClosure\Support\ReflectionClosure;
-use const PHP_VERSION_ID;
 use function rename;
 use function sprintf;
 use function tempnam;
-use UnitEnum;
 use function unlink;
 
 /**
@@ -48,7 +43,7 @@ class Compiler
      *
      * Keys are strings, values are `Definition` objects or null.
      */
-    private ArrayIterator $entriesToCompile;
+    private \ArrayIterator $entriesToCompile;
 
     /**
      * Progressive counter for definitions.
@@ -119,7 +114,7 @@ class Compiler
             throw new InvalidArgumentException("The container cannot be compiled: `$className` is not a valid PHP class name");
         }
 
-        $this->entriesToCompile = new ArrayIterator($definitionSource->getDefinitions());
+        $this->entriesToCompile = new \ArrayIterator($definitionSource->getDefinitions());
 
         // We use an ArrayIterator so that we can keep adding new items to the list while we compile entries
         foreach ($this->entriesToCompile as $entryName => $definition) {
@@ -239,7 +234,7 @@ class Compiler
             case $definition instanceof ArrayDefinition:
                 try {
                     $code = 'return ' . $this->compileValue($definition->getValues()) . ';';
-                } catch (Exception $e) {
+                } catch (\Exception $e) {
                     throw new DependencyException(sprintf(
                         'Error while compiling %s. %s',
                         $definition->getName(),
@@ -296,7 +291,7 @@ class Compiler
                 break;
             default:
                 // This case should not happen (so it cannot be tested)
-                throw new Exception('Cannot compile definition of type ' . $definition::class);
+                throw new \Exception('Cannot compile definition of type ' . $definition::class);
         }
 
         $this->methods[$methodName] = $code;
@@ -304,6 +299,11 @@ class Compiler
         return $methodName;
     }
 
+    /**
+     * @param Definition|array|bool|callable|string $value
+     * @throws DependencyException
+     * @throws InvalidDefinition
+     */
     public function compileValue(mixed $value) : string
     {
         // Check that the value can be compiled
@@ -334,7 +334,7 @@ class Compiler
             return "[\n$value        ]";
         }
 
-        if ($value instanceof Closure) {
+        if ($value instanceof \Closure) {
             return $this->compileClosure($value);
         }
 
@@ -352,6 +352,7 @@ class Compiler
     }
 
     /**
+     * @param Definition|array|bool|callable|string $value
      * @return string|true If true is returned that means that the value is compilable.
      */
     private function isCompilable($value) : string|bool
@@ -366,11 +367,11 @@ class Compiler
         if ($value instanceof Definition) {
             return true;
         }
-        if ($value instanceof Closure) {
+        if ($value instanceof \Closure) {
             return true;
         }
         /** @psalm-suppress UndefinedClass */
-        if ((PHP_VERSION_ID >= 80100) && ($value instanceof UnitEnum)) {
+        if ((\PHP_VERSION_ID >= 80100) && ($value instanceof \UnitEnum)) {
             return true;
         }
         if (is_object($value)) {
@@ -386,7 +387,7 @@ class Compiler
     /**
      * @throws InvalidDefinition
      */
-    private function compileClosure(Closure $closure) : string
+    private function compileClosure(\Closure $closure) : string
     {
         $reflector = new ReflectionClosure($closure);
 

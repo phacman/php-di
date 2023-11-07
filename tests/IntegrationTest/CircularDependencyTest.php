@@ -7,7 +7,6 @@ namespace DI\Test\IntegrationTest;
 use DI\ContainerBuilder;
 use DI\Test\UnitTest\Fixtures\Class1CircularDependencies;
 use DI\Test\UnitTest\Fixtures\Class2CircularDependencies;
-use stdClass;
 use function DI\create;
 use function DI\get;
 use DI\DependencyException;
@@ -25,8 +24,8 @@ class CircularDependencyTest extends BaseContainerTest
     public function can_get_the_same_entry_twice(ContainerBuilder $builder)
     {
         $container = $builder->build();
-        $container->get(stdClass::class);
-        $container->get(stdClass::class);
+        $container->get(\stdClass::class);
+        $container->get(\stdClass::class);
     }
 
     /**

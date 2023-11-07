@@ -7,9 +7,6 @@ namespace DI\Test\IntegrationTest;
 use DI\ContainerBuilder;
 use Invoker\Exception\NotCallableException;
 use Invoker\Exception\NotEnoughParametersException;
-use stdClass;
-use function DI\create;
-use function DI\get;
 
 /**
  * Tests the call() method from the container.
@@ -67,8 +64,8 @@ class ContainerCallTest extends BaseContainerTest
 
             return $foo;
         }, [
-            'bar' => create('stdClass'),
-            'foo' => get('bar'),
+            'bar' => \DI\create('stdClass'),
+            'foo' => \DI\get('bar'),
         ]);
         $this->assertEquals('bam', $result);
     }
@@ -86,7 +83,7 @@ class ContainerCallTest extends BaseContainerTest
             $self->assertInstanceOf('stdClass', $bar);
 
             return $foo;
-        }, [get('bar'), create('stdClass')]);
+        }, [\DI\get('bar'), \DI\create('stdClass')]);
         $this->assertEquals('bam', $result);
     }
 
@@ -128,10 +125,10 @@ class ContainerCallTest extends BaseContainerTest
     {
         $container = $builder->build();
 
-        $value = new stdClass();
+        $value = new \stdClass();
         $container->set('stdClass', $value);
 
-        $result = $container->call(function (stdClass $foo) {
+        $result = $container->call(function (\stdClass $foo) {
             return $foo;
         });
         $this->assertEquals($value, $result);

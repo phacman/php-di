@@ -7,7 +7,6 @@ namespace DI\Test\IntegrationTest\Definitions;
 use DI\ContainerBuilder;
 use DI\Test\IntegrationTest\BaseContainerTest;
 use DI\DependencyException;
-use function DI\string;
 
 /**
  * Test string definitions.
@@ -20,7 +19,7 @@ class StringDefinitionTest extends BaseContainerTest
     public function test_string_without_placeholder(ContainerBuilder $builder)
     {
         $builder->addDefinitions([
-            'foo' => string('bar'),
+            'foo' => \DI\string('bar'),
         ]);
         $container = $builder->build();
 
@@ -35,7 +34,7 @@ class StringDefinitionTest extends BaseContainerTest
     {
         $builder->addDefinitions([
             'foo'         => 'bar',
-            'test-string' => string('Hello {foo}'),
+            'test-string' => \DI\string('Hello {foo}'),
         ]);
         $container = $builder->build();
 
@@ -50,7 +49,7 @@ class StringDefinitionTest extends BaseContainerTest
         $builder->addDefinitions([
             'foo'         => 'bar',
             'bim'         => 'bam',
-            'test-string' => string('Hello {foo}, {bim}'),
+            'test-string' => \DI\string('Hello {foo}, {bim}'),
         ]);
         $container = $builder->build();
 
@@ -64,8 +63,8 @@ class StringDefinitionTest extends BaseContainerTest
     {
         $builder->addDefinitions([
             'name'        => 'John',
-            'welcome'     => string('Welcome {name}'),
-            'test-string' => string('{welcome}!'),
+            'welcome'     => \DI\string('Welcome {name}'),
+            'test-string' => \DI\string('{welcome}!'),
         ]);
         $container = $builder->build();
 
@@ -80,7 +79,7 @@ class StringDefinitionTest extends BaseContainerTest
         $this->expectException(DependencyException::class);
         $this->expectExceptionMessage('Error while parsing string expression for entry \'test-string\': No entry or class found for \'foo\'');
         $builder->addDefinitions([
-            'test-string' => string('Hello {foo}'),
+            'test-string' => \DI\string('Hello {foo}'),
         ]);
         $container = $builder->build();
 

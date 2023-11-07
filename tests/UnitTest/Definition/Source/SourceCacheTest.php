@@ -9,7 +9,6 @@ use DI\Definition\Source\DefinitionArray;
 use DI\Definition\Source\DefinitionSource;
 use DI\Definition\Source\SourceCache;
 use PHPUnit\Framework\TestCase;
-use function DI\create;
 
 class SourceCacheTest extends TestCase
 {
@@ -48,7 +47,7 @@ class SourceCacheTest extends TestCase
     public function should_save_to_cache_and_return()
     {
         $cachedSource = new DefinitionArray([
-            'foo' => create(),
+            'foo' => \DI\create(),
         ]);
 
         $source = new SourceCache($cachedSource);

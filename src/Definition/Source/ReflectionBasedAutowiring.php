@@ -7,8 +7,6 @@ namespace DI\Definition\Source;
 use DI\Definition\ObjectDefinition;
 use DI\Definition\ObjectDefinition\MethodInjection;
 use DI\Definition\Reference;
-use ReflectionClass;
-use ReflectionFunctionAbstract;
 use ReflectionNamedType;
 
 /**
@@ -29,7 +27,7 @@ class ReflectionBasedAutowiring implements DefinitionSource, Autowiring
         $definition = $definition ?: new ObjectDefinition($name);
 
         // Constructor
-        $class = new ReflectionClass($className);
+        $class = new \ReflectionClass($className);
         $constructor = $class->getConstructor();
         if ($constructor && $constructor->isPublic()) {
             $constructorInjection = MethodInjection::constructor($this->getParametersDefinition($constructor));
@@ -55,7 +53,7 @@ class ReflectionBasedAutowiring implements DefinitionSource, Autowiring
     /**
      * Read the type-hinting from the parameters of the function.
      */
-    private function getParametersDefinition(ReflectionFunctionAbstract $constructor) : array
+    private function getParametersDefinition(\ReflectionFunctionAbstract $constructor) : array
     {
         $parameters = [];
 

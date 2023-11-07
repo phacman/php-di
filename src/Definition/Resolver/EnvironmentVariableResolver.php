@@ -62,6 +62,11 @@ class EnvironmentVariableResolver implements DefinitionResolver
         return true;
     }
 
+    /**
+     * @return scalar|string[]
+     *
+     * @psalm-return non-empty-list<string>|scalar
+     */
     protected function getEnvVariable(string $variableName)
     {
         return $_ENV[$variableName] ?? $_SERVER[$variableName] ?? getenv($variableName);

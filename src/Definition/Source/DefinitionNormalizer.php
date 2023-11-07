@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace DI\Definition\Source;
 
-use Closure;
 use DI\Definition\ArrayDefinition;
 use DI\Definition\AutowireDefinition;
 use DI\Definition\DecoratorDefinition;
@@ -44,7 +43,7 @@ class DefinitionNormalizer
             $definition = $definition->getDefinition($name);
         } elseif (is_array($definition)) {
             $definition = new ArrayDefinition($definition);
-        } elseif ($definition instanceof Closure) {
+        } elseif ($definition instanceof \Closure) {
             $definition = new FactoryDefinition($name, $definition);
         } elseif (! $definition instanceof Definition) {
             $definition = new ValueDefinition($definition);
@@ -89,7 +88,7 @@ class DefinitionNormalizer
             $definition = $definition->getDefinition($name);
         } elseif (is_array($definition)) {
             $definition = new ArrayDefinition($definition);
-        } elseif ($definition instanceof Closure) {
+        } elseif ($definition instanceof \Closure) {
             $definition = new FactoryDefinition($name, $definition);
         }
 

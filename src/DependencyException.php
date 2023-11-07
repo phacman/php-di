@@ -4,12 +4,11 @@ declare(strict_types=1);
 
 namespace DI;
 
-use Exception;
 use Psr\Container\ContainerExceptionInterface;
 
 /**
  * Exception for the Container.
  */
-class DependencyException extends Exception implements ContainerExceptionInterface
+class DependencyException extends \Exception implements ContainerExceptionInterface
 {
 }

@@ -12,7 +12,6 @@ use EasyMock\EasyMock;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use Psr\Container\ContainerInterface;
-use ReflectionFunction;
 
 /**
  * @covers \DI\Invoker\FactoryParameterResolver
@@ -39,7 +38,7 @@ class FactoryParameterResolverTest extends TestCase
     {
         $callable = function (ContainerInterface $c) {
         };
-        $reflection = new ReflectionFunction($callable);
+        $reflection = new \ReflectionFunction($callable);
 
         $parameters = $this->resolver->getParameters($reflection, [$this->container, $this->requestedEntry], []);
 
@@ -54,7 +53,7 @@ class FactoryParameterResolverTest extends TestCase
     {
         $callable = function (ContainerInterface $c, RequestedEntry $entry) {
         };
-        $reflection = new ReflectionFunction($callable);
+        $reflection = new \ReflectionFunction($callable);
 
         $parameters = $this->resolver->getParameters($reflection, [$this->container, $this->requestedEntry], []);
 
@@ -70,7 +69,7 @@ class FactoryParameterResolverTest extends TestCase
     {
         $callable = function (ContainerInterface $c) {
         };
-        $reflection = new ReflectionFunction($callable);
+        $reflection = new \ReflectionFunction($callable);
 
         $parameters = $this->resolver->getParameters($reflection, [$this->container, $this->requestedEntry], []);
 
@@ -85,7 +84,7 @@ class FactoryParameterResolverTest extends TestCase
     {
         $callable = function (RequestedEntry $entry) {
         };
-        $reflection = new ReflectionFunction($callable);
+        $reflection = new \ReflectionFunction($callable);
 
         $parameters = $this->resolver->getParameters($reflection, [$this->container, $this->requestedEntry], []);
 
@@ -100,7 +99,7 @@ class FactoryParameterResolverTest extends TestCase
     {
         $callable = function () {
         };
-        $reflection = new ReflectionFunction($callable);
+        $reflection = new \ReflectionFunction($callable);
 
         $parameters = $this->resolver->getParameters($reflection, [$this->container, $this->requestedEntry], []);
 
@@ -114,7 +113,7 @@ class FactoryParameterResolverTest extends TestCase
     {
         $callable = function (ContainerInterface $container, RequestedEntry $entry, $other) {
         };
-        $reflection = new ReflectionFunction($callable);
+        $reflection = new \ReflectionFunction($callable);
 
         $mockContainer = $this->easyMock(Container::class);
         $mockEntry = $this->easyMock(RequestedEntry::class);
@@ -136,7 +135,7 @@ class FactoryParameterResolverTest extends TestCase
     {
         $callable = function (NoConstructor $nc) {
         };
-        $reflection = new ReflectionFunction($callable);
+        $reflection = new \ReflectionFunction($callable);
 
         $ncMock = $this->easyMock(NoConstructor::class);
         $ncReal = new NoConstructor();
