@@ -177,7 +177,7 @@ class ContainerBuilder
      * @param class-string<Container> $containerParentClass Name of the compiled container parent class. Customize only if necessary.
      * @psalm-param class-string<T> $containerParentClass
      *
-     * @psalm-return self<T>
+     * @psalm-return static<ContainerClass>
      */
     public function enableCompilation(
         string $directory,
