@@ -8,8 +8,6 @@ use DI\Definition\Exception\InvalidDefinition;
 use DI\Definition\ObjectDefinition;
 use DI\Definition\ObjectDefinition\MethodInjection;
 use DI\Definition\ObjectDefinition\PropertyInjection;
-use ReflectionException;
-use ReflectionParameter;
 
 /**
  * Helps defining how to create an instance of a class.
@@ -175,8 +173,8 @@ class CreateDefinitionHelper implements DefinitionHelper
                 $callable = [$definition->getClassName(), $method];
 
                 try {
-                    $reflectionParameter = new ReflectionParameter($callable, $index);
-                } catch (ReflectionException $e) {
+                    $reflectionParameter = new \ReflectionParameter($callable, $index);
+                } catch (\ReflectionException $e) {
                     throw InvalidDefinition::create($definition, sprintf("Parameter with name '%s' could not be found. %s.", $index, $e->getMessage()));
                 }
 

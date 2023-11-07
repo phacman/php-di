@@ -7,9 +7,6 @@ namespace DI\Test\IntegrationTest\Issues;
 use DI\ContainerBuilder;
 use DI\Test\IntegrationTest\BaseContainerTest;
 use DI\Test\IntegrationTest\Issues\Issue72\Class1;
-use stdClass;
-use function DI\create;
-use function DI\get;
 
 /**
  * Test that the manager prioritize correctly the different sources.
@@ -28,7 +25,7 @@ class Issue72Test extends BaseContainerTest
         $builder->useAttributes(true);
         $container = $builder->build();
 
-        $value = new stdClass();
+        $value = new \stdClass();
         $value->foo = 'bar';
         $container->set('service1', $value);
 
@@ -119,8 +116,8 @@ class Issue72Test extends BaseContainerTest
         // Override 'service1' to 'service2'
         $container->set(
             Class1::class,
-            create()
-                ->constructor(get('service2'))
+            \DI\create()
+                ->constructor(\DI\get('service2'))
         );
 
         /** @var Class1 $class1 */

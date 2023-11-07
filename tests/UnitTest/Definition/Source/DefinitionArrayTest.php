@@ -11,9 +11,6 @@ use DI\Definition\ObjectDefinition;
 use DI\Definition\Source\DefinitionArray;
 use DI\Definition\ValueDefinition;
 use PHPUnit\Framework\TestCase;
-use function DI\create;
-use function DI\factory;
-use function DI\get;
 
 /**
  * @covers \DI\Definition\Source\DefinitionArray
@@ -71,7 +68,7 @@ class DefinitionArrayTest extends TestCase
         $definitions = [
             'array'   => ['a', 'b', 'c'],
             'assoc'   => ['a' => 'b'],
-            'links'   => ['a' => get('b')],
+            'links'   => ['a' => \DI\get('b')],
         ];
         $source->addDefinitions($definitions);
 
@@ -96,7 +93,7 @@ class DefinitionArrayTest extends TestCase
     public function testObjectDefinition()
     {
         $source = new DefinitionArray([
-            'foo' => create(),
+            'foo' => \DI\create(),
         ]);
         /** @var $definition ObjectDefinition */
         $definition = $source->getDefinition('foo');
@@ -112,7 +109,7 @@ class DefinitionArrayTest extends TestCase
         };
         $source = new DefinitionArray();
         $source->addDefinitions([
-            'foo' => factory($callable),
+            'foo' => \DI\factory($callable),
         ]);
         /** @var FactoryDefinition $definition */
         $definition = $source->getDefinition('foo');
@@ -180,10 +177,10 @@ class DefinitionArrayTest extends TestCase
     {
         $source = new DefinitionArray([
             'foo*'                   => 'bar',
-            'Namespaced\*Interface'  => create('Namespaced\*'),
-            'Namespaced2\*Interface' => create('Namespaced2\Foo'),
-            'Multiple\*\*\Matches'   => create('Multiple\*\*\Implementation'),
-            '*Interface'   => create('GlobalImplementation'),
+            'Namespaced\*Interface'  => \DI\create('Namespaced\*'),
+            'Namespaced2\*Interface' => \DI\create('Namespaced2\Foo'),
+            'Multiple\*\*\Matches'   => \DI\create('Multiple\*\*\Implementation'),
+            '*Interface'   => \DI\create('GlobalImplementation'),
         ]);
 
         $definition = $source->getDefinition('foo1');
@@ -244,7 +241,7 @@ class DefinitionArrayTest extends TestCase
     public function testWildcardShouldNotMatchAcrossNamespaces()
     {
         $source = new DefinitionArray([
-            'My\*Interface' => create('My\*'),
+            'My\*Interface' => \DI\create('My\*'),
         ]);
         $this->assertNull($source->getDefinition('My\Foo\BarInterface'));
     }
@@ -255,7 +252,7 @@ class DefinitionArrayTest extends TestCase
     public function testGlobalNamespaceWildcardShouldNotMatchAcrossNamespace()
     {
         $source = new DefinitionArray([
-            '*Interface' => create(),
+            '*Interface' => \DI\create(),
         ]);
         $this->assertNull($source->getDefinition('My\FooInterface'));
     }

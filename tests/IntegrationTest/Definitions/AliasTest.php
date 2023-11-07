@@ -6,7 +6,6 @@ namespace DI\Test\IntegrationTest\Definitions;
 
 use DI\ContainerBuilder;
 use DI\Test\IntegrationTest\BaseContainerTest;
-use function DI\get;
 
 /**
  * Test alias definitions.
@@ -20,7 +19,7 @@ class AliasTest extends BaseContainerTest
     {
         $builder->addDefinitions([
             'foo'  => 'Hello',
-            'bar'  => get('foo'),
+            'bar'  => \DI\get('foo'),
         ]);
         $container = $builder->build();
 

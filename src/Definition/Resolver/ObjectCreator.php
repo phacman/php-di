@@ -11,11 +11,9 @@ use DI\Definition\ObjectDefinition\PropertyInjection;
 use DI\DependencyException;
 use DI\Proxy\ProxyFactory;
 use Exception;
-use const PHP_VERSION_ID;
 use ProxyManager\Proxy\LazyLoadingInterface;
 use Psr\Container\NotFoundExceptionInterface;
 use ReflectionClass;
-use ReflectionMethod;
 use ReflectionProperty;
 
 /**
@@ -157,7 +155,7 @@ class ObjectCreator implements DefinitionResolver
 
         // Method injections
         foreach ($objectDefinition->getMethodInjections() as $methodInjection) {
-            $methodReflection = new ReflectionMethod($object, $methodInjection->getMethodName());
+            $methodReflection = new \ReflectionMethod($object, $methodInjection->getMethodName());
             $args = $this->parameterResolver->resolveParameters($methodInjection, $methodReflection);
 
             $methodReflection->invokeArgs($object, $args);
@@ -201,7 +199,7 @@ class ObjectCreator implements DefinitionResolver
         $className = $className ?: $object::class;
 
         $property = new ReflectionProperty($className, $propertyName);
-        if (! $property->isPublic() && PHP_VERSION_ID < 80100) {
+        if (! $property->isPublic() && \PHP_VERSION_ID < 80100) {
             $property->setAccessible(true);
         }
         $property->setValue($object, $propertyValue);

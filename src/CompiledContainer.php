@@ -16,7 +16,6 @@ use Invoker\ParameterResolver\AssociativeArrayResolver;
 use Invoker\ParameterResolver\DefaultValueResolver;
 use Invoker\ParameterResolver\NumericArrayResolver;
 use Invoker\ParameterResolver\ResolverChain;
-use LogicException;
 
 /**
  * Compiled version of the dependency injection container.
@@ -81,7 +80,7 @@ abstract class CompiledContainer extends Container
     {
         // It needs to be forbidden because that would mean get() must go through the definitions
         // every time, which kinds of defeats the performance gains of the compiled container
-        throw new LogicException('You cannot set a definition at runtime on a compiled container. You can either put your definitions in a file, disable compilation or ->set() a raw value directly (PHP object, string, int, ...) instead of a PHP-DI definition.');
+        throw new \LogicException('You cannot set a definition at runtime on a compiled container. You can either put your definitions in a file, disable compilation or ->set() a raw value directly (PHP object, string, int, ...) instead of a PHP-DI definition.');
     }
 
     /**

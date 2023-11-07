@@ -4,21 +4,19 @@ declare(strict_types=1);
 
 namespace DI\Proxy;
 
-use Closure;
 use ProxyManager\Configuration;
 use ProxyManager\Factory\LazyLoadingValueHolderFactory;
 use ProxyManager\FileLocator\FileLocator;
 use ProxyManager\GeneratorStrategy\EvaluatingGeneratorStrategy;
 use ProxyManager\GeneratorStrategy\FileWriterGeneratorStrategy;
 use ProxyManager\Proxy\LazyLoadingInterface;
-use RuntimeException;
 
 /**
  * Creates proxy classes.
  *
  * Wraps Ocramius/ProxyManager LazyLoadingValueHolderFactory.
  *
- * @see LazyLoadingValueHolderFactory
+ * @see \ProxyManager\Factory\LazyLoadingValueHolderFactory
  *
  * @since  5.0
  * @author Matthieu Napoli <matthieu@mnapoli.fr>
@@ -40,9 +38,9 @@ class ProxyFactory
      * the given initializer.
      *
      * @param class-string $className name of the class to be proxied
-     * @param Closure $initializer initializer to be passed to the proxy
+     * @param \Closure $initializer initializer to be passed to the proxy
      */
-    public function createProxy(string $className, Closure $initializer) : LazyLoadingInterface
+    public function createProxy(string $className, \Closure $initializer) : LazyLoadingInterface
     {
         return $this->proxyManager()->createProxy($className, $initializer);
     }
@@ -65,7 +63,7 @@ class ProxyFactory
     {
         if ($this->proxyManager === null) {
             if (! class_exists(Configuration::class)) {
-                throw new RuntimeException('The ocramius/proxy-manager library is not installed. Lazy injection requires that library to be installed with Composer in order to work. Run "composer require ocramius/proxy-manager:~2.0".');
+                throw new \RuntimeException('The ocramius/proxy-manager library is not installed. Lazy injection requires that library to be installed with Composer in order to work. Run "composer require ocramius/proxy-manager:~2.0".');
             }
 
             $config = new Configuration();

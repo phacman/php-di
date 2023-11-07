@@ -7,7 +7,6 @@ namespace DI\Definition\Resolver;
 use DI\Definition\Definition;
 use DI\Definition\Exception\InvalidDefinition;
 use DI\Definition\ObjectDefinition\MethodInjection;
-use ReflectionException;
 use ReflectionMethod;
 use ReflectionParameter;
 
@@ -90,7 +89,7 @@ class ParameterResolver
     {
         try {
             return $parameter->getDefaultValue();
-        } catch (ReflectionException) {
+        } catch (\ReflectionException) {
             throw new InvalidDefinition(sprintf(
                 'The parameter "%s" of %s has no type defined or guessable. It has a default value, '
                 . 'but the default value can\'t be read through Reflection because it is a PHP internal class.',

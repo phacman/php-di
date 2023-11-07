@@ -6,7 +6,6 @@ namespace DI\Test\IntegrationTest\Fixtures;
 
 use DI\Attribute\Inject;
 use DI\Attribute\Injectable;
-use Exception;
 
 /**
  * Fixture class.
@@ -43,7 +42,7 @@ class Class1
     public $method4Param1;
 
     /**
-     * @throws Exception
+     * @throws \Exception
      */
     public function __construct(Class2 $param1, Interface1 $param2, LazyDependency $param3, $optional = true)
     {
@@ -52,7 +51,7 @@ class Class1
         $this->constructorParam3 = $param3;
 
         if ($optional !== true) {
-            throw new Exception('Expected optional parameter to not be defined');
+            throw new \Exception('Expected optional parameter to not be defined');
         }
     }
 
@@ -65,7 +64,7 @@ class Class1
         $this->method1Param1 = $param1;
 
         if ($optional !== true) {
-            throw new Exception('Expected optional parameter to not be defined');
+            throw new \Exception('Expected optional parameter to not be defined');
         }
     }
 

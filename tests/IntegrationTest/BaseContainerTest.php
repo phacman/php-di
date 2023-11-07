@@ -71,7 +71,7 @@ abstract class BaseContainerTest extends TestCase
     /**
      * Assert that the given entry is not compiled when we are testing the compiled container.
      */
-    protected static function assertEntryIsNotCompiled(Container $container, string $entry): void
+    protected static function assertEntryIsNotCompiled(Container $container, string $entry)
     {
         if (!$container instanceof CompiledContainer) {
             return;

@@ -6,7 +6,6 @@ namespace DI\Test\UnitTest\Definition;
 
 use DI\Definition\EnvironmentVariableDefinition;
 use PHPUnit\Framework\TestCase;
-use function DI\get;
 
 /**
  * @covers \DI\Definition\EnvironmentVariableDefinition
@@ -59,7 +58,7 @@ class EnvironmentVariableDefinitionTest extends TestCase
     optional = yes
     default = get(foo)
 )';
-        $this->assertEquals($str, (string) new EnvironmentVariableDefinition('bar', true, get('foo')));
+        $this->assertEquals($str, (string) new EnvironmentVariableDefinition('bar', true, \DI\get('foo')));
     }
 
     /**

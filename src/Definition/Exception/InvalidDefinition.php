@@ -5,8 +5,6 @@ declare(strict_types=1);
 namespace DI\Definition\Exception;
 
 use DI\Definition\Definition;
-use Exception;
-use const PHP_EOL;
 use Psr\Container\ContainerExceptionInterface;
 
 /**
@@ -14,12 +12,12 @@ use Psr\Container\ContainerExceptionInterface;
  *
  * @author Matthieu Napoli <matthieu@mnapoli.fr>
  */
-class InvalidDefinition extends Exception implements ContainerExceptionInterface
+class InvalidDefinition extends \Exception implements ContainerExceptionInterface
 {
-    public static function create(Definition $definition, string $message, Exception $previous = null) : self
+    public static function create(Definition $definition, string $message, \Exception $previous = null) : self
     {
         return new self(sprintf(
-            '%s' . PHP_EOL . 'Full definition:' . PHP_EOL . '%s',
+            '%s' . \PHP_EOL . 'Full definition:' . \PHP_EOL . '%s',
             $message,
             (string) $definition
         ), 0, $previous);

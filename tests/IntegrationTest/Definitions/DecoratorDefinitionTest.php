@@ -8,8 +8,6 @@ use DI\ContainerBuilder;
 use DI\Test\IntegrationTest\BaseContainerTest;
 use Psr\Container\ContainerInterface;
 use DI\Definition\Exception\InvalidDefinition;
-use function DI\create;
-use function DI\decorate;
 
 /**
  * Test decorator definitions.
@@ -25,7 +23,7 @@ class DecoratorDefinitionTest extends BaseContainerTest
             'foo' => 'bar',
         ]);
         $builder->addDefinitions([
-            'foo' => decorate(function ($previous) {
+            'foo' => \DI\decorate(function ($previous) {
                 return $previous . 'baz';
             }),
         ]);
@@ -46,7 +44,7 @@ class DecoratorDefinitionTest extends BaseContainerTest
             },
         ]);
         $builder->addDefinitions([
-            'foo' => decorate(function ($previous) {
+            'foo' => \DI\decorate(function ($previous) {
                 return $previous . 'baz';
             }),
         ]);
@@ -61,10 +59,10 @@ class DecoratorDefinitionTest extends BaseContainerTest
     public function test_decorate_object(ContainerBuilder $builder)
     {
         $builder->addDefinitions([
-            'foo' => create('stdClass'),
+            'foo' => \DI\create('stdClass'),
         ]);
         $builder->addDefinitions([
-            'foo' => decorate(function ($previous) {
+            'foo' => \DI\decorate(function ($previous) {
                 $previous->foo = 'bar';
 
                 return $previous;
@@ -86,7 +84,7 @@ class DecoratorDefinitionTest extends BaseContainerTest
             'bar' => 'world',
         ]);
         $builder->addDefinitions([
-            'foo' => decorate(function ($previous, ContainerInterface $container) {
+            'foo' => \DI\decorate(function ($previous, ContainerInterface $container) {
                 return $previous . $container->get('bar');
             }),
         ]);
@@ -104,12 +102,12 @@ class DecoratorDefinitionTest extends BaseContainerTest
             'foo' => 'bar',
         ]);
         $builder->addDefinitions([
-            'foo' => decorate(function ($previous) {
+            'foo' => \DI\decorate(function ($previous) {
                 return $previous . 'baz';
             }),
         ]);
         $builder->addDefinitions([
-            'foo' => decorate(function ($previous) {
+            'foo' => \DI\decorate(function ($previous) {
                 return $previous . 'bam';
             }),
         ]);
@@ -127,7 +125,7 @@ class DecoratorDefinitionTest extends BaseContainerTest
         $this->expectException(InvalidDefinition::class);
         $this->expectExceptionMessage('Entry "foo" decorates nothing: no previous definition with the same name was found');
         $builder->addDefinitions([
-            'foo' => decorate(function ($previous) {
+            'foo' => \DI\decorate(function ($previous) {
                 return $previous;
             }),
         ]);
@@ -144,7 +142,7 @@ class DecoratorDefinitionTest extends BaseContainerTest
         $this->expectExceptionMessage('Definition "foo" contains an error: Decorators cannot be nested in another definition');
         $builder->addDefinitions([
             'foo' => [
-                decorate(function ($previous) {
+                \DI\decorate(function ($previous) {
                     return $previous;
                 }),
             ],
