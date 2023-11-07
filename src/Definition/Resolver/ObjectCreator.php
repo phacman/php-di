@@ -196,11 +196,6 @@ class ObjectCreator implements DefinitionResolver
     }
 
     /**
-     * @param string|null $className
-     * @param object $object
-     * @param string $propertyName
-     * @param mixed $propertyValue
-     * @return void
      * @throws ReflectionException
      */
     public static function setPrivatePropertyValue(?string $className, object $object, string $propertyName, mixed $propertyValue) : void

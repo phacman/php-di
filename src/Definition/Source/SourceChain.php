@@ -69,12 +69,7 @@ class SourceChain implements DefinitionSource, MutableDefinitionSource
         $this->mutableSource->addDefinition($definition);
     }
 
-    /**
-     * @param ExtendsPreviousDefinition $definition
-     * @param int $currentIndex
-     * @return void
-     */
-    private function resolveExtendedDefinition(ExtendsPreviousDefinition $definition, int $currentIndex): void
+    private function resolveExtendedDefinition(ExtendsPreviousDefinition $definition, int $currentIndex) : void
     {
         // Look in the next sources only (else infinite recursion, and we can only extend
         // entries defined in the previous definition files - a previous == next here because

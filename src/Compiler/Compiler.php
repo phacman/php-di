@@ -301,7 +301,6 @@ class Compiler
 
     /**
      * @param Definition|array|bool|callable|string $value
-     * @return string
      * @throws DependencyException
      * @throws InvalidDefinition
      */
@@ -353,9 +352,8 @@ class Compiler
     }
 
     /**
-     * @return string|true If true is returned that means that the value is compilable.
-     *
      * @param Definition|array|bool|callable|string $value
+     * @return string|true If true is returned that means that the value is compilable.
      */
     private function isCompilable($value) : string|bool
     {
