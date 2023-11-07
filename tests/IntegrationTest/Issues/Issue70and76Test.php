@@ -6,7 +6,6 @@ namespace DI\Test\IntegrationTest\Issues;
 
 use DI\ContainerBuilder;
 use DI\Test\IntegrationTest\BaseContainerTest;
-use function DI\factory;
 
 /**
  * @see https://github.com/mnapoli/PHP-DI/issues/70
@@ -33,7 +32,7 @@ class Issue70and76Test extends BaseContainerTest
     public function closureDefinitionShouldOverrideReflectionDefinition(ContainerBuilder $builder)
     {
         $builder->addDefinitions([
-            'stdClass' => factory(function () {
+            'stdClass' => \DI\factory(function () {
                 return 'foo';
             }),
         ]);

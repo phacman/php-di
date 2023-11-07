@@ -2,7 +2,6 @@
 
 declare(strict_types=1);
 use DI\ContainerBuilder;
-use function DI\get;
 
 require_once __DIR__ . '/vendor/autoload.php';
 
@@ -39,7 +38,7 @@ for ($i = 0; $i < 100; $i++) {
 for ($i = 0; $i < 100; $i++) {
     $container->call(function ($foo, $bar) {
     }, [
-        'foo' => get('link'),
-        'bar' => get('link'),
+        'foo' => \DI\get('link'),
+        'bar' => \DI\get('link'),
     ]);
 }

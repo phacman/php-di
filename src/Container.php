@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace DI;
 
-use Closure;
 use DI\Definition\Definition;
 use DI\Definition\Exception\InvalidDefinition;
 use DI\Definition\FactoryDefinition;
@@ -21,9 +20,6 @@ use DI\Definition\ValueDefinition;
 use DI\Invoker\DefinitionParameterResolver;
 use DI\Proxy\ProxyFactory;
 use InvalidArgumentException;
-use Invoker\Exception\InvocationException;
-use Invoker\Exception\NotCallableException;
-use Invoker\Exception\NotEnoughParametersException;
 use Invoker\Invoker;
 use Invoker\InvokerInterface;
 use Invoker\ParameterResolver\AssociativeArrayResolver;
@@ -70,7 +66,7 @@ class Container implements ContainerInterface, FactoryInterface, InvokerInterfac
      */
     protected ContainerInterface $delegateContainer;
 
-    protected ProxyFactory $proxyFactory;
+    public ProxyFactory $proxyFactory;
 
     public static function create(
         array $definitions
@@ -235,14 +231,16 @@ class Container implements ContainerInterface, FactoryInterface, InvokerInterfac
     /**
      * Call the given function using the given parameters.
      *
+     * Missing parameters will be resolved from the container.
+     *
      * @param callable|array|string $callable Function to call.
-     * @param array $parameters Parameters to use.
+     * @param array    $parameters Parameters to use. Can be indexed by the parameter names
+     *                             or not indexed (same order as the parameters).
+     *                             The array can also contain DI definitions, e.g. DI\get().
+     *
      * @return mixed Result of the function.
-     * @throws InvocationException Base exception class for all the sub-exceptions below.
-     * @throws NotCallableException
-     * @throws NotEnoughParametersException
      */
-    public function call(callable|array|string $callable, array $parameters = []) : mixed
+    public function call($callable, array $parameters = []) : mixed
     {
         return $this->getInvoker()->call($callable, $parameters);
     }
@@ -257,7 +255,7 @@ class Container implements ContainerInterface, FactoryInterface, InvokerInterfac
     {
         if ($value instanceof DefinitionHelper) {
             $value = $value->getDefinition($name);
-        } elseif ($value instanceof Closure) {
+        } elseif ($value instanceof \Closure) {
             $value = new FactoryDefinition($name, $value);
         }
 

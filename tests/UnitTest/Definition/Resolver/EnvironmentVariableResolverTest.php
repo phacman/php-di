@@ -12,7 +12,6 @@ use EasyMock\EasyMock;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use DI\Definition\Exception\InvalidDefinition;
-use function DI\get;
 
 /**
  * @covers \DI\Definition\Resolver\EnvironmentVariableResolver
@@ -75,7 +74,7 @@ class EnvironmentVariableResolverTest extends TestCase
     {
         $this->parentResolver->expects($this->once())
             ->method('resolve')
-            ->with(get('foo'))
+            ->with(\DI\get('foo'))
             ->willReturn('bar');
 
         $value = $this->resolver->resolve($this->nestedDefinition);

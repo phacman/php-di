@@ -9,7 +9,6 @@ use DI\Test\IntegrationTest\BaseContainerTest;
 use DI\Test\IntegrationTest\Definitions\ObjectDefinition\Enum1;
 use DI\Test\IntegrationTest\Definitions\ObjectDefinition\Enum2;
 use stdClass;
-use function DI\value;
 
 /**
  * Test value definitions.
@@ -25,8 +24,8 @@ class ValueDefinitionTest extends BaseContainerTest
             'string'  => 'foo',
             'int'     => 123,
             'object'  => new stdClass(),
-            'helper'  => value('foo'),
-            'closure' => value(function () {
+            'helper'  => \DI\value('foo'),
+            'closure' => \DI\value(function () {
                 return 'foo';
             }),
         ]);

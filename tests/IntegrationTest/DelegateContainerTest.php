@@ -6,7 +6,6 @@ namespace DI\Test\IntegrationTest;
 
 use DI\Container;
 use DI\ContainerBuilder;
-use stdClass;
 use function DI\get;
 use function DI\string;
 
@@ -21,7 +20,7 @@ class DelegateContainerTest extends BaseContainerTest
     public function test_alias_to_dependency_in_delegate_container(ContainerBuilder $subContainerBuilder)
     {
         $rootContainer = new Container;
-        $value = new stdClass();
+        $value = new \stdClass();
         $rootContainer->set('bar', $value);
 
         $subContainerBuilder->wrapContainer($rootContainer);
@@ -56,7 +55,7 @@ class DelegateContainerTest extends BaseContainerTest
      */
     public function test_with_container_call(ContainerBuilder $subContainerBuilder)
     {
-        $value = new stdClass();
+        $value = new \stdClass();
         $rootContainer = new Container([
             'stdClass' => $value,
         ]);
@@ -64,7 +63,7 @@ class DelegateContainerTest extends BaseContainerTest
         $subContainerBuilder->wrapContainer($rootContainer);
         $subContainer = $subContainerBuilder->build();
 
-        $result = $subContainer->call(function (stdClass $foo) {
+        $result = $subContainer->call(function (\stdClass $foo) {
             return $foo;
         });
         self::assertSame($value, $result, 'The root container was not used for the type-hint');
