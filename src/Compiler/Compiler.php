@@ -299,6 +299,12 @@ class Compiler
         return $methodName;
     }
 
+    /**
+     * @param Definition|array|bool|callable|string $value
+     * @return string
+     * @throws DependencyException
+     * @throws InvalidDefinition
+     */
     public function compileValue(mixed $value) : string
     {
         // Check that the value can be compiled
@@ -348,6 +354,8 @@ class Compiler
 
     /**
      * @return string|true If true is returned that means that the value is compilable.
+     *
+     * @param Definition|array|bool|callable|string $value
      */
     private function isCompilable($value) : string|bool
     {

@@ -14,6 +14,7 @@ use Exception;
 use ProxyManager\Proxy\LazyLoadingInterface;
 use Psr\Container\NotFoundExceptionInterface;
 use ReflectionClass;
+use ReflectionException;
 use ReflectionProperty;
 
 /**
@@ -194,7 +195,15 @@ class ObjectCreator implements DefinitionResolver
         self::setPrivatePropertyValue($propertyInjection->getClassName(), $object, $propertyName, $value);
     }
 
-    public static function setPrivatePropertyValue(?string $className, $object, string $propertyName, mixed $propertyValue) : void
+    /**
+     * @param string|null $className
+     * @param object $object
+     * @param string $propertyName
+     * @param mixed $propertyValue
+     * @return void
+     * @throws ReflectionException
+     */
+    public static function setPrivatePropertyValue(?string $className, object $object, string $propertyName, mixed $propertyValue) : void
     {
         $className = $className ?: $object::class;
 
