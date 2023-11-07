@@ -63,7 +63,6 @@ class EnvironmentVariableResolver implements DefinitionResolver
     }
 
     /**
-     * @param string $variableName
      * @return scalar|string[]
      *
      * @psalm-return non-empty-list<string>|scalar
